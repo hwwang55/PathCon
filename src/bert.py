@@ -24,10 +24,9 @@ if __name__ == '__main__':
             tokens = ' '.join(tokens)
             relations.append(tokens)
 
-
     # start BERT client and get relation embedding
     client = BertClient()
     relation_embedding = client.encode(relations)
     print(relation_embedding.shape)
 
-    np.save('../data/' + DATASET + '/rel_emb_large.npy', relation_embedding)
+    np.save('../data/' + DATASET + '/bert-' + args.m + '.npy', relation_embedding)

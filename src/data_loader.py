@@ -1,13 +1,46 @@
+import re
 import numpy as np
 from collections import defaultdict
+from sklearn.feature_extraction.text import CountVectorizer
 
 
-def read_dict(file_name):
+def process_entities(file_name):
     print('reading %s' % file_name)
     d = {}
-    for line in open(file_name):
+
+    file = open(file_name)
+    for line in file:
         index, name = line.strip().split('\t')
         d[name] = int(index)
+    file.close()
+
+    return d
+
+
+def process_relations(file_name, args):
+    print('reading %s' % file_name)
+    d = {}
+    bow = []
+    count_vec = CountVectorizer()
+
+    file = open(file_name)
+    for line in file:
+        index, name = line.strip().split('\t')
+        d[name] = int(index)
+
+        if args.feature == 'bow':
+            if args.dataset == 'FB15k':
+                tokens = re.findall('[a-z]{2,}', name)
+            else:
+                # TODO
+                raise ValueError('dataset not found')
+            bow.append(' '.join(tokens))
+    file.close()
+
+    if args.feature == 'bow':
+        bow = count_vec.fit_transform(bow)
+        np.save('../data/' + args.dataset + '/bow.npy', bow.toarray())
+
     return d
 
 
@@ -73,8 +106,8 @@ def process_data(file_name, entity_dict, relation_dict):
 
 
 def load_data(args):
-    entity_dict = read_dict('../data/' + args.dataset + '/entities.dict')
-    relation_dict = read_dict('../data/' + args.dataset + '/relations.dict')
+    entity_dict = process_entities('../data/' + args.dataset + '/entities.dict')
+    relation_dict = process_relations('../data/' + args.dataset + '/relations.dict', args)
 
     edge2entities, entity2edges, edge2relation = process_kg('../data/' + args.dataset + '/train.txt',
                                                             entity_dict, relation_dict, args.sampling_size)
