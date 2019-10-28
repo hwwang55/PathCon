@@ -13,6 +13,7 @@ parser.add_argument('--dim', type=int, default=32, help='hidden dimension of rel
 parser.add_argument('--iteration', type=int, default=2, help='number of GNN iterations')
 parser.add_argument('--l2', type=float, default=1e-7, help='weight of l2 regularization')
 parser.add_argument('--lr', type=float, default=2e-2, help='learning rate')
+parser.add_argument('--dropout', type=float, default=0, help='dropout rate')
 parser.add_argument('--aggregator', type=str, default='mean', help='aggregation function of GNN: mean, concat')
 parser.add_argument('--feature', type=str, default='id', help='relation feature type: id, bow, bert-small, bert-large')
 parser.add_argument('--finetune', type=bool, default=True, help='whether to fin tune bert features')

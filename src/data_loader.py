@@ -33,7 +33,7 @@ def process_relations(file_name, args):
                 tokens = re.findall('[a-z]{2,}', name)
             else:
                 # TODO
-                raise ValueError('dataset not found')
+                raise ValueError('unknown dataset')
             bow.append(' '.join(tokens))
     file.close()
 
@@ -110,7 +110,7 @@ def load_data(args):
     relation_dict = process_relations('../data/' + args.dataset + '/relations.dict', args)
 
     edge2entities, entity2edges, edge2relation = process_kg('../data/' + args.dataset + '/train.txt',
-                                                            entity_dict, relation_dict, args.sampling_size)
+                                                            entity_dict, relation_dict, args.sample)
 
     train_data = process_data('../data/' + args.dataset + '/train.txt', entity_dict, relation_dict)
     val_data = process_data('../data/' + args.dataset + '/valid.txt', entity_dict, relation_dict)
