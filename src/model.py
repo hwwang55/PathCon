@@ -4,14 +4,16 @@ from aggregators import MeanAggregator, ConcatAggregator
 
 
 class RelationAgg(object):
-    def __init__(self, args, edge2entities, entity2edges, n_relations):
-        self._parse_args(args, edge2entities, entity2edges, n_relations)
+    def __init__(self, args, edge2entities, entity2edges, edge2relation, n_relations):
+        self._parse_args(args, edge2entities, entity2edges, edge2relation, n_relations)
         self._build_inputs()
         self._build_model()
+        self._build_train()
 
-    def _parse_args(self, args, edge2entities, entity2edges, n_relations):
+    def _parse_args(self, args, edge2entities, entity2edges, edge2relation, n_relations):
         self.edge2entities = edge2entities
         self.entity2edges = entity2edges
+        self.edge2relation = edge2relation
         self.n_relations = n_relations
 
         self.dataset = args.dataset
@@ -33,8 +35,8 @@ class RelationAgg(object):
             raise ValueError('unknown aggregator')
 
     def _build_inputs(self):
-        self.entity_pairs = tf.placeholder(dtype=tf.int32, shape=[None, 2], name='entity_pairs')
-        self.relations = tf.placeholder(dtype=tf.int32, shape=[None], name='relations')
+        self.entity_pairs = tf.placeholder(dtype=tf.int32, shape=[self.batch_size, 2], name='entity_pairs')
+        self.relations = tf.placeholder(dtype=tf.int32, shape=[self.batch_size], name='relations')
 
     def _build_model(self):
         if self.relation_feature_mode == 'id':
@@ -49,25 +51,25 @@ class RelationAgg(object):
         else:
             raise ValueError('unknown relation feature mode')
 
-        self.embedding_layer = tf.layers.Dense(self.dim, activation=tf.nn.tanh)
-        self.relation_embeddings = self.embedding_layer(self.relation_features)  # [n_relations, dim]
+        self.emb_mapping = tf.layers.Dense(self.dim, activation=tf.nn.tanh)
+        self.relation_embeddings = self.emb_mapping(self.relation_features)  # [n_relations, dim]
 
-        edges = self._get_neighbors(self.relations, self.entity_pairs)
+        edges_list = self._get_neighbors(self.relations, self.entity_pairs)
         self.aggregators = self._get_aggregators()
-        pred_relation_emb = self._aggregate(edges)  # [batch_size, dim]
+        pred_relation_emb = self._aggregate(edges_list)  # [batch_size, dim]
         pred_relation_emb = tf.expand_dims(pred_relation_emb, 1)  # [batch_size, 1, dim]
         self.scores = tf.reduce_sum(pred_relation_emb * self.relation_embeddings, axis=-1)  # [batch_size, n_relations]
 
     def _get_neighbors(self, relations, entities):
-        edges = [relations]  # the 'relations' servers as a placeholder only
+        edges_list = [relations]  # the 'relations' servers as a placeholder only
         for i in range(self.iteration):
             if i == 0:
                 neighbor_entities = entities
             else:
-                neighbor_entities = tf.reshape(tf.gather(self.edge2entities, edges[-1]), [self.batch_size, -1])
+                neighbor_entities = tf.reshape(tf.gather(self.edge2entities, edges_list[-1]), [self.batch_size, -1])
             neighbor_edges = tf.reshape(tf.gather(self.entity2edges, neighbor_entities), [self.batch_size, -1])
-            edges.append(neighbor_edges)
-        return edges
+            edges_list.append(neighbor_edges)
+        return edges_list
 
     def _get_aggregators(self):
         aggregators = []  # store all aggregators
@@ -84,8 +86,11 @@ class RelationAgg(object):
 
         return aggregators
 
-    def _aggregate(self, edges):
-        edge_vectors = [tf.nn.embedding_lookup(self.relation_embeddings, i) for i in edges]
+    def _aggregate(self, edge_list):
+        edge_vectors = [tf.nn.embedding_lookup(self.relation_embeddings, edge_list[0])]
+        for edges in edge_list[1:]:
+            relations = tf.gather(self.edge2relation, edges)
+            edge_vectors.append(tf.nn.embedding_lookup(self.relation_embeddings, relations))
 
         for i in range(self.iteration):
             aggregator = self.aggregators[i]
@@ -102,9 +107,12 @@ class RelationAgg(object):
     def _build_train(self):
         self.base_loss = tf.reduce_mean(tf.nn.sparse_softmax_cross_entropy_with_logits(labels=self.relations,
                                                                                        logits=self.scores))
-        self.l2_loss = self.embedding_layer.weights  # l2 loss of the embedding layer
+        self.l2_loss = self.emb_mapping.weights  # l2 loss of the embedding layer
         for aggregator in self.aggregators:
             self.l2_loss += tf.nn.l2_loss(aggregator.weights)  # l2 loss of each aggregator
         self.loss = self.base_loss + self.l2_weight * self.l2_loss
 
         self.optimizer = tf.train.AdamOptimizer(self.lr).minimize(self.loss)
+
+    def train(self, sess, feed_dict):
+        return sess.run([self.optimizer, self.loss], feed_dict)

@@ -97,7 +97,7 @@ def process_data(file_name, entity_dict, relation_dict):
         relation_idx = relation_dict[relation]
         tail_idx = entity_dict[tail]
 
-        data.append([head_idx, relation_idx, tail_idx])
+        data.append([head_idx, tail_idx, relation_idx])
     file.close()
 
     data = np.array(data)
@@ -116,4 +116,4 @@ def load_data(args):
     val_data = process_data('../data/' + args.dataset + '/valid.txt', entity_dict, relation_dict)
     test_data = process_data('../data/' + args.dataset + '/test.txt', entity_dict, relation_dict)
 
-    return edge2entities, entity2edges, edge2relation, train_data, val_data, test_data
+    return edge2entities, entity2edges, edge2relation, train_data, val_data, test_data, len(relation_dict)
