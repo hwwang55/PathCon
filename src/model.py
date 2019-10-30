@@ -1,5 +1,6 @@
 import numpy as np
 import tensorflow as tf
+from layers import Dense
 from aggregators import MeanAggregator, ConcatAggregator
 
 
@@ -40,18 +41,21 @@ class RelationAgg(object):
 
     def _build_model(self):
         if self.relation_feature_mode == 'id':
-            self.relation_features = tf.eye(self.n_relations, dtype=tf.float64, name='relation_features')
+            self.relation_features = tf.eye(self.n_relations, dtype=tf.float32, name='relation_features')
+            self.relation_dim = self.n_relations
         elif self.relation_feature_mode == 'bow':
             bow = np.load('../data/' + self.dataset + '/bow.npy')
-            self.relation_features = tf.constant(bow, dtype=tf.float64, name='relation_features')
+            self.relation_features = tf.constant(bow, dtype=tf.float32, name='relation_features')
+            self.relation_dim = bow.shape[1]
         elif self.relation_feature_mode == 'bert-small' or 'bert-large':
             bert = np.load('../data/' + self.dataset + '/' + self.relation_feature_mode + '.npy')
-            self.relation_features = tf.Variable(tf.constant(bert), dtype=tf.float64, trainable=self.fine_tune,
+            self.relation_features = tf.Variable(tf.constant(bert), dtype=tf.float32, trainable=self.fine_tune,
                                                  name='relation_features')
+            self.relation_dim = bert.shape[1]
         else:
             raise ValueError('unknown relation feature mode')
 
-        self.emb_mapping = tf.layers.Dense(self.dim, activation=tf.nn.tanh)
+        self.emb_mapping = Dense(self.relation_dim, self.dim, dropout=self.dropout, name='embedding_mapping')
         self.relation_embeddings = self.emb_mapping(self.relation_features)  # [n_relations, dim]
 
         edges_list = self._get_neighbors(self.relations, self.entity_pairs)
@@ -59,6 +63,7 @@ class RelationAgg(object):
         pred_relation_emb = self._aggregate(edges_list)  # [batch_size, dim]
         pred_relation_emb = tf.expand_dims(pred_relation_emb, 1)  # [batch_size, 1, dim]
         self.scores = tf.reduce_sum(pred_relation_emb * self.relation_embeddings, axis=-1)  # [batch_size, n_relations]
+        self.scores_normalized = tf.sigmoid(self.scores)  # [batch_size, n_relations]
 
     def _get_neighbors(self, relations, entities):
         edges_list = [relations]  # the 'relations' servers as a placeholder only
@@ -107,12 +112,15 @@ class RelationAgg(object):
     def _build_train(self):
         self.base_loss = tf.reduce_mean(tf.nn.sparse_softmax_cross_entropy_with_logits(labels=self.relations,
                                                                                        logits=self.scores))
-        self.l2_loss = self.emb_mapping.weights  # l2 loss of the embedding layer
+        self.l2_loss = tf.nn.l2_loss(self.emb_mapping.weights)  # l2 loss of the embedding layer
         for aggregator in self.aggregators:
-            self.l2_loss += tf.nn.l2_loss(aggregator.weights)  # l2 loss of each aggregator
-        self.loss = self.base_loss + self.l2_weight * self.l2_loss
+            self.l2_loss += self.l2_weight * tf.nn.l2_loss(aggregator.weights)  # l2 loss of each aggregator
+        self.loss = self.base_loss + self.l2_loss
 
         self.optimizer = tf.train.AdamOptimizer(self.lr).minimize(self.loss)
 
     def train(self, sess, feed_dict):
         return sess.run([self.optimizer, self.loss], feed_dict)
+
+    def eval(self, sess, feed_dict):
+        return sess.run(self.scores_normalized, feed_dict)

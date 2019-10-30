@@ -1,16 +1,16 @@
 import tensorflow as tf
 from abc import abstractmethod
 
-LAYER_IDS = {}
+AGGREGATOR_ID = {}
 
 
-def get_layer_id(layer_name=''):
-    if layer_name not in LAYER_IDS:
-        LAYER_IDS[layer_name] = 0
+def get_layer_id(aggregator_name=''):
+    if aggregator_name not in AGGREGATOR_ID:
+        AGGREGATOR_ID[aggregator_name] = 0
         return 0
     else:
-        LAYER_IDS[layer_name] += 1
-        return LAYER_IDS[layer_name]
+        AGGREGATOR_ID[aggregator_name] += 1
+        return AGGREGATOR_ID[aggregator_name]
 
 
 class Aggregator(object):
