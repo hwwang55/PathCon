@@ -1,0 +1,4 @@
+*/checkpoint
+KnowledgeGraphEmbedding/models
+*.npy
+*.log
