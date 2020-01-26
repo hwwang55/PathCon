@@ -5,7 +5,9 @@ from collections import defaultdict
 
 
 def train(args, data):
-    train_neighbors, valid_neighbors, test_neighbors, n_relations = data
+    neighbors, paths, n_relations = data
+    train_neighbors, valid_neighbors, test_neighbors = neighbors
+    train_paths, valid_paths, test_paths = paths
 
     '''
     all_data = np.concatenate([train_data, valid_data, test_data], axis=0)
