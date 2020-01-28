@@ -2,12 +2,19 @@ import tensorflow as tf
 import numpy as np
 from model import MPNN
 from collections import defaultdict
+from utils import sparse_to_tuple
 
 
-def train(args, data):
-    neighbors, paths, n_relations = data
+args = None
+
+
+def train(model_args, data):
+    global args, model, sess
+    args = model_args
+    neighbors, paths, labels, n_relations, params_for_paths = data
     train_neighbors, valid_neighbors, test_neighbors = neighbors
     train_paths, valid_paths, test_paths = paths
+    train_labels, valid_labels, test_labels = labels
 
     '''
     all_data = np.concatenate([train_data, valid_data, test_data], axis=0)
@@ -17,25 +24,29 @@ def train(args, data):
         true_relations[(head, tail)].append(relation)
     '''
 
-    model = MPNN(args, n_relations)
+    model = MPNN(args, n_relations, params_for_paths)
 
     with tf.Session() as sess:
+        print('start training ...')
         sess.run(tf.global_variables_initializer())
 
         for step in range(args.epoch):
             # data shuffling
-            index = np.arange(len(train_neighbors[0]))
+            index = np.arange(len(train_labels))
             np.random.shuffle(index)
-            for i in range(args.iteration + 1):
-                train_neighbors[i] = train_neighbors[i][index]
+            if args.use_ls:
+                for i in range(args.iteration + 1):
+                    train_neighbors[i] = train_neighbors[i][index]
+            if args.use_e2e:
+                train_paths = train_paths[index]
+            train_labels = train_labels[index]
 
             # training
-            start = 0
-            # skip the last incomplete minibatch if its size < batch size
-            while start + args.batch_size <= len(train_neighbors[0]):
+            s = 0
+            while s + args.batch_size <= len(train_labels):
                 _, loss = model.train(
-                    sess, get_feed_dict(model, train_neighbors, start, start + args.batch_size, args.iteration))
-                start += args.batch_size
+                    sess, get_feed_dict(train_neighbors, train_paths, train_labels, s, s + args.batch_size))
+                s += args.batch_size
 
             # evaluation
             '''
@@ -47,26 +58,37 @@ def train(args, data):
             print()
             '''
             print('epoch %d   ' % step, end='')
-            train_acc = evaluate(sess, model, train_neighbors, args.batch_size, args.iteration)
-            valid_acc = evaluate(sess, model, valid_neighbors, args.batch_size, args.iteration)
-            test_acc = evaluate(sess, model, test_neighbors, args.batch_size, args.iteration)
+            train_acc = evaluate(train_neighbors, train_paths, train_labels)
+            valid_acc = evaluate(valid_neighbors, valid_paths, valid_labels)
+            test_acc = evaluate(test_neighbors, test_paths, test_labels)
             print('train acc: %.3f   valid acc: %.3f   test acc: %.3f' % (train_acc, valid_acc, test_acc))
 
 
-def get_feed_dict(model, neighbors, start, end, n_iteration):
+def get_feed_dict(neighbors, paths, labels, start, end):
     feed_dict = {}
-    for i in range(n_iteration + 1):
-        feed_dict[model.neighbors_list[i]] = neighbors[i][start:end]
+
+    if args.use_ls:
+        for i in range(args.iteration + 1):
+            feed_dict[model.neighbors_list[i]] = neighbors[i][start:end]
+
+    if args.use_e2e:
+        if args.path_embedding == 'id':
+            feed_dict[model.path_features] = sparse_to_tuple(paths[start:end])
+        elif args.path_embedding == 'rnn':
+            feed_dict[model.path_ids] = paths[start:end]
+
+    feed_dict[model.labels] = labels[start:end]
+
     return feed_dict
 
 
-def evaluate(sess, model, neighbors, batch_size, n_iteration):
+def evaluate(neighbors, paths, labels):
     acc_list = []
     start = 0
-    while start + batch_size <= len(neighbors[0]):
-        acc = model.eval(sess, get_feed_dict(model, neighbors, start, start + batch_size, n_iteration))
+    while start + args.batch_size <= len(labels):
+        acc = model.eval(sess, get_feed_dict(neighbors, paths, labels, start, start + args.batch_size))
         acc_list.append(acc)
-        start += batch_size
+        start += args.batch_size
     return float(np.mean(acc_list))
 
 

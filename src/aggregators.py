@@ -72,8 +72,12 @@ class ConcatAggregator(Aggregator):
             multiplier = 3 if self_included else 2
             self.weights = tf.get_variable(shape=[self.input_dim * multiplier, self.output_dim],
                                            initializer=tf.contrib.layers.xavier_initializer(),
+                                           dtype=tf.float64,
                                            name='weights')
-            self.bias = tf.get_variable(shape=[self.output_dim], initializer=tf.zeros_initializer(), name='bias')
+            self.bias = tf.get_variable(shape=[self.output_dim],
+                                        initializer=tf.zeros_initializer(),
+                                        dtype=tf.float64,
+                                        name='bias')
 
     def _call(self, self_vectors, entity_vectors):
         # self_vectors: [batch_size, -1, input_dim]
