@@ -187,24 +187,16 @@ class MPNet(object):
     def _aggregate_paths(self, inputs):
         # input shape: [batch_size, path_samples, n_relations]
 
-        if self.path_agg == 'avg':
+        if self.path_agg == 'mean':
             # [batch_size, n_relations]
             output = tf.reduce_mean(inputs, axis=1)
-
-        elif self.path_agg == 'w_avg':
-            self.path_weights = tf.get_variable(shape=[self.n_paths],
-                                                initializer=tf.contrib.layers.xavier_initializer(),
-                                                dtype=tf.float64,
-                                                name='path_weights')
-            path_weights_batch = tf.nn.embedding_lookup(self.path_weights, self.path_ids)  # [batch_size, path_samples]
-            output = self._weighted_average(inputs, path_weights_batch)
-
         elif self.path_agg == 'att':
             assert self.use_gnn
             aggregated_neihbors = tf.expand_dims(self.aggregated_neighbors, axis=1)  # [batch_size, 1, n_relations]
             attention_weights = tf.reduce_sum(aggregated_neihbors * inputs, axis=-1)  # [batch_size, path_samples]
-            output = self._weighted_average(inputs, attention_weights)
-
+            attention_weights = tf.nn.softmax(attention_weights, axis=-1)  # [batch_size, path_samples]
+            attention_weights = tf.expand_dims(attention_weights, axis=-1)  # [batch_size, path_samples, 1]
+            output = tf.reduce_sum(attention_weights * inputs, axis=1)  # [batch_size, n_relations]
         else:
             raise ValueError('unknown path_agg')
 

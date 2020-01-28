@@ -51,15 +51,15 @@ def main():
     # settings for local structure message passing
     parser.add_argument('--use_gnn', type=bool, default=False, help='whether to use local structure message passing')
     parser.add_argument('--neighbor_samples', type=int, default=16, help='number of sampled neighbor edges')
-    parser.add_argument('--gnn_layers', type=int, default=3, help='number of gnn layers')
+    parser.add_argument('--gnn_layers', type=int, default=2, help='number of gnn layers')
     parser.add_argument('--neighbor_agg', type=str, default='concat', help='neighbor aggregator: mean, concat, cross')
 
     # settings for entity2entity message passing
     parser.add_argument('--use_path', type=bool, default=True, help='whether to use entity2entity message passing')
     parser.add_argument('--max_path_len', type=int, default=2, help='max length of a path')
     parser.add_argument('--path_mode', type=str, default='rnn', help='path representation mode: id, rnn')
-    parser.add_argument('--path_samples', type=int, default=4, help='number of sampled paths if using rnn')
-    parser.add_argument('--path_agg', type=str, default='avg', help='path aggregator if using rnn: avg, w_avg, att')
+    parser.add_argument('--path_samples', type=int, default=8, help='number of sampled paths if using rnn')
+    parser.add_argument('--path_agg', type=str, default='mean', help='path aggregator if using rnn: mean, att')
 
     args = parser.parse_args()
     print_setting(args)

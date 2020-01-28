@@ -275,8 +275,8 @@ def sample_paths(train_data, valid_data, test_data):
     for data in [train_data, valid_data, test_data]:
         path_ids_for_data = []
         for paths in data:
-            # TODO: do not consider path frequency
-            path_ids_for_triplet = []
+            # consider path frequency by setting the following variable as a list, otherwise setting this as a set
+            path_ids_for_triplet = set()
 
             for path in paths:
                 path_tuple = tuple(path)
@@ -285,10 +285,11 @@ def sample_paths(train_data, valid_data, test_data):
                     id2length.append(len(path))
                     id2path.append(path + [len(relation_dict)] * (args.max_path_len - len(path)))  # padding
                     n_paths += 1
-                path_ids_for_triplet.append(path2id[path_tuple])
+                path_ids_for_triplet.add(path2id[path_tuple])
 
-            sampled_path_ids_for_triplet = np.random.choice(
-                path_ids_for_triplet, size=args.path_samples, replace=len(path_ids_for_triplet) < args.path_samples)
+            sampled_path_ids_for_triplet = np.random.choice(list(path_ids_for_triplet),
+                                                            size=args.path_samples,
+                                                            replace=len(path_ids_for_triplet) < args.path_samples)
             path_ids_for_data.append(sampled_path_ids_for_triplet)
 
         path_ids_for_data = np.array(path_ids_for_data)
