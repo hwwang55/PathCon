@@ -42,12 +42,12 @@ def process_relations(file_name):
         index, name = line.strip().split('\t')
         d[name] = int(index)
 
-        if args.feature == 'bow':
+        if args.feature_mode == 'bow':
             tokens = re.findall('[a-z]{2,}', name)
             bow.append(' '.join(tokens))
     file.close()
 
-    if args.feature == 'bow':
+    if args.feature_mode == 'bow':
         bow = count_vec.fit_transform(bow)
         np.save('../data/' + args.dataset + '/bow.npy', bow.toarray())
 
@@ -75,13 +75,13 @@ def process_kg(train_data):
     for edge_idx, triplet in enumerate(train_data):
         head_idx, tail_idx, relation_idx = triplet
 
-        if args.use_ls:
+        if args.use_gnn:
             entity2edge_set[head_idx].add(edge_idx)
             entity2edge_set[tail_idx].add(edge_idx)
             edge2entities.append([head_idx, tail_idx])
             edge2relation.append(relation_idx)
 
-        if args.use_e2e:
+        if args.use_path:
             e2re[head_idx].add((relation_idx, tail_idx))
             e2re[tail_idx].add((relation_idx, head_idx))
 
@@ -93,7 +93,7 @@ def process_kg(train_data):
     # edge2relation[null_edge] = null_relation
     # The feature of null_relation is a zero vector. See _build_model() of model.py for details
 
-    if args.use_ls:
+    if args.use_gnn:
         null_entity = len(entity_dict)
         null_relation = len(relation_dict)
         null_edge = len(edge2entities)
@@ -105,8 +105,8 @@ def process_kg(train_data):
                 entity2edge_set[i] = {null_edge}
 
             sampled_neighbors = np.random.choice(list(entity2edge_set[i]),
-                                                 size=args.sample,
-                                                 replace=len(entity2edge_set[i]) < args.sample)
+                                                 size=args.neighbor_samples,
+                                                 replace=len(entity2edge_set[i]) < args.neighbor_samples)
             entity2edges.append(sampled_neighbors)
 
 
@@ -121,7 +121,7 @@ def get_neighbors_for_train(inputs):
     # the first element in edge_list is relations of all triples
     edges_list = [data_np[:, 2]]
 
-    for i in range(args.iteration):
+    for i in range(args.gnn_layers):
         edges_list.append([])
 
     for i, (head, tail, _) in enumerate(data_np):
@@ -131,10 +131,10 @@ def get_neighbors_for_train(inputs):
         row_tail = entity2edges_np[tail]
 
         # replace the two rows (head and tail) with new sampled neighbors
-        entity2edges_np[head] = sample_neighbors(entity2edge_set[head], edge, args.sample)
-        entity2edges_np[tail] = sample_neighbors(entity2edge_set[tail], edge, args.sample)
+        entity2edges_np[head] = sample_neighbors(entity2edge_set[head], edge, args.neighbor_samples)
+        entity2edges_np[tail] = sample_neighbors(entity2edge_set[tail], edge, args.neighbor_samples)
 
-        for j in range(args.iteration):
+        for j in range(args.gnn_layers):
             if j == 0:
                 neighbor_entities = np.array([head, tail])
             else:
@@ -146,11 +146,11 @@ def get_neighbors_for_train(inputs):
         entity2edges_np[head] = row_head
         entity2edges_np[tail] = row_tail
 
-    for i in range(args.iteration):
+    for i in range(args.gnn_layers):
         edges_list[i + 1] = np.array(edges_list[i + 1])
 
     # map each edge to its relation type
-    for i in range(args.iteration):
+    for i in range(args.gnn_layers):
         edges_list[i + 1] = edge2relation_np[edges_list[i + 1]]
 
     return edges_list, pid
@@ -164,7 +164,7 @@ def get_neighbors_for_train_with_mp(data):
 
     # sort the results by pid to make sure that train data preserve the original order
     sorted_results = sorted(results, key=lambda x: x[1])
-    edges_list = [np.concatenate([j[i] for j, _ in sorted_results], axis=0) for i in range(args.iteration + 1)]
+    edges_list = [np.concatenate([j[i] for j, _ in sorted_results], axis=0) for i in range(args.gnn_layers + 1)]
 
     return edges_list
 
@@ -178,7 +178,7 @@ def get_neighbors_for_eval(data):
     # the first element in edge_list is relations of all triples
     edges_list = [data_np[:, 2]]
 
-    for i in range(args.iteration):
+    for i in range(args.gnn_layers):
         if i == 0:
             neighbor_entities = data_np[:, 0:2]
         else:
@@ -187,7 +187,7 @@ def get_neighbors_for_eval(data):
         edges_list.append(neighbor_edges)
 
     # map each edge to its relation type
-    for i in range(args.iteration):
+    for i in range(args.gnn_layers):
         edges_list[i + 1] = edge2relation_np[edges_list[i + 1]]
 
     return edges_list
@@ -259,7 +259,7 @@ def bfs(head, tail, relation, flag):
         paths.append([relation])
 
     # if using rnn and no path is found for the triplet, put a empty path into paths
-    if args.path_embedding == 'rnn' and len(paths) == 0:
+    if args.path_mode == 'rnn' and len(paths) == 0:
         paths.append([])
 
     return paths
@@ -288,13 +288,13 @@ def sample_paths(train_data, valid_data, test_data):
                 path_ids_for_triplet.append(path2id[path_tuple])
 
             sampled_path_ids_for_triplet = np.random.choice(
-                path_ids_for_triplet, size=args.p_sample, replace=len(path_ids_for_triplet) < args.p_sample)
+                path_ids_for_triplet, size=args.path_samples, replace=len(path_ids_for_triplet) < args.path_samples)
             path_ids_for_data.append(sampled_path_ids_for_triplet)
 
         path_ids_for_data = np.array(path_ids_for_data)
         res.append(path_ids_for_data)
 
-    return res, id2path, id2length
+    return res, n_paths, id2path, id2length
 
 
 def load_data(model_args):
@@ -314,7 +314,7 @@ def load_data(model_args):
     print('processing the knowledge graph ...')
     process_kg(train_data)
 
-    if args.use_ls:
+    if args.use_gnn:
         print('sampling neighbor edges ...')
 
         use_mp = False
@@ -332,7 +332,7 @@ def load_data(model_args):
 
     params_for_paths = []
 
-    if args.use_e2e:
+    if args.use_path:
         print('counting paths from head to tail ...')
         train_set = set(train_data)
 
@@ -346,14 +346,14 @@ def load_data(model_args):
             valid_paths, _ = count_paths((train_set, valid_data, 0))
             test_paths, _ = count_paths((train_set, test_data, 0))
 
-        if args.path_embedding == 'id':
+        if args.path_mode == 'id':
             print('transforming paths to one hot IDs ...')
             paths, n_paths = one_hot_path_id(train_paths, valid_paths, test_paths)
             params_for_paths.append(n_paths)
-        elif args.path_embedding == 'rnn':
+        elif args.path_mode == 'rnn':
             print('sampling paths ...')
-            paths, id2path, id2length = sample_paths(train_paths, valid_paths, test_paths)
-            params_for_paths.extend([id2path, id2length])
+            paths, n_paths, id2path, id2length = sample_paths(train_paths, valid_paths, test_paths)
+            params_for_paths.extend([n_paths, id2path, id2length])
         else:
             raise ValueError('unknown path embedding mode')
     else:

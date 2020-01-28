@@ -1,6 +1,6 @@
 import tensorflow as tf
 import numpy as np
-from model import MPNN
+from model import MPNet
 from collections import defaultdict
 from utils import sparse_to_tuple
 
@@ -24,7 +24,7 @@ def train(model_args, data):
         true_relations[(head, tail)].append(relation)
     '''
 
-    model = MPNN(args, n_relations, params_for_paths)
+    model = MPNet(args, n_relations, params_for_paths)
 
     with tf.Session() as sess:
         print('start training ...')
@@ -34,10 +34,10 @@ def train(model_args, data):
             # data shuffling
             index = np.arange(len(train_labels))
             np.random.shuffle(index)
-            if args.use_ls:
-                for i in range(args.iteration + 1):
+            if args.use_gnn:
+                for i in range(args.gnn_layers + 1):
                     train_neighbors[i] = train_neighbors[i][index]
-            if args.use_e2e:
+            if args.use_path:
                 train_paths = train_paths[index]
             train_labels = train_labels[index]
 
@@ -67,14 +67,14 @@ def train(model_args, data):
 def get_feed_dict(neighbors, paths, labels, start, end):
     feed_dict = {}
 
-    if args.use_ls:
-        for i in range(args.iteration + 1):
+    if args.use_gnn:
+        for i in range(args.gnn_layers + 1):
             feed_dict[model.neighbors_list[i]] = neighbors[i][start:end]
 
-    if args.use_e2e:
-        if args.path_embedding == 'id':
+    if args.use_path:
+        if args.path_mode == 'id':
             feed_dict[model.path_features] = sparse_to_tuple(paths[start:end])
-        elif args.path_embedding == 'rnn':
+        elif args.path_mode == 'rnn':
             feed_dict[model.path_ids] = paths[start:end]
 
     feed_dict[model.labels] = labels[start:end]
