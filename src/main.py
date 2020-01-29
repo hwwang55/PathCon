@@ -3,7 +3,7 @@ from data_loader import load_data
 from train import train
 import os
 
-os.environ['CUDA_VISIBLE_DEVICES'] = '1'
+os.environ['CUDA_VISIBLE_DEVICES'] = '2'
 os.environ['TF_CPP_MIN_LOG_LEVEL'] = '1'
 
 
@@ -51,7 +51,7 @@ def main():
     parser.add_argument('--use_gnn', type=bool, default=True, help='whether to use local structure message passing')
     parser.add_argument('--neighbor_samples', type=int, default=16, help='number of sampled neighbor edges')
     parser.add_argument('--gnn_layers', type=int, default=3, help='number of gnn layers')
-    parser.add_argument('--neighbor_agg', type=str, default='cross', help='neighbor aggregator: mean, concat, cross')
+    parser.add_argument('--neighbor_agg', type=str, default='concat', help='neighbor aggregator: mean, concat, cross')
 
     # settings for entity2entity message passing
     parser.add_argument('--use_path', type=bool, default=True, help='whether to use entity2entity message passing')
