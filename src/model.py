@@ -70,7 +70,6 @@ class MPNet(object):
             self._build_relation_feature()
 
         self.scores = 0.0
-        #self.scores_normalized = tf.sigmoid(self.scores)  # [batch_size, n_relations]
 
         if self.use_gnn:
             self.aggregators = self._get_neighbor_aggregators()  # define aggregators for each layer
@@ -85,6 +84,9 @@ class MPNet(object):
             elif self.path_mode == 'rnn':
                 rnn_output = self._rnn()  # [batch_size, path_samples, n_relations]
                 self.scores += self._aggregate_paths(rnn_output)
+
+        # narrow the range of scores to [0, 1] for the ease of calculating ranking-based metrics
+        self.scores_normalized = tf.sigmoid(self.scores)
 
     def _build_relation_feature(self):
         # the feature of the last relation (the null relation) is a zero vector
@@ -224,5 +226,4 @@ class MPNet(object):
         return sess.run([self.optimizer, self.loss], feed_dict)
 
     def eval(self, sess, feed_dict):
-        #return sess.run(self.scores_normalized, feed_dict)
-        return sess.run(self.acc, feed_dict)
+        return sess.run([self.acc, self.scores_normalized], feed_dict)

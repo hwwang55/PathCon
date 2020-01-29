@@ -308,24 +308,24 @@ def load_data(model_args):
     relation_dict = process_relations(directory + 'relations.dict')
 
     print('reading train, validation, and test data ...')
-    train_data = process_data(directory + 'train.txt')
-    valid_data = process_data(directory + 'valid.txt')
-    test_data = process_data(directory + 'test.txt')
+    train_triplets = process_data(directory + 'train.txt')
+    valid_triplets = process_data(directory + 'valid.txt')
+    test_triplets = process_data(directory + 'test.txt')
 
     print('processing the knowledge graph ...')
-    process_kg(train_data)
+    process_kg(train_triplets)
 
     if args.use_gnn:
         print('sampling neighbor edges ...')
 
         use_mp = False
         if use_mp:
-            train_neighbors = get_neighbors_for_train_with_mp(train_data)
+            train_neighbors = get_neighbors_for_train_with_mp(train_triplets)
         else:
-            train_neighbors, _ = get_neighbors_for_train((train_data, 0, 0))
+            train_neighbors, _ = get_neighbors_for_train((train_triplets, 0, 0))
 
-        valid_neighbors = get_neighbors_for_eval(valid_data)
-        test_neighbors = get_neighbors_for_eval(test_data)
+        valid_neighbors = get_neighbors_for_eval(valid_triplets)
+        test_neighbors = get_neighbors_for_eval(test_triplets)
 
         neighbors = [train_neighbors, valid_neighbors, test_neighbors]
     else:
@@ -335,17 +335,17 @@ def load_data(model_args):
 
     if args.use_path:
         print('counting paths from head to tail ...')
-        train_set = set(train_data)
+        train_set = set(train_triplets)
 
         use_mp = False
         if use_mp:
-            train_paths = count_paths_with_mp(train_set, train_data)
-            valid_paths = count_paths_with_mp(train_set, valid_data)
-            test_paths = count_paths_with_mp(train_set, test_data)
+            train_paths = count_paths_with_mp(train_set, train_triplets)
+            valid_paths = count_paths_with_mp(train_set, valid_triplets)
+            test_paths = count_paths_with_mp(train_set, test_triplets)
         else:
-            train_paths, _ = count_paths((train_set, train_data, 0))
-            valid_paths, _ = count_paths((train_set, valid_data, 0))
-            test_paths, _ = count_paths((train_set, test_data, 0))
+            train_paths, _ = count_paths((train_set, train_triplets, 0))
+            valid_paths, _ = count_paths((train_set, valid_triplets, 0))
+            test_paths, _ = count_paths((train_set, test_triplets, 0))
 
         if args.path_mode == 'id':
             print('transforming paths to one hot IDs ...')
@@ -360,8 +360,10 @@ def load_data(model_args):
     else:
         paths = [None] * 3
 
-    labels = [np.array([triplet[2] for triplet in train_data]),
-              np.array([triplet[2] for triplet in valid_data]),
-              np.array([triplet[2] for triplet in test_data])]
+    triplets = [train_triplets, valid_triplets, test_triplets]
 
-    return neighbors, paths, labels, len(relation_dict), params_for_paths
+    labels = [np.array([triplet[2] for triplet in train_triplets]),
+              np.array([triplet[2] for triplet in valid_triplets]),
+              np.array([triplet[2] for triplet in test_triplets])]
+
+    return triplets, neighbors, paths, labels, len(relation_dict), params_for_paths
