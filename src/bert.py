@@ -11,7 +11,7 @@ from bert_serving.client import BertClient
 
 if __name__ == '__main__':
     parser = argparse.ArgumentParser()
-    parser.add_argument('-d', type=str, default='wn18rr', help='which dataset to preprocess')
+    parser.add_argument('-d', type=str, default='NELL995', help='which dataset to preprocess')
     args = parser.parse_args()
     dataset = args.d
 

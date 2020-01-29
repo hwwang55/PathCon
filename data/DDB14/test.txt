@@ -1,0 +1,4000 @@
+13905	may cause	725
+33066	may cause	30700
+2020	may cause	3742
+12148	may cause	29379
+11346	may cause	6764
+32333	belong(s) to the category of	29076
+31810	belongs to the drug family of	31017
+10854	may cause	13657
+1784	may cause	18924
+8344	belongs to drug super-family	32440
+4766	may cause	16940
+35298	may be allelic with	33581
+31946	may cause	4509
+17	may cause	7305
+29217	belong(s) to the category of	28857
+3726	belongs to the drug family of	29481
+8937	may cause	21885
+34796	may cause	6469
+31446	may cause	6239
+5245	may cause	19635
+34311	belongs to the drug family of	31630
+36580	belongs to the drug family of	36579
+29562	belong(s) to the category of	29546
+34808	may cause	23092
+29503	may cause	33955
+29651	may cause	30605
+5435	may cause	34799
+31217	may cause	29354
+34918	belong(s) to the category of	28803
+7698	may cause	27875
+10248	may cause	4461
+1351	belong(s) to the category of	28813
+36583	may cause	23053
+31164	may cause	18639
+32201	may cause	4509
+32581	may cause	4894
+29094	may cause	4015
+33103	belong(s) to the category of	28813
+34817	may cause	11288
+11155	may cause	9820
+32455	may cause	14843
+6483	may cause	8817
+33267	is a subtype of	29086
+31576	is a risk factor for	33713
+30770	belong(s) to the category of	28857
+33629	may cause	29214
+34700	may cause	33955
+31978	may cause	2869
+5267	may cause	25831
+11068	may cause	12116
+34552	may cause	33577
+34495	may cause	33267
+4788	may cause	18165
+30055	may cause	5581
+694	may cause	672
+11124	may cause	5534
+14176	may cause	5245
+34676	belongs to the drug family of	34013
+29491	belong(s) to the category of	28803
+325	may cause	29507
+33970	may cause	11620
+49756	belongs to the drug family of	31168
+33089	belongs to the drug family of	31630
+32793	may cause	2592
+34586	belong(s) to the category of	28813
+31425	may cause	6646
+5406	may cause	21929
+29981	belong(s) to the category of	28813
+19186	may cause	29214
+30318	belongs to the drug family of	29481
+36650	may cause	35190
+5452	may cause	26200
+33609	may cause	14638
+34141	may cause	14638
+30111	may cause	3218
+30527	belongs to the drug family of	34188
+9002	is a risk factor for	7616
+12988	may cause	14843
+34314	belongs to the drug family of	34315
+32550	belong(s) to the category of	29076
+10262	may cause	6330
+4777	is a risk factor for	4366
+1145	may cause	16101
+7070	may cause	24638
+6283	may cause	29048
+32098	belong(s) to the category of	28856
+29572	may cause	4466
+9730	may cause	22143
+33377	may cause	13567
+26200	belong(s) to the category of	28807
+31094	may cause	4033
+29055	belong(s) to the category of	28806
+5302	may cause	6226
+30037	belong(s) to the category of	28813
+8412	may cause	6764
+56785	belong(s) to the category of	28801
+31892	may cause	32487
+32807	may cause	3043
+32226	may cause	24248
+34928	belong(s) to the category of	28803
+9148	belong(s) to the category of	28856
+5765	may cause	8716
+2938	may cause	8817
+7518	interacts with	9933
+12069	may cause	1517
+29797	may cause	22225
+9677	interacts with	3620
+29745	belongs to the drug family of	31895
+30813	may cause	28256
+11841	may cause	4466
+33165	belong(s) to the category of	28813
+1876	belong(s) to the category of	28809
+4200	belong(s) to the category of	28834
+6942	may cause	8994
+10780	may cause	19635
+33110	belong(s) to the category of	28813
+29933	may cause	32479
+29372	may cause	7692
+30006	belong(s) to the category of	28813
+4630	may cause	4328
+1873	belong(s) to the category of	28838
+2829	may cause	17239
+34841	belong(s) to the category of	28813
+9351	may cause	29870
+29355	may cause	29680
+35286	belong(s) to the category of	28803
+11263	may cause	3637
+36646	belong(s) to the category of	28813
+29435	belong(s) to the category of	33484
+4540	see also	3000
+12628	is a risk factor for	11396
+34717	may cause	22895
+34824	may cause	5534
+31918	may cause	19825
+1075	may cause	18561
+36466	belongs to the drug family of	31168
+9202	may cause	32488
+32882	may cause	29145
+33503	may cause	23092
+33678	may cause	19674
+31196	belongs to the drug family of	31189
+1897	may cause	26839
+34515	may cause	2137
+29032	may cause	25831
+32948	belong(s) to the category of	28803
+32520	may cause	29330
+8131	may cause	29284
+9303	may cause	5578
+33578	may cause	4509
+19587	is a subtype of	29337
+5821	may cause	17472
+10122	is a subtype of	29457
+6974	may cause	2999
+31089	may cause	3218
+16662	belong(s) to the category of	28856
+31345	may cause	11080
+9231	belongs to the drug family of	32197
+29212	is a risk factor for	222
+35223	belong(s) to the category of	28803
+30576	belong(s) to the category of	28813
+8847	may cause	8716
+12155	is a risk factor for	31339
+4875	belong(s) to the category of	28813
+33228	may cause	14367
+31703	belong(s) to the category of	28813
+34411	may cause	6239
+10521	may cause	9385
+7565	may cause	5728
+33282	belong(s) to the category of	28811
+11205	may cause	402
+31247	may cause	27852
+7431	see also	203
+36411	is a subtype of	3160
+34682	belong(s) to the category of	28803
+29455	belong(s) to the category of	28856
+6187	may cause	15639
+29953	belong(s) to the category of	28813
+36565	belongs to the drug family of	31168
+33840	may cause	15237
+31777	belong(s) to the category of	31740
+35256	belong(s) to the category of	28808
+3661	may cause	7306
+30846	belongs to the drug family of	29779
+29717	may cause	5578
+9748	may cause	4021
+32145	may cause	24853
+7022	may cause	6242
+32469	may cause	26030
+33863	is a risk factor for	34340
+34731	see also	985
+32825	may cause	32826
+409	may cause	24638
+34954	belong(s) to the category of	28854
+9991	interacts with	12873
+59823	may cause	1777
+4442	belong(s) to the category of	28860
+29377	may cause	20204
+12782	may cause	6853
+11124	may cause	27522
+10331	may cause	22895
+12069	may cause	20061
+3427	may cause	946
+13743	may cause	13038
+33912	may cause	26030
+33805	may cause	12134
+30986	belong(s) to the category of	28813
+6023	may cause	29486
+12602	may cause	6469
+31291	may cause	36525
+32665	may cause	3218
+7464	may cause	10424
+10512	is a subtype of	7038
+32263	may cause	16118
+33182	may cause	2627
+10545	may contraindicate	30302
+9896	may cause	13582
+33748	belong(s) to the category of	28813
+171	may contraindicate	4568
+36488	may cause	2218
+29535	may cause	26060
+33589	belong(s) to the category of	28806
+30046	may cause	27522
+12069	may cause	14367
+5705	may cause	5245
+30794	may cause	9241
+12916	belong(s) to the category of	28803
+12744	may cause	24405
+12289	belong(s) to the category of	28825
+30646	belong(s) to the category of	28813
+9814	belong(s) to the category of	28813
+35161	may cause	9266
+4697	may cause	13980
+13037	is a subtype of	29151
+29587	may cause	28833
+29891	is a risk factor for	9392
+32766	may cause	29398
+14025	may cause	3218
+4678	is a risk factor for	9392
+33575	may cause	32598
+31300	may cause	2179
+1450	may cause	24638
+31217	may cause	29892
+11288	may cause	16940
+3303	may cause	29445
+13983	may cause	14765
+11106	belongs to the drug family of	31187
+3101	may cause	30737
+33153	belong(s) to the category of	29546
+13703	belongs to the drug family of	29550
+31482	belong(s) to the category of	28843
+10811	may cause	29777
+32747	may cause	21064
+23092	is a subtype of	29484
+3961	see also	12263
+32485	may cause	2729
+32508	belong(s) to the category of	28825
+32046	may cause	28555
+14030	may cause	35201
+12873	may cause	2137
+5841	may cause	30734
+33869	may cause	2218
+6959	may cause	20061
+32107	may cause	15823
+35266	may cause	22652
+29318	may cause	6444
+30031	may cause	6870
+203	may cause	21506
+13415	may cause	22225
+31429	see also	33819
+32165	may cause	8994
+2837	may cause	31141
+32732	belong(s) to the category of	28838
+11093	may cause	15503
+2410	may cause	8994
+6750	may cause	14843
+30643	may cause	22832
+35014	may cause	3742
+171	may cause	9849
+34764	may cause	2549
+34323	may cause	29435
+31573	may cause	26060
+1617	may contraindicate	2003
+34323	belongs to the drug family of	34324
+32835	may cause	27522
+14096	may cause	22832
+13939	belongs to the drug family of	29547
+31022	belong(s) to the category of	28813
+14198	may cause	24609
+8288	may cause	5578
+9043	may cause	25831
+31860	may cause	6445
+30098	belongs to the drug family of	30589
+11155	may cause	22225
+9807	may cause	6431
+4724	belong(s) to the category of	28838
+31591	belong(s) to the category of	28813
+30766	may cause	36408
+32099	interacts with	30664
+32455	may cause	33013
+29746	may cause	17239
+56775	may cause	6226
+30379	belong(s) to the category of	28813
+13651	may cause	10424
+32065	see also	5444
+29161	may cause	29159
+36464	belong(s) to the category of	28801
+12769	may cause	22832
+11442	belong(s) to the category of	28828
+33334	may cause	22652
+8575	may cause	8716
+58797	may cause	37707
+8732	belong(s) to the category of	28801
+12635	may cause	16345
+31485	may cause	28056
+10956	may cause	29456
+36515	belongs to the drug family of	31701
+11288	may cause	6301
+10077	may cause	17379
+12236	may cause	6890
+30647	belong(s) to the category of	28813
+29827	may cause	6397
+34470	may cause	30033
+34927	may cause	8994
+57789	may cause	29421
+33965	belong(s) to the category of	29546
+14241	may cause	12136
+32373	may cause	15892
+29733	may cause	12013
+8314	may cause	3207
+14141	may cause	18724
+31024	belong(s) to the category of	28813
+7503	may cause	22543
+32491	may cause	19825
+1914	may cause	31112
+6155	belong(s) to the category of	28854
+31486	may cause	34903
+9539	belong(s) to the category of	28834
+2433	may cause	8100
+7070	may cause	2729
+30499	may cause	10470
+21873	belong(s) to the category of	28856
+12013	is a subtype of	17332
+33338	may cause	20061
+34018	may cause	24182
+13731	may cause	7772
+34834	is a risk factor for	7547
+31296	is a subtype of	3110
+30070	may cause	20008
+33314	belong(s) to the category of	28838
+33054	may cause	10811
+29586	belong(s) to the category of	28834
+36472	belong(s) to the category of	28813
+58809	is a risk factor for	3800
+3218	belong(s) to the category of	28811
+7189	may cause	6443
+4366	belong(s) to the category of	28844
+4432	belong(s) to the category of	28806
+30189	may cause	24048
+9313	belong(s) to the category of	28812
+36500	belong(s) to the category of	28803
+30914	belong(s) to the category of	28856
+33893	belong(s) to the category of	28813
+30009	belongs to the drug family of	35091
+31597	belongs to the drug family of	29566
+32019	may cause	33606
+29877	belong(s) to the category of	28803
+32498	belong(s) to the category of	28857
+3765	belong(s) to the category of	28825
+32518	belongs to the drug family of	10707
+10545	may cause	6227
+29273	belong(s) to the category of	32967
+10545	may contraindicate	30419
+32562	may cause	3066
+36606	belong(s) to the category of	28803
+30631	belong(s) to the category of	28860
+92	is a subtype of	87
+34716	may cause	13095
+33968	belong(s) to the category of	28801
+53767	belongs to the drug family of	34239
+29218	may cause	402
+31643	belongs to the drug family of	31550
+8937	may cause	31496
+35131	may cause	3218
+3589	may cause	33439
+33925	is a vector for	36320
+34278	is a risk factor for	11245
+1039	may cause	13253
+29146	may cause	21417
+30614	belong(s) to the category of	29546
+37704	belongs to the drug family of	29560
+13831	may cause	23260
+10107	may cause	1416
+32841	belong(s) to the category of	28801
+29389	belong(s) to the category of	28856
+4540	may cause	22464
+5124	may cause	9820
+844	may cause	27303
+32072	belong(s) to the category of	28813
+36316	may cause	22629
+14246	may cause	9850
+7464	may cause	10605
+35278	may cause	27522
+7226	may cause	16662
+29725	is a subtype of	5534
+4269	may cause	29
+12507	may cause	11141
+5906	may cause	22479
+29914	is a risk factor for	1264
+12128	interacts with	30043
+29057	may cause	16537
+35229	belong(s) to the category of	28854
+29438	belong(s) to the category of	28857
+4328	belong(s) to the category of	28825
+34978	may cause	10703
+34660	may cause	4629
+35107	may cause	29876
+42739	belong(s) to the category of	28813
+35169	see also	12668
+29765	belong(s) to the category of	28852
+5969	may cause	20389
+36417	belong(s) to the category of	28811
+31929	may cause	22751
+35008	is a risk factor for	3056
+29920	may cause	12134
+36399	belong(s) to the category of	28813
+33992	belong(s) to the category of	28801
+34748	belongs to the drug family of	30531
+30433	belongs to the drug family of	34093
+29940	belong(s) to the category of	28813
+9725	may cause	28833
+1118	may cause	724
+9058	may cause	29642
+31207	belong(s) to the category of	28813
+33921	belong(s) to the category of	35202
+32155	may cause	6123
+33158	belong(s) to the category of	28813
+32692	belongs to the drug family of	36349
+1498	may cause	7480
+31947	belong(s) to the category of	28801
+29889	may cause	10998
+2802	may cause	29284
+34769	may cause	21885
+20061	may cause	14701
+30924	may cause	17880
+792	may cause	11445
+35138	may cause	8994
+32001	belong(s) to the category of	28857
+10685	belongs to the drug family of	29533
+1065	may cause	18165
+31447	may cause	29398
+33429	may cause	19825
+29329	may cause	25466
+29263	belongs to the drug family of	33824
+31774	may cause	11960
+36495	belongs to the drug family of	31630
+29645	is a subtype of	28256
+519	may cause	31111
+33051	may cause	4328
+29290	belong(s) to the category of	28857
+35188	is a risk factor for	203
+33815	may cause	5402
+35132	may cause	25466
+29537	may cause	7677
+35251	may cause	11104
+32889	belong(s) to the category of	28858
+30757	may cause	1777
+4522	may cause	12375
+13139	may cause	6431
+34048	belong(s) to the category of	28803
+34911	belong(s) to the category of	28801
+33453	may cause	4509
+30880	belong(s) to the category of	28813
+8628	may cause	21885
+7378	may cause	29145
+31365	may cause	21207
+54773	may cause	13052
+33213	belong(s) to the category of	28813
+30193	belongs to the drug family of	29481
+529	may cause	24024
+36357	is a risk factor for	8604
+34962	belong(s) to the category of	28813
+33609	may cause	29214
+37700	may cause	11472
+29938	may cause	8817
+4334	may cause	22751
+29214	belong(s) to the category of	28857
+844	belong(s) to the category of	28808
+1645	may cause	4021
+34682	may cause	26861
+34584	may cause	10477
+30068	may cause	16756
+35260	is a risk factor for	7616
+1275	may cause	26839
+32833	may cause	2874
+880	may cause	8817
+33521	belong(s) to the category of	28801
+30216	may cause	29284
+33115	may cause	26380
+21432	belong(s) to the category of	28807
+28842	is a category subset of	28841
+31346	may cause	28886
+823	may cause	29459
+32201	may cause	21417
+6666	belong(s) to the category of	28857
+1642	may cause	6539
+30400	may cause	14638
+31902	may cause	4033
+10545	is a risk factor for	4410
+32414	belong(s) to the category of	28813
+36509	belong(s) to the category of	28857
+34004	may cause	15237
+4824	may cause	29455
+11845	may cause	15801
+32168	may cause	5728
+2179	belong(s) to the category of	28856
+33108	may cause	24638
+29901	may cause	30532
+3166	may cause	20872
+35132	may cause	29623
+31981	belong(s) to the category of	28854
+30495	belongs to the drug family of	30496
+35040	belongs to the drug family of	35195
+33820	is associated with	3661
+29506	may cause	13905
+10545	may contraindicate	6942
+29277	may cause	9148
+5220	may cause	16662
+2975	belong(s) to the category of	28843
+31120	may cause	14367
+5303	may cause	2729
+69	belongs to the drug family of	34214
+29724	may cause	27522
+7984	may cause	32198
+30602	belongs to the drug family of	3137
+2322	may cause	12134
+33279	may cause	27742
+30505	belong(s) to the category of	28813
+8312	may cause	34800
+3266	may cause	12136
+34117	see also	34095
+34756	belong(s) to the category of	28813
+33713	may cause	14326
+13960	interacts with	29943
+35130	belongs to the drug family of	34015
+34497	may cause	2156
+29990	belong(s) to the category of	28813
+29651	may cause	37707
+34526	may cause	34044
+31125	belong(s) to the category of	28809
+33936	may cause	20061
+34295	may cause	11080
+588	belongs to the drug family of	30493
+2247	may cause	17942
+8905	may cause	6534
+9912	may cause	12135
+7518	may cause	8817
+34757	may cause	5375
+10545	may contraindicate	30549
+10988	belong(s) to the category of	29073
+33242	may cause	16537
+29525	belongs to the drug family of	29533
+29541	may cause	10207
+31587	belong(s) to the category of	28813
+34242	belongs to the drug family of	15141
+8389	may cause	18756
+35108	may cause	5728
+36423	belongs to the drug family of	8975
+8616	may cause	15503
+4153	is a risk factor for	29
+35154	may cause	11623
+1161	may cause	6539
+36458	belongs to the drug family of	35014
+1984	may cause	27381
+30306	may cause	13052
+33933	belongs to the drug family of	30573
+36329	belong(s) to the category of	28801
+32447	may cause	7677
+30042	interacts with	3321
+34425	belong(s) to the category of	29076
+33688	may cause	30699
+34631	may cause	27591
+32438	belong(s) to the category of	29546
+30761	belong(s) to the category of	28825
+6765	may cause	24024
+29707	may cause	12384
+36459	may cause	19635
+13824	interacts with	7518
+2505	may cause	9539
+34690	may cause	18756
+36540	see also	5901
+36362	belongs to the drug family of	31630
+37689	may cause	25320
+10319	may cause	36542
+1578	may cause	2861
+33112	belongs to the drug family of	30812
+32636	may cause	14901
+36651	is a risk factor for	11485
+2247	may cause	6330
+29145	belong(s) to the category of	28807
+12390	is a subtype of	1
+6558	may cause	10832
+8716	may cause	21915
+31863	belong(s) to the category of	28806
+11954	may cause	29168
+11941	may cause	3066
+20008	is a subtype of	29396
+33094	belongs to the drug family of	29560
+32683	may cause	29328
+3971	may cause	29214
+10545	may contraindicate	31006
+34984	is a subtype of	22056
+33932	belong(s) to the category of	28801
+11950	may cause	2874
+30925	belong(s) to the category of	28813
+7776	may contraindicate	32480
+34413	may cause	4509
+30341	belongs to the drug family of	29481
+30485	belongs to the drug family of	4610
+4033	may cause	14367
+10545	may contraindicate	35155
+32216	may cause	32042
+32854	belongs to the drug family of	32855
+3314	may cause	19011
+34386	belong(s) to the category of	28803
+27801	belong(s) to the category of	28856
+6913	may cause	3742
+7121	may cause	32712
+32692	may cause	20061
+35106	may cause	24048
+29900	belong(s) to the category of	28811
+34306	belongs to the drug family of	35018
+35020	belong(s) to the category of	28856
+6974	interacts with	1984
+31481	belong(s) to the category of	28813
+34499	may cause	18665
+29192	belongs to the drug family of	30969
+31153	belong(s) to the category of	28808
+35023	may cause	6330
+2505	may cause	7565
+29442	belong(s) to the category of	28857
+29698	is a subtype of	28483
+34604	belongs to the drug family of	33999
+32289	belong(s) to the category of	29076
+34829	may be allelic with	34351
+29222	may cause	29727
+859	may cause	8902
+171	may contraindicate	512
+29473	may cause	14701
+32849	interacts with	31477
+32371	may cause	8603
+49757	belongs to the drug family of	35014
+1442	may cause	6870
+12026	may cause	7698
+13657	may cause	18003
+5406	may cause	10439
+8288	may cause	9474
+36370	may cause	35124
+11980	may cause	9320
+9392	may cause	29282
+29991	may cause	14638
+3266	may cause	18327
+36572	may cause	15409
+30301	belongs to the drug family of	29548
+31949	is a risk factor for	34033
+32101	may be allelic with	34707
+30268	belongs to the drug family of	30531
+4484	may cause	4466
+394	may cause	26184
+34294	may cause	2592
+31284	may cause	2999
+32597	may cause	29414
+34765	belong(s) to the category of	28801
+34695	may cause	2218
+3111	belong(s) to the category of	28828
+36338	belong(s) to the category of	28854
+36390	may cause	8068
+11288	may cause	18703
+4478	interacts with	14043
+8515	may cause	7678
+8116	may cause	2729
+30392	belongs to the drug family of	28871
+35112	see also	35111
+29828	may cause	31642
+11563	may cause	17239
+30759	may cause	28364
+33747	belongs to the drug family of	35018
+34619	belong(s) to the category of	28813
+29458	is a subtype of	29457
+6087	may cause	14556
+859	may cause	29577
+36442	may cause	11346
+29183	belong(s) to the category of	28813
+32505	belong(s) to the category of	28813
+32274	belong(s) to the category of	29076
+33878	may cause	36592
+2860	is a subtype of	28256
+14194	may cause	11346
+35108	may cause	27522
+7013	belong(s) to the category of	28828
+3957	may cause	6623
+29956	interacts with	4875
+29399	belong(s) to the category of	28856
+35113	see also	31206
+29203	belongs to the drug family of	30537
+705	may cause	24405
+6534	see also	31324
+11719	may cause	22225
+6160	may cause	10825
+27369	belong(s) to the category of	28856
+33175	belong(s) to the category of	28854
+34006	may cause	29330
+34971	belong(s) to the category of	28813
+29239	may cause	2197
+35233	may cause	6348
+33539	may cause	20521
+35035	may cause	24048
+33601	belong(s) to the category of	28813
+1889	belongs to the drug family of	31542
+34140	belong(s) to the category of	28811
+36447	may cause	29145
+14245	interacts with	985
+32918	may cause	6187
+13415	may cause	3066
+35019	belong(s) to the category of	28801
+29863	belongs to the drug family of	29568
+29366	belong(s) to the category of	28856
+31803	belongs to the drug family of	32197
+31148	may cause	24182
+2320	belong(s) to the category of	28828
+6788	belong(s) to the category of	28844
+32713	may cause	16940
+30051	belong(s) to the category of	28803
+1816	may cause	24638
+171	may cause	6706
+13433	may cause	36592
+29151	belong(s) to the category of	28856
+13606	may cause	1777
+33587	may cause	33577
+8204	belong(s) to the category of	29073
+32811	may cause	4033
+29936	is a risk factor for	2820
+32613	belong(s) to the category of	28848
+13415	may cause	11620
+4131	is associated with	13567
+30629	belong(s) to the category of	28813
+35229	may cause	2874
+17379	belong(s) to the category of	28856
+31528	may cause	16940
+11445	belong(s) to the category of	28857
+31276	is a subtype of	11416
+8515	may cause	26060
+30412	may cause	26877
+29694	belongs to the drug family of	34542
+1598	may cause	15788
+10139	belong(s) to the category of	28856
+1914	may cause	18924
+11849	may cause	25810
+5490	may cause	24638
+30939	may cause	11017
+35176	belong(s) to the category of	28857
+29839	may cause	5534
+33878	may cause	4509
+33051	belong(s) to the category of	28826
+9748	may cause	28137
+31381	may cause	27395
+4345	may cause	25485
+34934	belong(s) to the category of	28813
+33113	belongs to the drug family of	29747
+35209	may cause	28555
+1996	may cause	11472
+30116	belong(s) to the category of	28801
+12736	may cause	13606
+32725	is a risk factor for	3178
+34443	may cause	21885
+34591	is associated with	13743
+29955	may cause	19110
+1150	may cause	20061
+33449	may cause	29900
+4834	belong(s) to the category of	28856
+30911	may cause	22543
+30718	may cause	29890
+31776	may cause	29588
+7751	may cause	943
+33599	belong(s) to the category of	28807
+10664	interacts with	30239
+34656	may cause	10703
+35088	may be allelic with	32841
+34645	belong(s) to the category of	28813
+3538	interacts with	6765
+2565	belong(s) to the category of	28803
+34260	may cause	4328
+33472	may cause	29082
+11927	belongs to the drug family of	32438
+33813	may cause	2218
+32016	may cause	8374
+13478	may cause	5728
+34619	belongs to the drug family of	31168
+31125	may cause	19011
+10479	is a risk factor for	9143
+100	may cause	29288
+5324	may cause	19110
+30793	may cause	2218
+7587	belongs to the drug family of	29554
+588	may cause	26877
+32669	may cause	6330
+7496	may cause	19570
+30115	may cause	17746
+30100	may cause	29397
+32339	belong(s) to the category of	29076
+6688	may cause	10703
+11855	belong(s) to the category of	28825
+31759	belong(s) to the category of	28821
+34301	may cause	8723
+9739	may cause	4889
+30490	may cause	10703
+32020	may cause	4509
+9256	may cause	21555
+33576	may cause	4328
+13104	may cause	34500
+5490	may cause	19601
+34499	may cause	3067
+30638	may cause	32963
+13139	belong(s) to the category of	28813
+35204	is a risk factor for	11506
+1155	may cause	6239
+33216	may cause	20468
+33684	may cause	29296
+31184	belongs to the drug family of	32452
+3449	may cause	9580
+33164	belong(s) to the category of	28806
+29262	is a risk factor for	3876
+29699	may cause	6870
+7431	may cause	29370
+31377	belong(s) to the category of	28857
+32436	belong(s) to the category of	28857
+33591	is a risk factor for	31362
+13039	may cause	29230
+1832	may cause	14836
+29906	belong(s) to the category of	28803
+36445	may cause	20872
+29201	belongs to the drug family of	33887
+31064	may cause	11263
+34580	belongs to the drug family of	31783
+35035	belongs to the drug family of	36348
+7518	may cause	27381
+4131	may cause	19317
+35175	belong(s) to the category of	28803
+12633	may cause	2095
+32686	may cause	29398
+1854	may cause	6397
+36626	belongs to the drug family of	36627
+14246	belongs to the drug family of	33371
+12040	belong(s) to the category of	28847
+9065	may cause	11064
+3122	may cause	2875
+33176	may cause	34851
+32482	belong(s) to the category of	28813
+30327	belongs to the drug family of	29155
+36446	may cause	21417
+33604	belongs to the drug family of	32135
+29373	belong(s) to the category of	28856
+3087	may cause	5375
+11547	may cause	26380
+30680	belongs to the drug family of	30545
+29898	may cause	29782
+33190	interacts with	29923
+31778	belong(s) to the category of	31740
+30621	may cause	16940
+30034	belong(s) to the category of	28858
+21240	is a subtype of	29762
+2641	may cause	7678
+34045	may cause	14839
+30911	belong(s) to the category of	28860
+31801	belongs to the drug family of	31802
+34858	belongs to the drug family of	34334
+34397	may cause	7772
+34047	may cause	24609
+3765	may cause	37697
+6947	may cause	29147
+13691	belong(s) to the category of	28824
+6680	may cause	9580
+33466	belong(s) to the category of	28813
+33047	belongs to the drug family of	33049
+29479	may cause	27369
+36378	belongs to the drug family of	6959
+31394	may cause	28410
+1373	may cause	7395
+8080	may cause	32504
+30717	may cause	5404
+1886	is a risk factor for	10589
+13980	is a subtype of	6255
+3178	may cause	29147
+59813	may cause	22629
+29598	belong(s) to the category of	28856
+34695	belong(s) to the category of	28801
+4901	belongs to the drug family of	29547
+2861	belong(s) to the category of	28856
+33708	may cause	18561
+33046	belong(s) to the category of	28813
+10657	interacts with	13703
+35131	may cause	21417
+28865	belong(s) to the category of	28855
+33017	may cause	3043
+30020	belong(s) to the category of	28801
+6827	may cause	6234
+32393	may cause	27460
+29446	belong(s) to the category of	33482
+32013	may cause	22641
+1684	may cause	18756
+171	may cause	27951
+29675	may cause	14901
+29263	belongs to the drug family of	29547
+13315	may cause	28192
+1272	may cause	29379
+33960	belong(s) to the category of	28813
+33335	may cause	633
+29331	may cause	34904
+34505	may cause	1578
+30985	belongs to the drug family of	30983
+30043	interacts with	30473
+31205	belongs to the drug family of	10707
+4301	may cause	27359
+16756	is a subtype of	22056
+29686	may cause	16615
+33878	is associated with	29493
+32150	may be allelic with	13045
+4224	may cause	29380
+7689	is a subtype of	29337
+3930	may cause	27522
+29463	belong(s) to the category of	28811
+30051	may cause	11416
+27852	may cause	20872
+5841	may cause	25171
+1203	belong(s) to the category of	28806
+34896	may cause	11346
+33064	belongs to the drug family of	29568
+45748	may cause	21417
+32815	see also	32765
+5220	may cause	29465
+30121	may cause	26877
+34737	belong(s) to the category of	28813
+34939	may cause	29080
+46752	may cause	31340
+31164	may cause	2868
+29796	belong(s) to the category of	28803
+30546	belong(s) to the category of	28813
+11797	may cause	22713
+29857	belong(s) to the category of	28803
+30935	may cause	28364
+34088	may cause	22519
+10262	is a risk factor for	29255
+30597	belong(s) to the category of	28811
+5075	belong(s) to the category of	28858
+7589	may cause	27908
+36564	may cause	6412
+30071	belong(s) to the category of	28801
+7245	belong(s) to the category of	28813
+33513	may be allelic with	35110
+29043	may cause	273
+59817	may cause	16149
+30022	may cause	2999
+13373	may cause	22804
+6806	belong(s) to the category of	28858
+12348	belongs to the drug family of	32398
+33054	belong(s) to the category of	28803
+11506	may cause	20521
+33913	belong(s) to the category of	28826
+29356	may cause	22053
+3218	is a risk factor for	12966
+2064	may cause	9850
+34019	may cause	16940
+32059	see also	7947
+10465	belong(s) to the category of	28834
+36376	belong(s) to the category of	28801
+29062	is a risk factor for	203
+36369	may cause	11263
+32683	may cause	6890
+2729	may cause	11080
+3742	may cause	3520
+11547	may cause	13595
+59814	may cause	32794
+33810	belong(s) to the category of	28811
+35286	may cause	20872
+8199	belong(s) to the category of	28821
+30594	may cause	29782
+9218	may cause	21207
+7111	may cause	20061
+1231	may cause	4847
+36407	belong(s) to the category of	28842
+31845	belongs to the drug family of	29262
+69	belong(s) to the category of	28813
+33832	belong(s) to the category of	28811
+34403	may cause	22641
+4593	interacts with	8116
+29929	may cause	20061
+33661	belong(s) to the category of	29546
+6123	may cause	4889
+7616	may cause	13232
+31838	belongs to the drug family of	31017
+14124	may cause	10989
+31684	may cause	6623
+5705	may cause	15237
+4172	may cause	29071
+33248	may cause	22751
+3797	may cause	29080
+29819	belong(s) to the category of	28803
+8817	may cause	6445
+30721	belong(s) to the category of	28834
+29835	belong(s) to the category of	28803
+792	belong(s) to the category of	28808
+29666	belong(s) to the category of	28856
+6309	may cause	6503
+31575	may cause	6314
+32464	belong(s) to the category of	28821
+12664	belong(s) to the category of	28803
+29716	may cause	19674
+5124	may cause	24638
+33566	belong(s) to the category of	28813
+32783	belong(s) to the category of	28844
+32640	may cause	7689
+34641	belong(s) to the category of	28801
+2339	belong(s) to the category of	28813
+13965	is associated with	9870
+12507	may cause	30731
+325	may cause	10825
+32665	may cause	4509
+31435	may cause	3742
+30572	belong(s) to the category of	28813
+12445	may cause	943
+3487	may contraindicate	30409
+3517	may cause	8994
+29610	may cause	6522
+4048	may cause	20204
+2938	may cause	29594
+4108	may cause	18665
+7286	may cause	9706
+4409	may cause	29157
+34898	belong(s) to the category of	28803
+3144	may cause	29473
+3809	may cause	22832
+36622	may cause	15409
+29062	may cause	725
+35256	see also	27395
+6716	belong(s) to the category of	28808
+5115	may contraindicate	30467
+8478	may cause	11755
+33669	may cause	4224
+30742	is a risk factor for	8664
+5719	may cause	27522
+29929	belongs to the drug family of	29262
+6469	belong(s) to the category of	28807
+30622	belongs to the drug family of	30626
+34653	may cause	11346
+3122	may cause	6854
+30320	may cause	10703
+35052	belong(s) to the category of	29546
+30944	may cause	6234
+8244	may cause	22575
+171	is a risk factor for	7547
+29886	belong(s) to the category of	28803
+3646	may cause	3637
+8773	may cause	35258
+31817	belong(s) to the category of	28801
+33678	may cause	22629
+8993	belongs to the drug family of	33492
+34472	belongs to the drug family of	31017
+34764	may cause	23470
+13863	may cause	10703
+12507	may cause	5403
+34842	may cause	22629
+325	may cause	19601
+58799	may be allelic with	31947
+32683	may cause	2218
+5879	may cause	21064
+30805	belong(s) to the category of	28847
+34760	belong(s) to the category of	28813
+30222	may cause	34044
+3661	may cause	2866
+32827	belong(s) to the category of	28838
+34773	may cause	17771
+29696	may cause	15801
+5765	is a risk factor for	7547
+32442	may cause	13676
+9208	may cause	2218
+2826	is associated with	2837
+31797	belongs to the drug family of	29046
+34864	may cause	29350
+34496	may be allelic with	32014
+33183	may cause	5226
+10615	may cause	33921
+34780	may cause	11104
+29833	may cause	33577
+34186	belong(s) to the category of	28813
+32411	may cause	21240
+12236	may cause	24034
+218	may cause	27492
+30067	may cause	29782
+31429	belong(s) to the category of	28826
+32609	may cause	36547
+31407	may cause	19011
+11346	is a risk factor for	29255
+30920	may cause	19825
+33222	belong(s) to the category of	28813
+29978	belong(s) to the category of	28813
+33310	belongs to the drug family of	30955
+35131	may cause	18724
+6123	may cause	16311
+31862	belong(s) to the category of	28853
+7518	may cause	27426
+40733	belong(s) to the category of	28813
+28824	is a category subset of	28857
+33228	may cause	10988
+33265	belong(s) to the category of	28813
+2064	may cause	29475
+28483	is a subtype of	15752
+29546	is a category subset of	28809
+33219	may cause	1578
+3153	may cause	6123
+9168	belong(s) to the category of	28858
+30685	may cause	4509
+31819	may cause	19011
+13642	may cause	4025
+4962	belong(s) to the category of	28848
+4326	belong(s) to the category of	28810
+4678	may cause	19367
+31036	belong(s) to the category of	28813
+7826	may cause	22832
+30241	belongs to the drug family of	29548
+5938	is a risk factor for	9802
+33722	may cause	21207
+3532	may cause	11346
+31499	may cause	14843
+24212	may cause	4015
+4461	may cause	15237
+10707	may cause	6330
+13461	may cause	20279
+11148	may cause	25363
+14030	belong(s) to the category of	28841
+32370	may cause	11104
+34679	belong(s) to the category of	28801
+37689	belongs to the drug family of	33999
+31577	may cause	31487
+34547	belong(s) to the category of	28801
+9600	may cause	92
+32111	belongs to the drug family of	32112
+31463	may cause	4224
+32040	belong(s) to the category of	28806
+31238	belong(s) to the category of	28813
+29331	may cause	3160
+14237	may cause	11080
+32087	may cause	33476
+30983	belongs to drug super-family	31782
+35132	belong(s) to the category of	28801
+4638	may cause	7772
+35102	belong(s) to the category of	28803
+31575	may cause	29284
+5375	belong(s) to the category of	28807
+31237	belong(s) to the category of	28813
+34606	may cause	29328
+31315	may cause	11417
+10545	may contraindicate	627
+12916	may cause	29283
+31737	may cause	29126
+32708	belong(s) to the category of	28803
+36516	may cause	4509
+12348	may cause	19601
+979	belong(s) to the category of	28858
+21207	may cause	29542
+31283	may cause	7692
+35072	may cause	19011
+34707	is a risk factor for	3056
+4688	may cause	4466
+34176	may cause	20061
+34711	may cause	29350
+31916	belong(s) to the category of	28813
+9367	may cause	15823
+32029	may cause	20061
+3178	may cause	31127
+10195	may cause	29756
+33160	belong(s) to the category of	28813
+32590	belong(s) to the category of	28821
+7861	may cause	15880
+7249	may be allelic with	11661
+11429	is a subtype of	11416
+34903	is a subtype of	18724
+33590	may cause	29337
+7047	is a subtype of	15206
+32652	may cause	33297
+13386	belong(s) to the category of	29076
+34896	belongs to the drug family of	33996
+10751	may cause	12134
+3218	may cause	6443
+33185	belong(s) to the category of	28803
+7967	belong(s) to the category of	29073
+33489	belong(s) to the category of	28805
+30562	interacts with	519
+33068	belong(s) to the category of	28834
+33511	may be allelic with	29462
+22543	may cause	34501
+32740	may cause	21207
+2975	may cause	8817
+34748	may cause	22832
+30060	may cause	19011
+31812	belong(s) to the category of	28813
+11506	may cause	25933
+7659	may cause	16537
+9987	belong(s) to the category of	28803
+29080	is a risk factor for	12365
+6469	may cause	6330
+7384	may cause	6426
+32393	may cause	4509
+31246	may cause	6239
+33367	belong(s) to the category of	28803
+19238	belong(s) to the category of	28807
+7943	may cause	943
+29693	may cause	12375
+3884	is a subtype of	1
+8770	belong(s) to the category of	28813
+8346	is a subtype of	17207
+30580	belong(s) to the category of	28813
+29622	may cause	22629
+53763	belong(s) to the category of	28807
+114	may cause	2860
+30320	belongs to the drug family of	29533
+171	may contraindicate	2405
+33779	may cause	29382
+30620	belong(s) to the category of	28813
+31467	may cause	19317
+8412	may cause	9579
+34924	may cause	54
+2020	may cause	11017
+7387	may cause	35124
+31300	may cause	31270
+9252	may cause	17746
+33267	belong(s) to the category of	28856
+31145	may cause	7688
+3851	may cause	6539
+10545	may contraindicate	30260
+32528	may cause	10703
+33871	belong(s) to the category of	28803
+1578	may cause	19011
+8801	belong(s) to the category of	28857
+3661	may cause	1173
+8515	may cause	10195
+2802	belongs to the drug family of	30955
+597	may cause	6445
+31927	may cause	6890
+1513	is a subtype of	29744
+29292	belong(s) to the category of	28857
+10664	interacts with	31041
+10643	may cause	33920
+34470	belong(s) to the category of	28842
+29962	interacts with	14043
+36565	may cause	16209
+33679	belong(s) to the category of	28803
+1598	may cause	12727
+10343	may cause	29426
+8975	may cause	24212
+30213	belong(s) to the category of	28813
+12396	may cause	29434
+1212	may cause	16940
+30740	may cause	7651
+5728	may cause	29685
+29507	is a subtype of	10703
+29503	may cause	34500
+3604	may cause	1578
+9479	may cause	2874
+529	interacts with	29943
+7679	belong(s) to the category of	28856
+29839	may cause	19011
+1075	may cause	8288
+30086	belongs to the drug family of	29553
+29255	may cause	6330
+14000	may cause	9528
+13273	may cause	29061
+325	may cause	27522
+888	belong(s) to the category of	28813
+33530	may cause	9706
+2729	may cause	12384
+30011	belongs to the drug family of	30545
+14287	may cause	27369
+10262	belong(s) to the category of	28801
+33915	belong(s) to the category of	28851
+36565	belong(s) to the category of	28813
+31063	belong(s) to the category of	28813
+7927	belongs to the drug family of	29262
+4678	is a risk factor for	5799
+19317	may cause	30745
+3303	may cause	8817
+29414	is a subtype of	29337
+34174	belong(s) to the category of	28813
+29969	belongs to the drug family of	29046
+13353	may cause	21817
+31230	may cause	29484
+8330	belong(s) to the category of	28801
+11673	belong(s) to the category of	28857
+10028	belong(s) to the category of	32967
+33086	belong(s) to the category of	29546
+12540	may cause	6854
+34824	may cause	12375
+33844	may cause	19317
+34615	may cause	6242
+29452	may cause	30780
+29238	may cause	9148
+11223	belong(s) to the category of	28834
+3971	may cause	979
+8001	may cause	7698
+29986	may cause	24048
+32608	may cause	26545
+1522	belong(s) to the category of	28801
+7698	is a risk factor for	28508
+6160	may cause	14367
+1326	may cause	6196
+12481	may cause	25480
+33574	may cause	3067
+30372	interacts with	31897
+33741	may cause	11978
+6513	may cause	18756
+5938	is a risk factor for	10718
+34847	belongs to the drug family of	4610
+29918	may cause	26039
+529	may cause	27742
+10545	may contraindicate	30465
+14030	may cause	1442
+3809	may cause	14367
+11590	may cause	17942
+29570	may cause	26839
+34748	interacts with	11603
+33906	is a vector for	13415
+34803	belongs to the drug family of	31264
+33334	may cause	18724
+1777	belong(s) to the category of	28856
+29988	belong(s) to the category of	28813
+13265	may cause	29461
+29697	may cause	11970
+29440	may cause	23092
+31329	may cause	29082
+29453	belong(s) to the category of	28856
+749	may cause	17462
+31239	belongs to the drug family of	15141
+30562	belongs to the drug family of	29779
+32842	may cause	7150
+4730	belong(s) to the category of	28838
+34268	belong(s) to the category of	28855
+36440	may cause	32479
+30550	may cause	3742
+34459	belong(s) to the category of	28809
+3048	may cause	27916
+1408	may cause	14765
+7751	may cause	3765
+31451	may cause	29604
+29250	belong(s) to the category of	28857
+3176	is a risk factor for	7161
+33421	may cause	6469
+33190	interacts with	8205
+30180	see also	7652
+29097	may cause	12375
+14000	may cause	1578
+6677	belong(s) to the category of	28807
+32616	may cause	6895
+28908	belong(s) to the category of	28852
+30342	may cause	6539
+11797	may cause	10195
+32849	interacts with	30518
+30780	is a subtype of	30781
+13547	may cause	16940
+30852	belong(s) to the category of	28813
+36607	may cause	3742
+36370	may cause	3043
+10031	may cause	28256
+5115	may contraindicate	31046
+465	may cause	2874
+1713	may cause	10989
+35043	belong(s) to the category of	28801
+30886	belongs to the drug family of	30662
+4221	may cause	6763
+30615	may cause	16537
+12128	interacts with	3321
+34183	belong(s) to the category of	28813
+10545	may contraindicate	30467
+2729	may cause	29284
+33933	belong(s) to the category of	28813
+465	may cause	11429
+13863	belongs to the drug family of	30649
+30793	belong(s) to the category of	28854
+13415	belong(s) to the category of	28851
+34788	may cause	6847
+32597	may cause	18724
+33111	may cause	29284
+33926	belong(s) to the category of	28809
+4855	interacts with	2760
+34468	may cause	2869
+29425	may cause	14367
+32374	belongs to the drug family of	33552
+3765	may cause	27522
+8254	may cause	18756
+11968	belongs to the drug family of	33428
+30193	may cause	95
+171	may contraindicate	5435
+507	is an ingredient of	29915
+7914	may cause	20061
+8628	may cause	20944
+30154	belong(s) to the category of	28856
+29239	may cause	3742
+8628	may cause	29220
+8347	may cause	29284
+31685	belong(s) to the category of	28803
+32385	may cause	19825
+36425	belong(s) to the category of	28813
+10494	may cause	27522
+30155	may cause	35183
+33679	may be allelic with	32019
+34409	may cause	29158
+29730	interacts with	8116
+36670	may cause	19011
+2003	may cause	7038
+29648	belong(s) to the category of	28857
+31663	may cause	8994
+34036	belong(s) to the category of	28813
+29425	belong(s) to the category of	28805
+31292	may cause	35152
+30074	may cause	23059
+6895	is a subtype of	31952
+34375	belongs to the drug family of	33996
+13208	may cause	1131
+8896	may cause	14326
+10392	may cause	27591
+31999	may cause	12870
+31916	belongs to the drug family of	32066
+10209	may cause	13582
+1161	may cause	27303
+9849	is a subtype of	17472
+10729	interacts with	29943
+13114	may cause	24048
+31279	belong(s) to the category of	28821
+6503	may cause	22832
+4630	may cause	5896
+5084	may cause	25831
+30002	may cause	11104
+29581	belong(s) to the category of	28801
+26423	belong(s) to the category of	28856
+58799	belong(s) to the category of	28801
+32662	may cause	9385
+8244	may cause	3742
+13150	may cause	7689
+8628	may cause	15801
+29991	may cause	21555
+9905	may cause	19367
+6032	belong(s) to the category of	28860
+29673	may cause	92
+36630	may cause	10477
+6160	may cause	6196
+34603	may cause	4509
+35266	belong(s) to the category of	28801
+34109	may cause	10703
+30432	belong(s) to the category of	28813
+12782	may cause	29725
+33233	may cause	30154
+22105	may cause	20204
+10545	may contraindicate	4593
+29839	may cause	4509
+32757	belongs to the drug family of	33494
+1967	may cause	31904
+2003	belongs to the drug family of	33887
+36606	may cause	2179
+30490	may cause	1715
+30320	may cause	19635
+33811	may cause	27190
+9150	may cause	20204
+3000	may cause	6372
+31924	may cause	6234
+33663	belongs to the drug family of	33662
+32956	belongs to the drug family of	30573
+171	may contraindicate	6974
+30212	may cause	24024
+36499	may cause	4190
+34966	belong(s) to the category of	28803
+969	may cause	29214
+9730	may cause	29284
+31112	belong(s) to the category of	28857
+2064	may cause	4894
+37689	may cause	28364
+4159	may cause	2095
+34799	may cause	15237
+12155	may cause	6854
+33343	may be allelic with	29515
+5406	is a risk factor for	10425
+10545	may contraindicate	12913
+30036	belongs to the drug family of	35091
+29187	may cause	22751
+32958	belong(s) to the category of	28813
+29286	is a subtype of	17771
+11506	may cause	4375
+8244	may cause	8817
+29900	may cause	4509
+6050	may cause	12375
+29255	may cause	26423
+276	belong(s) to the category of	28857
+3661	is a risk factor for	13974
+34992	is a subtype of	31448
+34697	is associated with	58
+36350	belong(s) to the category of	28803
+35050	belongs to the drug family of	35052
+29177	belong(s) to the category of	28838
+1218	may cause	9748
+57788	belong(s) to the category of	28803
+12396	may cause	29474
+1203	may cause	22225
+2173	belong(s) to the category of	28806
+32539	belong(s) to the category of	28809
+14043	interacts with	29935
+31551	belong(s) to the category of	29546
+10481	may cause	28415
+12913	belong(s) to the category of	28813
+30536	is a risk factor for	33178
+13544	may cause	26060
+32947	may cause	36547
+12214	may cause	7698
+12281	belong(s) to the category of	28813
+30688	may cause	29900
+32756	interacts with	30166
+29780	may cause	4509
+1791	may cause	9819
+32489	may cause	31491
+32827	may cause	20624
+40727	is a risk factor for	203
+29403	may cause	29398
+31220	may cause	7306
+36606	may cause	29604
+32831	belong(s) to the category of	28803
+8358	may cause	2869
+29657	may cause	21867
+30645	belongs to drug super-family	30876
+1964	see also	12623
+31395	may cause	24638
+31312	may cause	14765
+34654	may cause	4509
+2533	may cause	29060
+31431	is a subtype of	1777
+30550	may cause	27426
+29521	belong(s) to the category of	28834
+6397	may cause	92
+31556	may cause	21417
+30166	may cause	29158
+19762	is a subtype of	10122
+29094	may cause	19601
+32792	may cause	29398
+12369	may cause	10122
+5107	may cause	979
+31850	may cause	34500
+7091	may cause	4786
+35018	belong(s) to the category of	29546
+25831	belong(s) to the category of	28856
+29764	may cause	25933
+31362	may cause	20886
+29468	belong(s) to the category of	28803
+38724	belongs to the drug family of	33999
+11545	belong(s) to the category of	28828
+5649	is associated with	9870
+6067	may cause	20886
+12744	may cause	4342
+10664	interacts with	30230
+25810	may cause	29214
+34348	belongs to the drug family of	34215
+29914	may cause	6445
+32221	belong(s) to the category of	28809
+30898	belongs to the drug family of	28871
+35232	belong(s) to the category of	28813
+40732	may cause	11104
+32512	interacts with	29923
+36656	may cause	10122
+33664	belong(s) to the category of	28813
+5938	may cause	6397
+1341	may cause	315
+33176	belong(s) to the category of	28803
+114	may cause	25933
+34210	may cause	6412
+9065	may cause	29459
+11106	may cause	14367
+29873	belong(s) to the category of	28803
+8218	may cause	31518
+32009	may cause	4509
+11387	may cause	13595
+12136	belong(s) to the category of	28834
+30898	belong(s) to the category of	28813
+9991	may cause	7688
+27076	is associated with	33394
+30099	may cause	19825
+1442	may cause	31879
+12507	may cause	6753
+30552	may cause	3742
+6373	is a subtype of	2137
+7019	may cause	13043
+9850	may cause	4438
+30988	belong(s) to the category of	28813
+7965	may cause	21506
+31277	may cause	28256
+34042	may cause	14367
+30745	belong(s) to the category of	28856
+11875	may cause	10388
+33014	may cause	8905
+26541	belong(s) to the category of	28856
+33509	is associated with	34471
+6733	may cause	2549
+13165	is a subtype of	26955
+12764	may cause	2218
+32403	may cause	32400
+11442	may cause	33379
+34529	may cause	4509
+5965	is a risk factor for	11223
+14043	may cause	2592
+36393	may be allelic with	36392
+33015	belong(s) to the category of	28811
+29064	may cause	33574
+9005	may cause	19110
+1578	may cause	2875
+2826	may cause	31141
+35107	may cause	2874
+34214	belong(s) to the category of	29546
+8116	may cause	7688
+35263	belong(s) to the category of	28803
+32890	belong(s) to the category of	28813
+4206	interacts with	420
+35073	may cause	1715
+171	may contraindicate	325
+32897	may cause	29900
+10780	may cause	15544
+58809	belong(s) to the category of	28844
+34556	may cause	1089
+31598	may cause	25294
+13365	belongs to the drug family of	31152
+3083	see also	3000
+33506	may cause	26545
+7403	may cause	28192
+10733	belongs to the drug family of	33492
+5570	may cause	22543
+29822	may cause	25831
+31250	interacts with	30118
+30098	may cause	11445
+29491	may be allelic with	32666
+33425	may cause	20521
+30428	interacts with	33851
+33558	may cause	31688
+11978	may cause	29293
+29046	belong(s) to the category of	29546
+31900	belong(s) to the category of	28860
+29923	may cause	31684
+33602	belong(s) to the category of	28813
+32955	may be allelic with	30105
+29249	may cause	6330
+13877	may cause	29513
+11375	belong(s) to the category of	28813
+29740	may cause	3742
+3165	belong(s) to the category of	29073
+4766	may cause	19011
+34819	may cause	29221
+3661	may cause	28415
+34486	belong(s) to the category of	29546
+31949	may cause	29892
+6388	may cause	2847
+36413	may cause	29145
+5037	may contraindicate	29938
+4417	belongs to the drug family of	29924
+7189	may cause	17462
+6050	may cause	18724
+33770	belong(s) to the category of	28813
+31932	belong(s) to the category of	28857
+7137	may cause	4629
+12744	may cause	22641
+30700	is a subtype of	22056
+30543	may cause	14367
+5465	may cause	29742
+4737	may cause	21417
+35192	belongs to the drug family of	30573
+12938	may cause	29742
+16914	belong(s) to the category of	28811
+36500	may cause	4509
+29291	may cause	1268
+31733	may cause	8472
+32476	belong(s) to the category of	28803
+29215	may cause	27190
+2410	may cause	6431
+32751	may cause	18639
+6330	is a risk factor for	11421
+30600	belong(s) to the category of	28813
+31677	interacts with	31265
+57788	may cause	19011
+35076	belong(s) to the category of	28856
+4540	may cause	29080
+28410	belong(s) to the category of	28856
+4678	may cause	11416
+4934	may cause	6469
+29080	is a risk factor for	11359
+31462	may cause	14017
+6680	see also	6678
+32047	may cause	26380
+29720	may cause	8100
+59816	belong(s) to the category of	28813
+11104	belong(s) to the category of	1
+29243	belong(s) to the category of	28857
+29220	belong(s) to the category of	28804
+7036	may cause	28555
+12782	may cause	8346
+2449	may cause	3080
+34893	is a risk factor for	8604
+33165	belongs to the drug family of	29560
+30615	interacts with	8327
+31410	may cause	11755
+34689	belong(s) to the category of	28813
+12966	may cause	22194
+30395	belong(s) to the category of	28813
+2837	may cause	8817
+7238	belong(s) to the category of	28838
+32978	may cause	26978
+29951	belong(s) to the category of	28813
+31089	may cause	29401
+33435	may cause	6445
+58803	belong(s) to the category of	28801
+35171	may cause	33297
+5702	may cause	9819
+9539	may cause	7490
+36355	may cause	16940
+6501	belong(s) to the category of	28805
+8515	may cause	13052
+30785	belong(s) to the category of	28856
+33021	may cause	3559
+30338	may cause	5728
+13495	may cause	29524
+10667	belong(s) to the category of	28813
+35148	belong(s) to the category of	28803
+33190	interacts with	29258
+29697	may cause	27522
+30418	belong(s) to the category of	28813
+7340	may cause	9241
+30656	may cause	25619
+12988	may cause	29080
+11148	belong(s) to the category of	28860
+33581	may cause	29492
+3631	may be allelic with	32618
+31934	belong(s) to the category of	28828
+11657	may cause	6372
+30519	may cause	8994
+33605	may cause	18756
+12664	may cause	29374
+30293	belong(s) to the category of	28813
+1617	may contraindicate	29199
+33259	may cause	4509
+32965	may cause	3067
+11849	may cause	9242
+33411	belong(s) to the category of	28808
+31345	may cause	15237
+33277	may be allelic with	14000
+9836	may cause	15237
+7474	may cause	16940
+32737	may cause	18756
+31123	belong(s) to the category of	28809
+35179	may cause	14367
+31707	belong(s) to the category of	28860
+5124	may cause	15823
+34926	may cause	15237
+34746	belong(s) to the category of	28813
+29273	is a vector for	11093
+32829	belong(s) to the category of	28803
+420	may cause	4450
+48753	belong(s) to the category of	28813
+3347	may cause	7698
+1422	may cause	11687
+29179	may cause	3110
+36614	belong(s) to the category of	28803
+2955	may cause	14367
+36459	belongs to the drug family of	36460
+34196	belong(s) to the category of	28813
+7935	may cause	19825
+34668	may cause	10470
+33654	may cause	13866
+13888	may cause	9580
+34533	may cause	19011
+31601	belong(s) to the category of	28843
+30885	belongs to the drug family of	15141
+5236	may cause	18665
+30932	belongs to the drug family of	15141
+7880	may cause	36524
+14226	may cause	15892
+22143	is a subtype of	18832
+33758	belong(s) to the category of	28803
+32278	belong(s) to the category of	29076
+10664	interacts with	621
+33352	may cause	33606
+34062	belongs to the drug family of	31017
+12490	may cause	5403
+203	may cause	34026
+31505	belong(s) to the category of	28834
+29920	may cause	16209
+3539	may cause	20722
+32846	is a risk factor for	8935
+11487	may cause	7035
+11729	may cause	2179
+29321	may cause	1777
+885	may cause	34042
+35077	may cause	10166
+32592	may cause	32591
+33424	may cause	20521
+12481	may cause	9748
+1353	may cause	5245
+2659	may cause	28440
+31329	may cause	26380
+33441	may cause	19011
+30488	belongs to the drug family of	29533
+29266	may cause	14839
+29625	may cause	27951
+8798	may cause	23119
+4329	belongs to the drug family of	30535
+32395	may cause	4509
+29997	may cause	10998
+36581	may cause	5375
+9947	interacts with	519
+12845	may cause	17942
+28886	is a subtype of	30738
+39723	is a subtype of	34296
+1914	is a risk factor for	5465
+33137	belongs to the drug family of	29568
+3101	may cause	19825
+31995	may cause	10019
+8003	may cause	27662
+10780	may cause	6764
+12236	is a risk factor for	9288
+32233	may cause	4509
+3242	may cause	36405
+31961	may cause	24212
+34786	belong(s) to the category of	28813
+31543	belong(s) to the category of	28828
+30125	is a vector for	30124
+6937	belong(s) to the category of	28813
+36328	may cause	30838
+6880	may cause	1578
+7927	may cause	1777
+1249	may cause	5534
+34600	belongs to the drug family of	31168
+29942	may cause	17912
+36413	belong(s) to the category of	28803
+31203	belongs to the drug family of	10707
+4903	belongs to the drug family of	33492
+11932	may cause	14765
+34391	is a risk factor for	14013
+32043	may cause	23092
+29091	belong(s) to the category of	28832
+32119	belong(s) to the category of	28813
+57789	belong(s) to the category of	28801
+33636	belongs to the drug family of	31017
+30791	may cause	6646
+5461	may cause	24212
+6688	may cause	22895
+33299	belong(s) to the category of	28806
+3520	may cause	29770
+29462	may cause	29283
+30057	may cause	33395
+21253	may cause	21506
+3391	belong(s) to the category of	28824
+1107	may cause	30786
+11025	belong(s) to the category of	28808
+32013	may cause	23092
+33449	may cause	32598
+9579	is a subtype of	11416
+34201	belongs to the drug family of	31549
+6996	belongs to the drug family of	2182
+7211	may cause	18703
+33388	belong(s) to the category of	28801
+32554	belongs to the drug family of	32452
+5375	may cause	15237
+8412	may cause	25933
+34383	may cause	29475
+11687	may cause	9351
+11506	may cause	11898
+31170	may cause	10703
+35038	may cause	35190
+870	may cause	9539
+3661	may cause	6226
+203	may cause	3765
+2365	is associated with	12633
+472	belong(s) to the category of	28809
+34045	may cause	26861
+3259	may cause	9819
+13461	may cause	29423
+10545	may contraindicate	29929
+29896	may cause	29382
+29447	may cause	29715
+30618	may cause	16940
+34898	may cause	33315
+32787	may cause	4509
+34382	may cause	4509
+36378	belong(s) to the category of	28813
+10545	may contraindicate	29931
+8817	may cause	29217
+33705	may cause	24599
+30394	belong(s) to the category of	28813
+32986	may cause	6412
+30553	may cause	5534
+29549	belongs to the drug family of	29547
+8375	may cause	15892
+9643	may cause	29507
+32896	belong(s) to the category of	28813
+2428	may cause	18992
+10285	belong(s) to the category of	28824
+34457	may cause	8905
+22543	may cause	12050
+30366	may cause	29214
+32347	may cause	18756
+3160	may cause	35152
+32024	may cause	33267
+11729	may cause	29414
+14213	may cause	9236
+844	may cause	10477
+29367	may cause	27698
+288	may cause	36405
+29458	belong(s) to the category of	28861
+5220	may cause	30605
+30808	may cause	9266
+40	may cause	10589
+11429	may cause	2860
+30109	belong(s) to the category of	28813
+31341	belongs to the drug family of	15141
+33183	see also	32737
+18165	belong(s) to the category of	28808
+11463	may cause	17239
+14057	may cause	27190
+33408	belong(s) to the category of	28857
+9150	may cause	8817
+29531	may cause	2137
+35292	may cause	6330
+31301	may cause	34455
+33134	belong(s) to the category of	28848
+29684	is a subtype of	13580
+9679	may cause	2949
+3153	may cause	9580
+36617	may cause	27522
+34354	may cause	4629
+10280	may cause	26030
+31223	may cause	29631
+7245	may cause	39723
+5490	may cause	9850
+9002	may cause	16149
+31494	belong(s) to the category of	28857
+14141	may cause	26035
+31103	may cause	2137
+32122	belongs to the drug family of	32123
+31963	may cause	18703
+8243	is a subtype of	25614
+35123	may cause	25619
+3303	may cause	6426
+32772	may cause	16940
+10094	may cause	13038
+30463	belongs to the drug family of	29552
+1132	may cause	27084
+31930	belong(s) to the category of	28838
+35012	belongs to the drug family of	29861
+32694	belongs to the drug family of	36349
+32849	interacts with	32931
+35179	belong(s) to the category of	28813
+3840	interacts with	14043
+10220	may cause	19011
+5728	may cause	21432
+33343	may cause	33267
+4442	may cause	7691
+9510	may cause	29081
+58801	may cause	6234
+31235	may cause	33955
+13688	may cause	31485
+7002	may cause	13750
+29255	may cause	25320
+5906	may cause	20204
+3800	is associated with	9651
+31752	may cause	14638
+34883	may cause	6539
+2627	belong(s) to the category of	28808
+36426	may cause	27369
+32009	may cause	21417
+7984	is a risk factor for	9912
+3961	belong(s) to the category of	28852
+30105	may cause	24638
+2433	may cause	1513
+36457	may cause	15237
+3606	may cause	11416
+29819	may cause	21417
+13139	may cause	24024
+13122	belong(s) to the category of	28821
+34210	may cause	11017
+29152	may cause	29473
+9568	belongs to the drug family of	30645
+907	may cause	2218
+7307	may cause	2227
+7667	may cause	10122
+8152	belongs to the drug family of	29924
+8165	may cause	4786
+33080	belong(s) to the category of	28813
+31885	belongs to the drug family of	25284
+30016	belong(s) to the category of	28813
+34978	belongs to the drug family of	31630
+3467	may cause	25831
+7343	may cause	6372
+31533	may cause	15409
+30901	belongs to the drug family of	34287
+34860	may cause	29618
+5224	may cause	29157
+37723	belong(s) to the category of	28854
+31040	belongs to the drug family of	29555
+34210	belong(s) to the category of	28813
+7751	may cause	20760
+8628	may cause	22713
+30251	may cause	8994
+34262	may cause	29082
+9775	may cause	10703
+29891	may cause	2179
+2907	may cause	15409
+7744	may cause	12375
+10513	may cause	22725
+31621	may cause	9367
+33246	belong(s) to the category of	28813
+36518	may cause	6348
+31620	may cause	16537
+6397	may cause	6196
+4360	belong(s) to the category of	28806
+11797	may cause	34578
+31335	may cause	8870
+29642	may cause	6623
+33557	belong(s) to the category of	28860
+34570	belong(s) to the category of	28813
+35100	may cause	29284
+33489	may cause	22751
+3800	may cause	29428
+32875	may cause	26416
+35102	may cause	6259
+29057	may cause	24212
+33349	may cause	22641
+33182	see also	33171
+11620	may cause	3884
+29887	belong(s) to the category of	28811
+33924	may cause	4439
+32832	may cause	29782
+29375	belong(s) to the category of	28856
+33552	belongs to drug super-family	28871
+35042	may cause	2874
+29958	belongs to the drug family of	29560
+29188	belongs to the drug family of	33428
+34011	may be allelic with	8736
+33470	may cause	20872
+8515	may cause	6880
+32094	may cause	11429
+30785	is a subtype of	29151
+32964	may cause	29080
+30672	belongs to the drug family of	30545
+9479	may cause	15544
+6643	may cause	9819
+34795	may cause	36563
+35129	belongs to the drug family of	31802
+5406	may cause	4889
+32676	may cause	6426
+10392	may cause	4623
+32233	may cause	29618
+34871	may cause	8994
+30363	belongs to the drug family of	31564
+512	may cause	6397
+30175	belongs to the drug family of	25284
+13738	may cause	1777
+34016	belong(s) to the category of	28813
+32314	belong(s) to the category of	29076
+712	may cause	29165
+32253	belongs to the drug family of	31712
+34538	may cause	58
+30704	may cause	17771
+32354	may be allelic with	32618
+36610	belong(s) to the category of	28801
+29936	belong(s) to the category of	28813
+1422	belong(s) to the category of	28813
+31715	may cause	5404
+34892	may cause	25831
+3898	may cause	15838
+34717	may cause	23059
+5783	may cause	2729
+31759	may cause	2184
+35058	may cause	2533
+9418	may cause	10519
+7386	belong(s) to the category of	28857
+13415	may cause	10477
+11487	may cause	9820
+36546	belong(s) to the category of	29546
+1964	belong(s) to the category of	28813
+31334	may cause	33975
+36370	may cause	37707
+31767	belongs to the drug family of	31760
+5879	may cause	31684
+10545	may contraindicate	33594
+13991	may cause	24182
+30450	may cause	18924
+3898	may cause	30593
+11875	may cause	22105
+31106	is a risk factor for	7947
+32155	may cause	29870
+33292	may cause	8817
+30801	may cause	20590
+31233	belong(s) to the category of	29546
+33222	belongs to the drug family of	29046
+2627	may cause	1065
+30119	belong(s) to the category of	28813
+31484	may cause	6348
+3242	may cause	26838
+32350	belong(s) to the category of	29076
+31509	see also	10989
+8358	belong(s) to the category of	28844
+35101	may cause	32504
+30892	belongs to the drug family of	2208
+12494	may cause	9367
+11288	may cause	25363
+2791	belong(s) to the category of	28813
+11687	may cause	8723
+8029	may cause	29351
+35069	may cause	19011
+7518	may cause	29284
+29244	may cause	1089
+5195	may cause	20590
+29279	is a vector for	33772
+33827	belongs to the drug family of	34041
+33336	may cause	30597
+30993	belong(s) to the category of	28813
+29467	may cause	9241
+31456	belong(s) to the category of	28813
+3101	may cause	20061
+30433	belongs to the drug family of	31630
+31594	belong(s) to the category of	28803
+30344	may cause	8968
+34463	belong(s) to the category of	28856
+29436	belong(s) to the category of	28809
+12916	may cause	8358
+32228	belong(s) to the category of	28851
+32626	belong(s) to the category of	28801
+4491	may cause	6330
+33499	may cause	3066
+34859	belong(s) to the category of	28813
+10589	is a risk factor for	1713
+33503	may cause	29330
+11263	may cause	6266
+9450	may cause	6764
+33729	may cause	2874
+36598	may cause	20061
+5534	is a subtype of	10512
+10220	may cause	18561
+1961	may cause	10989
+5124	may cause	14573
+29057	may cause	21240
+5044	may cause	15409
+31025	belongs to the drug family of	29779
+10956	may cause	30749
+35171	may be allelic with	32162
+29942	may cause	17865
+29182	may cause	1132
+14057	may cause	18612
+9231	may cause	14367
+31661	may cause	29394
+7864	may cause	9819
+33819	may cause	4328
+12901	may cause	7305
+29280	is a vector for	32460
+33873	belongs to the drug family of	29551
+34764	may cause	20204
+30335	is a risk factor for	2820
+9933	belong(s) to the category of	28813
+32667	may cause	29894
+7013	is a risk factor for	9748
+31737	may cause	4509
+4033	may cause	20061
+12069	may cause	7395
+34697	belong(s) to the category of	28857
+9587	belongs to the drug family of	28871
+29182	may cause	4224
+10388	may cause	5810
+29808	may cause	29388
+13039	may cause	13529
+17	may cause	18756
+32360	belong(s) to the category of	29076
+29660	belong(s) to the category of	28801
+6443	is a subtype of	22035
+8828	may cause	3263
+36402	belongs to the drug family of	34320
+27702	may cause	31511
+30312	belong(s) to the category of	28813
+31629	may cause	18924
+9587	may cause	25831
+33629	may cause	14638
+33383	belongs to the drug family of	31630
+32805	may cause	21432
+14107	may cause	17771
+100	may cause	17942
+1684	may cause	14212
+24563	belong(s) to the category of	28856
+31709	may cause	5323
+30504	belongs to the drug family of	30506
+32918	may cause	26184
+29095	belong(s) to the category of	28841
+30276	may cause	12135
+4660	belong(s) to the category of	28811
+35120	may cause	3742
+9664	may cause	24248
+15088	belong(s) to the category of	28808
+29739	may cause	29738
+31849	may cause	14638
+2533	may cause	14326
+4200	may cause	29420
+10475	belong(s) to the category of	28809
+32415	may cause	29284
+4707	may cause	12949
+29394	is a subtype of	8926
+32077	belongs to the drug family of	29555
+36505	belongs to the drug family of	31168
+2672	may cause	17149
+4387	belong(s) to the category of	28860
+1194	belong(s) to the category of	28813
+2317	may cause	13039
+10854	may cause	22543
+29888	may cause	8807
+8027	may cause	21867
+33106	belong(s) to the category of	28813
+30592	may cause	8881
+30908	belong(s) to the category of	28813
+33005	belong(s) to the category of	28813
+32143	may be allelic with	32142
+31935	may cause	20204
+14043	interacts with	3000
+9479	may cause	26861
+4461	belong(s) to the category of	28856
+31677	interacts with	35192
+10545	may cause	17266
+3947	may cause	33041
+4089	may cause	14934
+29404	is a subtype of	22056
+34681	may cause	2218
+33903	belong(s) to the category of	28806
+11849	may cause	17472
+29593	belong(s) to the category of	28856
+325	interacts with	8116
+33559	may cause	22832
+29261	may cause	9819
+31947	may cause	2592
+29919	may cause	4450
+30808	may cause	29379
+30705	may cause	25831
+19297	may cause	4021
+29372	may cause	26316
+30927	belongs to the drug family of	2208
+36597	may cause	4509
+32766	belong(s) to the category of	28801
+4932	is a risk factor for	9313
+31616	belongs to the drug family of	29481
+34398	may cause	10703
+31434	may cause	29363
+13009	may cause	11958
+2496	may cause	7306
+33716	belong(s) to the category of	28803
+30667	belong(s) to the category of	28813
+3898	may cause	53760
+29985	may cause	20061
+29843	may cause	2179
+29324	may cause	29080
+409	may cause	18134
+3142	is a risk factor for	3474
+11705	may cause	6483
+33361	belongs to the drug family of	30493
+31218	belong(s) to the category of	28857
+30361	belong(s) to the category of	28813
+33427	may cause	32761
+28856	is a category subset of	33461
+30617	may cause	16940
+31766	belongs to the drug family of	31760
+12845	may cause	26541
+8057	may cause	29283
+33456	may cause	14326
+10664	interacts with	31040
+7655	may cause	1065
+4877	may cause	6314
+7935	belongs to the drug family of	32452
+30765	may cause	10940
+30070	may cause	24638
+10521	is a risk factor for	29119
+11106	may cause	19110
+12005	may cause	31340
+11155	may cause	8716
+2232	may cause	2874
+3218	may cause	19570
+979	may cause	1684
+34886	belong(s) to the category of	28809
+29930	may cause	11687
+12190	may contraindicate	9933
+31876	may cause	19942
+30043	may cause	35190
+35196	interacts with	31196
+8131	is a risk factor for	12782
+3498	may cause	30826
+32033	belongs to the drug family of	3416
+30424	may cause	29214
+3827	may cause	19825
+34164	may be allelic with	32635
+58804	may cause	35190
+43747	belong(s) to the category of	28813
+32595	may cause	4410
+29869	may cause	17942
+34512	belong(s) to the category of	28832
+30469	belong(s) to the category of	28813
+31410	may cause	19011
+32517	belongs to the drug family of	3416
+35255	may cause	22629
+31610	belong(s) to the category of	29546
+29592	may cause	33855
+1309	may cause	6234
+33256	may cause	29900
+29914	belong(s) to the category of	28813
+36344	see also	32331
+8628	may cause	21432
+36567	may cause	29577
+10545	may contraindicate	30297
+13486	may cause	32042
+31249	belong(s) to the category of	28813
+36452	may cause	20521
+9016	may cause	22832
+11506	may cause	11080
+7431	may cause	21915
+4872	may cause	25831
+3207	belong(s) to the category of	28825
+31231	is a subtype of	31149
+33774	belong(s) to the category of	28813
+31677	interacts with	33005
+33498	may cause	30760
+34748	may cause	11105
+13075	may cause	28364
+33951	see also	29143
+6959	may cause	5581
+31686	may cause	8870
+7820	may cause	14901
+2137	is a subtype of	16209
+36380	may cause	10703
+34828	is a risk factor for	10285
+18003	belong(s) to the category of	28856
+12486	may cause	28508
+36628	belongs to the drug family of	36627
+9351	may cause	32386
+36672	belongs to the drug family of	33492
+29100	may cause	7150
+36447	may cause	4509
+34230	belongs to the drug family of	31168
+34376	belongs to the drug family of	30493
+4	may cause	6397
+33017	may cause	29401
+31445	belong(s) to the category of	28854
+552	may cause	19011
+30016	belongs to the drug family of	29555
+31736	may cause	8994
+33125	belongs to the drug family of	29665
+34234	belong(s) to the category of	28813
+14279	may cause	33955
+29378	may cause	35254
+30801	may be allelic with	30611
+33437	belong(s) to the category of	28857
+31207	belongs to the drug family of	10707
+36335	may cause	9266
+32214	may cause	7452
+30090	belong(s) to the category of	28806
+31677	interacts with	4875
+29034	may cause	6706
+36390	belong(s) to the category of	28806
+31889	may cause	4328
+32964	may cause	8994
+2885	may cause	16940
+33337	may cause	21064
+31242	may cause	9266
+3832	may cause	8995
+29735	may cause	14765
+8152	may cause	8817
+5406	may cause	4025
+32024	may cause	34903
+1384	may cause	3742
+10545	may contraindicate	29923
+10425	may cause	11998
+30450	belong(s) to the category of	28813
+32730	may cause	5252
+29626	belong(s) to the category of	28813
+33871	may cause	8881
+29417	may cause	928
+10545	may contraindicate	32937
+34537	may be allelic with	14093
+9816	is a subtype of	13580
+33344	may cause	4509
+32392	may cause	4015
+33131	may cause	6445
+6558	is a risk factor for	9135
+29226	may cause	6397
+32735	belong(s) to the category of	28803
+946	may cause	14843
+29233	belong(s) to the category of	28827
+32693	may cause	4509
+5141	may cause	8817
+14021	is associated with	5901
+32499	may cause	22641
+1341	may cause	9614
+1762	may cause	13750
+33731	may cause	16940
+7351	is a subtype of	1
+13703	may cause	27426
+32210	belong(s) to the category of	28826
+30284	belongs to the drug family of	29564
+32854	may cause	26877
+33475	may cause	4509
+325	may cause	1173
+31082	see also	5765
+29309	may cause	3218
+5419	is associated with	9870
+2659	may cause	10703
+2858	may cause	28364
+5195	is a risk factor for	4889
+13685	may cause	31391
+5003	may cause	11687
+31666	belongs to the drug family of	31017
+4968	may cause	1174
+29503	is associated with	9870
+30372	interacts with	31749
+295	see also	25294
+32018	may cause	36371
+33698	belong(s) to the category of	28803
+31029	may cause	16940
+11068	may cause	5728
+29625	belongs to the drug family of	29565
+32448	belong(s) to the category of	28813
+32092	may cause	8374
+12192	belong(s) to the category of	28856
+30600	belongs to the drug family of	35091
+9479	may cause	18724
+33239	belong(s) to the category of	28813
+87	belong(s) to the category of	28807
+2533	may cause	29323
+57785	may cause	29284
+1090	may cause	17017
+36337	belong(s) to the category of	28813
+31257	belong(s) to the category of	53766
+31751	may cause	29214
+30949	may cause	25363
+32117	may cause	29283
+31862	may cause	2095
+4476	may cause	19173
+12169	may cause	2869
+10545	may contraindicate	31207
+31817	may cause	20279
+29964	may cause	29284
+36372	may cause	7772
+20061	is a subtype of	7038
+31021	belongs to the drug family of	15141
+40728	may cause	19011
+8275	may cause	10998
+552	may cause	6539
+32791	may cause	29715
+29410	may cause	29402
+12540	may cause	26039
+32724	may cause	14612
+11223	may cause	17416
+31723	belong(s) to the category of	28813
+33399	belong(s) to the category of	28805
+36346	belong(s) to the category of	28813
+29086	is a subtype of	29396
+1617	may contraindicate	3783
+6706	may cause	8817
+7403	belong(s) to the category of	28806
+3467	may cause	14140
+34799	belong(s) to the category of	28805
+12585	belong(s) to the category of	28808
+35168	may cause	29870
+11416	belong(s) to the category of	28856
+21253	belong(s) to the category of	28857
+1577	may cause	6539
+33847	belong(s) to the category of	28813
+29374	is a subtype of	7386
+3623	may cause	28555
+31932	may cause	23053
+7150	may cause	24599
+22641	belong(s) to the category of	28856
+35297	belong(s) to the category of	28803
+29614	belong(s) to the category of	28807
+3971	may cause	6542
+7880	may cause	6160
+34545	may cause	6234
+10444	may cause	18706
+12732	belong(s) to the category of	28828
+6426	may cause	22105
+33979	may cause	32189
+11390	is a subtype of	2137
+1173	belong(s) to the category of	28844
+29422	belong(s) to the category of	28856
+11445	may cause	13544
+8080	may cause	21417
+14241	belong(s) to the category of	28803
+30876	belong(s) to the category of	29546
+33641	belong(s) to the category of	28821
+29985	may cause	17771
+31556	may cause	20204
+32746	belong(s) to the category of	28857
+5332	may cause	29459
+3303	may cause	7772
+30161	may cause	15237
+32129	may cause	2549
+9965	may cause	26380
+5094	may cause	1514
+33259	may cause	4466
+37700	may cause	14701
+29472	is a subtype of	22832
+30712	may cause	14326
+29564	interacts with	14043
+31405	belong(s) to the category of	28801
+7565	may cause	9121
+9161	may cause	19317
+33862	may cause	15063
+32072	may cause	13606
+29974	belong(s) to the category of	28813
+32290	belong(s) to the category of	29076
+21057	may cause	14843
+1505	may cause	1684
+12523	may cause	15237
+31973	belong(s) to the category of	28813
+29206	may cause	29214
+32915	may cause	25831
+36404	may cause	17143
+8001	belong(s) to the category of	28857
+6542	may cause	4166
+12507	may cause	29245
+35125	may cause	10825
+57791	may cause	19825
+33511	may cause	35160
+33044	belongs to drug super-family	35182
+9670	may cause	18706
+8772	belong(s) to the category of	28856
+5155	may cause	979
+29578	may cause	28256
+34565	interacts with	519
+29809	belong(s) to the category of	28857
+3460	may cause	4461
+29740	may cause	25769
+29477	may cause	29464
+35033	belong(s) to the category of	28801
+33794	belong(s) to the category of	28821
+325	may cause	6443
+32669	belong(s) to the category of	28801
+32953	belong(s) to the category of	29546
+13789	may cause	18165
+4660	may cause	18756
+32133	may cause	6445
+2567	may cause	9539
+2040	may cause	6330
+11124	may cause	14367
+34781	may cause	33577
+37701	may cause	4509
+171	may contraindicate	31648
+3898	is a risk factor for	8604
+32736	belong(s) to the category of	28838
+29195	belong(s) to the category of	28813
+5671	may cause	19942
+32176	may cause	19825
+10053	belong(s) to the category of	28841
+6241	is a subtype of	16589
+30522	belong(s) to the category of	28813
+4522	may cause	29080
+7352	may cause	12870
+29714	belong(s) to the category of	28847
+12873	interacts with	3321
+32560	may cause	3066
+35173	belong(s) to the category of	29546
+5728	may cause	21506
+34585	belongs to the drug family of	29532
+2327	may cause	3739
+32165	may cause	6426
+10343	is associated with	2975
+6348	belong(s) to the category of	28815
+34243	belongs to the drug family of	15141
+34339	belongs to the drug family of	34214
+9418	may cause	943
+36409	belong(s) to the category of	28853
+31685	may cause	6490
+36590	belong(s) to the category of	28852
+454	may cause	11416
+7286	may cause	11429
+29792	may cause	25810
+9052	belongs to drug super-family	29533
+12901	may cause	3110
+30026	may cause	9559
+6111	may cause	4847
+3399	may cause	12180
+12934	may cause	18706
+30742	may cause	6330
+29847	may cause	6483
+9099	is a risk factor for	4252
+33679	may cause	8723
+1212	belongs to the drug family of	31693
+27130	belong(s) to the category of	28832
+14279	belong(s) to the category of	28842
+2428	may cause	19825
+33688	may cause	54
+33348	may be allelic with	32807
+29807	may cause	24638
+6014	may cause	8243
+36598	may cause	6348
+13888	belongs to the drug family of	29563
+36478	may cause	8994
+33429	may cause	6539
+29843	may be allelic with	30161
+32577	belongs to the drug family of	29550
+11258	is a risk factor for	31360
+31800	belongs to the drug family of	30535
+32196	may cause	19825
+35178	may cause	6890
+11258	may cause	6323
+10195	may cause	29214
+420	belongs to the drug family of	34320
+12975	is a risk factor for	34299
+31363	belong(s) to the category of	28857
+36455	belongs to the drug family of	36456
+36664	may cause	6234
+33872	may cause	27931
+29885	may cause	3617
+30572	belongs to the drug family of	29553
+32018	may cause	30700
+11603	interacts with	31889
+30222	may cause	7677
+2218	is a subtype of	15409
+3898	may cause	30596
+11263	may cause	9820
+13341	may cause	4509
+870	may cause	5667
+8616	may cause	12375
+6558	may cause	53760
+8034	is a risk factor for	32516
+32808	belongs to the drug family of	8975
+7178	belong(s) to the category of	28857
+8834	may cause	27130
+3066	may cause	15206
+7580	may cause	11080
+2384	may cause	19297
+34224	belong(s) to the category of	29546
+30707	may cause	17942
+1285	may cause	13676
+31501	belong(s) to the category of	28803
+29743	may cause	22751
+32394	may cause	29894
+1876	is a risk factor for	10780
+30080	may cause	34162
+34296	may cause	892
+10545	may contraindicate	35211
+35063	may cause	6539
+29833	may cause	21417
+29602	may cause	1777
+3532	may cause	29364
+34884	belong(s) to the category of	28813
+34633	belong(s) to the category of	28801
+31251	may cause	8994
+9475	is a subtype of	1
+10611	belong(s) to the category of	28813
+35108	may cause	34044
+9970	may cause	28256
+34157	belong(s) to the category of	28813
+32560	may cause	20624
+1591	may cause	22464
+30372	interacts with	30472
+12602	may cause	25810
+6330	may cause	7659
+2975	may cause	15544
+32613	may cause	26724
+31621	may cause	5404
+7137	may cause	2868
+20710	belong(s) to the category of	28807
+30111	may cause	29402
+19011	may cause	11472
+12711	belong(s) to the category of	28808
+12356	is a risk factor for	3623
+64	may cause	6503
+33117	belongs to the drug family of	31670
+3971	may cause	15206
+6067	may cause	7689
+2247	may cause	29283
+34911	may cause	29214
+29751	may cause	21506
+32789	may cause	11263
+30400	belongs to the drug family of	29481
+30718	may cause	29434
+7820	may cause	6431
+29526	belong(s) to the category of	28813
+29559	may cause	12135
+2520	may cause	18924
+325	may cause	24034
+1416	may cause	4882
+18612	may cause	7150
+33907	belong(s) to the category of	31740
+220	belongs to the drug family of	34131
+318	belong(s) to the category of	28811
+5606	belongs to the drug family of	32452
+32117	may cause	35160
+6067	may cause	31423
+5690	may cause	11472
+32570	may cause	20886
+29233	may cause	4328
+29192	belong(s) to the category of	28813
+31677	interacts with	30043
+3559	may cause	18665
+13273	may cause	25466
+30845	belongs to the drug family of	29779
+32155	may cause	29623
+10729	interacts with	30166
+5991	may cause	21885
+35006	is a risk factor for	10718
+33853	belong(s) to the category of	28813
+30961	belongs to the drug family of	29730
+7091	may cause	2999
+35124	is associated with	29328
+4221	belong(s) to the category of	28810
+34899	may cause	30052
+11155	may cause	31684
+32571	may cause	15544
+11288	may cause	19011
+30807	may cause	29623
+32279	may cause	18756
+18706	is a subtype of	9503
+9991	may cause	14612
+32017	may cause	30593
+30833	may cause	28555
+29613	may cause	6226
+7491	belong(s) to the category of	28857
+31575	may cause	10470
+35234	belongs to the drug family of	33044
+32882	belongs to the drug family of	34542
+31375	belong(s) to the category of	28857
+12356	may cause	8995
+10657	belong(s) to the category of	28813
+33420	belong(s) to the category of	28803
+32278	may cause	18756
+9860	may cause	11960
+30464	belongs to the drug family of	31192
+33022	may cause	6431
+2462	may cause	7651
+34068	belong(s) to the category of	28813
+4113	belong(s) to the category of	33481
+36629	may cause	8723
+10131	may cause	6388
+33919	belong(s) to the category of	35202
+8515	may cause	30723
+29595	may cause	7651
+32366	belong(s) to the category of	29076
+31980	may cause	29328
+32453	may cause	13606
+4269	may cause	4017
+31904	is associated with	12155
+33713	may cause	9850
+34955	belong(s) to the category of	28813
+32512	interacts with	32422
+7947	may cause	15788
+8773	may cause	5226
+30652	belong(s) to the category of	29546
+30097	may cause	11445
+13808	belong(s) to the category of	28808
+32756	belongs to the drug family of	29747
+10343	is associated with	9418
+36609	may cause	29158
+31497	may cause	24638
+29942	may cause	2549
+36422	may cause	30760
+2274	belong(s) to the category of	28858
+34000	belongs to the drug family of	33999
+33721	may cause	29782
+6947	may cause	8192
+29188	may cause	30532
+31737	may cause	3043
+12128	interacts with	33133
+35237	may cause	3742
+3094	may cause	9385
+34543	belong(s) to the category of	28854
+6330	is a risk factor for	13974
+1254	may cause	27934
+29938	may cause	19011
+31558	may cause	19011
+171	may cause	27498
+46752	belong(s) to the category of	28813
+14186	may cause	12135
+29931	may cause	29284
+33711	may be allelic with	34533
+30242	may cause	4450
+32117	may cause	31448
+31170	may cause	29153
+5812	belong(s) to the category of	28801
+31418	may cause	39723
+2003	may cause	5332
+32783	may cause	32779
+34862	belong(s) to the category of	28811
+31045	belongs to the drug family of	29774
+7901	may cause	6539
+9231	may cause	24048
+1090	may cause	8275
+36633	may cause	21929
+31096	may cause	28555
+32626	may cause	4509
+7396	may cause	28555
+29740	belong(s) to the category of	28813
+11093	may cause	11080
+13703	is a risk factor for	8926
+32949	may cause	24638
+31131	may cause	18924
+30372	interacts with	30002
+34453	belong(s) to the category of	28841
+5236	belong(s) to the category of	28857
+10921	may cause	22725
+29134	belong(s) to the category of	28801
+12428	is associated with	3649
+5481	may cause	14843
+30618	belong(s) to the category of	28813
+7091	may cause	27359
+29638	may cause	4630
+37718	belongs to the drug family of	32123
+6666	may cause	29214
+34405	may cause	31491
+32898	may cause	31088
+32135	belongs to drug super-family	31073
+4011	belong(s) to the category of	28857
+529	may cause	17771
+31314	belong(s) to the category of	28813
+9572	may cause	26060
+33739	belong(s) to the category of	28806
+6720	may cause	14901
+11	may cause	22035
+1961	may cause	15237
+10545	may cause	10703
+30615	interacts with	31897
+10685	may cause	27522
+12050	may cause	16615
+4540	may cause	20061
+8695	may cause	32419
+30981	belongs to the drug family of	28871
+35049	belongs to the drug family of	30974
+2161	belong(s) to the category of	28801
+36582	may cause	8995
+8222	may cause	2861
+13378	may cause	29395
+1231	may cause	2218
+5973	may cause	16
+4206	belongs to the drug family of	29568
+10545	may contraindicate	29920
+30339	belong(s) to the category of	28813
+29255	may cause	29284
+4417	belong(s) to the category of	28813
+7903	may cause	3742
+9385	is a subtype of	29870
+32581	may cause	10703
+30718	may cause	30719
+58801	may cause	10703
+58791	belong(s) to the category of	28813
+32061	may cause	15237
+29572	may cause	1684
+32253	belong(s) to the category of	28813
+33111	may cause	14638
+31318	may cause	5375
+31729	may cause	4824
+6558	may cause	4438
+24580	may cause	17942
+31876	may cause	15409
+31731	may cause	30066
+32226	may cause	20204
+47752	belong(s) to the category of	28813
+171	may cause	3080
+29840	may cause	20468
+29909	belong(s) to the category of	28803
+30067	may cause	6314
+934	may cause	29323
+3094	may cause	9720
+34032	may cause	26545
+3957	may cause	2227
+985	belongs to the drug family of	29730
+33465	interacts with	1984
+36370	belong(s) to the category of	28801
+12597	may cause	3233
+33694	may be allelic with	32216
+29064	may cause	29066
+8664	may cause	8817
+11288	is a risk factor for	32593
+10545	may contraindicate	30457
+4015	is a subtype of	26978
+32785	may cause	19291
+32599	may cause	3043
+29380	is a subtype of	29379
+11017	may cause	10139
+34530	may cause	2137
+1229	belong(s) to the category of	28834
+35287	belong(s) to the category of	28803
+35250	may cause	35249
+36597	may cause	29616
+243	may cause	26380
+3617	may cause	9476
+7307	may cause	945
+34954	may cause	4509
+31757	may cause	24638
+31483	may cause	30780
+32178	belong(s) to the category of	28801
+33210	may cause	29283
+8131	may cause	8716
+985	may cause	27908
+10664	interacts with	30232
+6014	is a subtype of	25614
+34316	belong(s) to the category of	28813
+29797	may cause	29379
+31537	may cause	23053
+33117	belong(s) to the category of	28813
+29528	may cause	14367
+30015	may cause	12050
+29586	is a subtype of	29585
+29495	may cause	19011
+8573	belong(s) to the category of	28813
+12327	may cause	6764
+29460	may cause	29459
+34815	belongs to the drug family of	34239
+30590	may cause	24034
+5141	may cause	19110
+32218	belong(s) to the category of	28857
+32213	may cause	4033
+32447	may cause	8994
+29837	may cause	34424
+30893	belong(s) to the category of	28813
+29308	may cause	21555
+30026	may cause	9539
+7616	may cause	27084
+35264	may cause	29330
+35025	belong(s) to the category of	28811
+13642	may cause	13038
+13835	may cause	11288
+34591	belong(s) to the category of	28847
+34380	may cause	22641
+9905	may cause	2847
+7387	may cause	3218
+30174	may cause	25148
+30762	is a subtype of	1
+5452	may cause	25466
+57788	may cause	35249
+32665	may cause	36371
+29622	may cause	29423
+12013	may cause	2095
+27877	belong(s) to the category of	28807
+31323	may cause	8902
+33488	belong(s) to the category of	28844
+33343	belong(s) to the category of	28803
+29956	belongs to the drug family of	15141
+10376	may contraindicate	6959
+13808	may cause	32905
+29226	may cause	24638
+10545	may contraindicate	29937
+30186	belongs to the drug family of	30955
+12181	is a subtype of	24638
+31949	may cause	22629
+34560	belong(s) to the category of	28803
+30479	may cause	6890
+29826	may cause	20468
+32683	may cause	3218
+36321	may cause	19825
+33520	may cause	29283
+33713	belong(s) to the category of	28842
+30515	belongs to the drug family of	29564
+31037	belongs to the drug family of	29481
+12069	may cause	9572
+4432	may cause	15237
+29065	may cause	7607
+309	may cause	16149
+6372	may cause	29220
+34205	belong(s) to the category of	29546
+1145	belong(s) to the category of	33482
+4478	may cause	2549
+4342	may cause	26553
+31817	may cause	29328
+34658	may cause	29722
+5649	may cause	20521
+6880	may cause	16940
+32882	belongs to the drug family of	33371
+4638	may cause	11080
+29964	may cause	27303
+2161	may cause	19011
+29848	may cause	21417
+10488	may cause	5670
+33593	belong(s) to the category of	28857
+10545	may contraindicate	33137
+31994	may cause	29358
+13866	belong(s) to the category of	28806
+33008	may cause	8472
+33499	may cause	14765
+33694	belong(s) to the category of	28801
+12263	may cause	14638
+31177	belong(s) to the category of	28813
+3153	may cause	19825
+2847	is a subtype of	23092
+4855	interacts with	14043
+31090	belong(s) to the category of	28857
+33316	may cause	6646
+24077	belong(s) to the category of	28856
+32368	is associated with	10615
+8515	may cause	29255
+31214	may cause	32098
+31421	belong(s) to the category of	28843
+9271	may cause	14367
+5671	may cause	32907
+32011	may cause	4509
+4815	may cause	2847
+11014	belong(s) to the category of	28808
+32451	may cause	29350
+7242	belongs to the drug family of	33371
+9351	may cause	15801
+33592	is a risk factor for	2955
+32022	belong(s) to the category of	28856
+31960	belongs to the drug family of	33492
+12277	may cause	6234
+11856	may cause	1715
+35210	may cause	11263
+32373	belong(s) to the category of	28853
+31301	may cause	5226
+13516	is a risk factor for	7947
+2708	interacts with	14043
+9212	may cause	29398
+13495	may cause	21253
+30582	belongs to the drug family of	10707
+35300	may cause	7305
+31163	may cause	32567
+36627	belong(s) to the category of	29546
+2	may cause	20960
+6750	may cause	29596
+29094	may cause	29402
+33125	may cause	24034
+4252	is associated with	4512
+4939	may cause	29217
+2247	may cause	34501
+30179	belongs to the drug family of	10707
+32161	may cause	29782
+37715	belongs to the drug family of	37716
+7914	may cause	20468
+1929	may cause	25831
+8905	belong(s) to the category of	29073
+25619	is a subtype of	25831
+31465	belong(s) to the category of	28852
+32652	may cause	6490
+1249	may cause	5404
+29955	belongs to the drug family of	35091
+34921	belong(s) to the category of	28813
+32239	may cause	2179
+30783	may cause	7438
+12559	may cause	7698
+2449	may cause	24024
+36595	may cause	35190
+30848	may cause	9539
+4153	belong(s) to the category of	28828
+36554	may cause	32487
+30807	may cause	33267
+58800	may cause	16662
+32623	may cause	26545
+9237	may cause	18665
+31468	belong(s) to the category of	28841
+36328	may cause	23092
+32607	belong(s) to the category of	28813
+30010	belongs to the drug family of	29262
+11373	may cause	9503
+31978	may cause	22641
+27395	is a subtype of	25831
+11729	belong(s) to the category of	28835
+34465	may cause	24638
+30357	may cause	25320
+13259	may cause	22804
+33701	may cause	20624
+8100	belong(s) to the category of	28825
+11155	may cause	27426
+34907	may cause	6558
+13824	belongs to the drug family of	31190
+34678	may cause	21064
+9189	see also	3000
+33744	belong(s) to the category of	28813
+10545	may cause	7306
+14043	interacts with	12988
+29319	is a subtype of	29379
+33707	may cause	2592
+12998	may cause	9266
+945	belong(s) to the category of	28844
+4540	may cause	6270
+31850	belong(s) to the category of	28813
+35073	is a risk factor for	203
+31752	may cause	29214
+30940	belongs to the drug family of	30645
+32773	may cause	16149
+29495	may cause	11416
+31904	is associated with	11506
+29761	may cause	29900
+6558	may cause	9099
+31929	belong(s) to the category of	28803
+31346	may cause	24075
+34085	is a subtype of	13634
+7150	belong(s) to the category of	28856
+10248	may cause	15088
+1984	interacts with	33131
+30978	belongs to the drug family of	29560
+7991	may cause	1173
+31664	may cause	22225
+8905	may cause	27726
+6558	may cause	27939
+5220	is a risk factor for	12641
+33804	may cause	29670
+30720	belong(s) to the category of	28834
+30705	may cause	26877
+2064	may cause	25363
+29410	may cause	21885
+32486	may cause	22641
+171	may cause	16043
+9099	is a risk factor for	29852
+35108	belongs to the drug family of	33999
+36577	may cause	2874
+3213	may cause	8716
+30609	belong(s) to the category of	28843
+2173	may cause	13676
+29188	belongs to the drug family of	30535
+13770	may cause	7772
+11882	may cause	22105
+9991	may cause	17771
+10444	may cause	19825
+11631	may cause	6330
+26060	may contraindicate	29930
+30401	belong(s) to the category of	28813
+36466	belong(s) to the category of	28813
+33457	belong(s) to the category of	28801
+700	may cause	29414
+33875	belong(s) to the category of	28817
+10589	is a risk factor for	29544
+32748	may cause	29892
+30600	may cause	9148
+29717	may cause	2847
+32873	may cause	14367
+5968	belong(s) to the category of	28838
+8905	may cause	5667
+7487	may cause	22751
+31319	may cause	30066
+34128	belong(s) to the category of	28813
+6431	may cause	28256
+7484	belong(s) to the category of	28813
+13535	belongs to the drug family of	33391
+35186	may cause	26545
+34503	may cause	20764
+4593	may cause	17865
+14218	may cause	11223
+34962	may cause	27369
+30822	see also	14836
+29510	belong(s) to the category of	28803
+1560	may cause	15838
+31814	belongs to the drug family of	1950
+29668	may cause	14908
+29181	may cause	4466
+9297	belongs to the drug family of	15141
+32035	belongs to the drug family of	29262
+11337	may cause	21915
+7052	may cause	11080
+18157	is a subtype of	9503
+29213	may cause	29080
+15141	may cause	30836
+1791	may cause	26060
+2764	may cause	26060
+36503	belong(s) to the category of	28838
+7121	may cause	18924
+10392	belong(s) to the category of	28828
+11506	may cause	13750
+32159	may cause	7698
+6348	may cause	14556
+29691	belongs to the drug family of	36394
+34745	may cause	19011
+9313	is a risk factor for	2309
+10545	may contraindicate	30459
+29866	may cause	15237
+36426	may cause	22895
+12430	may cause	29409
+9016	may cause	4509
+34666	belong(s) to the category of	28813
+31203	belong(s) to the category of	28813
+8975	may cause	19601
+29788	belong(s) to the category of	28813
+34107	belongs to the drug family of	32926
+30052	belong(s) to the category of	28811
+5435	may cause	25831
+30807	may cause	2309
+33131	may cause	19635
+32630	belong(s) to the category of	28803
+33550	belong(s) to the category of	28813
+32559	may cause	6539
+31242	belong(s) to the category of	28813
+30113	belongs to the drug family of	29550
+9351	may cause	29408
+3073	may cause	4786
+33139	may cause	21867
+29977	belong(s) to the category of	28813
+1735	is a subtype of	29096
+29750	may cause	2095
+29123	belong(s) to the category of	28801
+34386	may cause	2218
+29625	may cause	20061
+2247	may cause	12050
+7403	may cause	4461
+7808	belongs to the drug family of	30182
+19011	may cause	4676
+30983	belong(s) to the category of	29546
+29661	belong(s) to the category of	28856
+12901	may cause	12375
+34107	belong(s) to the category of	28813
+32020	may cause	29617
+7776	may contraindicate	13034
+31447	belong(s) to the category of	28801
+31145	may cause	2860
+4005	may cause	29217
+6880	belong(s) to the category of	28832
+7565	may cause	20204
+11506	may cause	16101
+34789	belong(s) to the category of	29546
+34489	belong(s) to the category of	28857
+29161	belong(s) to the category of	28803
+37719	belong(s) to the category of	28808
+29355	may cause	14901
+3538	belongs to the drug family of	36501
+30175	may cause	29
+9579	is a subtype of	9242
+83	may cause	24599
+1728	is associated with	10343
+34500	may cause	14367
+32698	may cause	29398
+6009	may cause	28256
+32461	may cause	22543
+34043	may cause	3341
+29258	may cause	29284
+10926	belong(s) to the category of	28852
+5765	is associated with	5938
+11368	may cause	26184
+14107	may cause	22832
+1578	may cause	2858
+2198	may cause	17942
+5487	may cause	8881
+32002	belong(s) to the category of	28857
+58805	may cause	2218
+1832	may cause	36405
+31637	belong(s) to the category of	28813
+31949	may cause	29623
+1994	may cause	406
+10439	belong(s) to the category of	28856
+29914	may cause	5667
+13433	may cause	22519
+30017	belong(s) to the category of	28813
+29477	may cause	15748
+29364	may cause	18706
+29209	may cause	7698
+8288	may cause	1065
+9539	may cause	6234
+36623	may cause	12375
+10664	interacts with	31632
+29134	may cause	26545
+31678	belong(s) to the category of	29546
+10545	may cause	30030
+10545	may contraindicate	30474
+34661	may cause	4629
+33110	interacts with	29987
+10545	may contraindicate	30299
+5581	may cause	14843
+33398	belong(s) to the category of	28803
+33522	may cause	17472
+29509	belong(s) to the category of	28811
+32663	may cause	22629
+30215	belong(s) to the category of	28813
+34718	belong(s) to the category of	28803
+5311	belong(s) to the category of	28803
+32557	belong(s) to the category of	28813
+36423	may cause	28415
+36553	belongs to the drug family of	32439
+10545	may contraindicate	30106
+32274	may cause	4509
+8337	may cause	3067
+33208	may cause	11958
+11106	may cause	11103
+29057	may cause	22143
+32948	may cause	14367
+4638	may cause	8275
+31224	may cause	29631
+728	may cause	11754
+14141	may cause	22629
+30166	interacts with	29935
+34958	may cause	6445
+31127	belong(s) to the category of	28805
+33071	belong(s) to the category of	28813
+663	may cause	16537
+32054	may cause	14367
+35196	belong(s) to the category of	28813
+8935	may cause	14326
+10331	may cause	11080
+6558	may cause	12134
+34565	may cause	16537
+10392	may cause	3865
+29093	belong(s) to the category of	28832
+30502	belongs to the drug family of	29568
+31885	may cause	31289
+9150	may cause	7565
+145	may cause	22543
+4540	is a risk factor for	7547
+888	belongs to the drug family of	31610
+31138	belong(s) to the category of	28832
+35295	may cause	5375
+37700	may cause	4015
+7352	may cause	24168
+7298	may cause	3742
+34450	belong(s) to the category of	28841
+36673	may cause	29414
+11245	may cause	30609
+2791	may cause	7305
+30475	belong(s) to the category of	28813
+33583	may cause	5404
+9793	may cause	13606
+34640	may cause	11346
+29740	may cause	3067
+9850	belong(s) to the category of	28856
+58801	may cause	4450
+34797	may cause	17771
+32341	belong(s) to the category of	29076
+34608	may cause	16662
+34657	may cause	29282
+29218	may cause	6469
+30227	belongs to the drug family of	29046
+2095	may cause	13783
+12306	may cause	1416
+5670	belong(s) to the category of	28807
+5153	belongs to the drug family of	30539
+58799	may be allelic with	29327
+13657	may cause	11080
+32013	belong(s) to the category of	28801
+29355	may cause	6445
+31847	may cause	34743
+34982	may cause	22895
+33968	may cause	3160
+31012	belongs to the drug family of	33552
+14107	may cause	9148
+2764	may cause	9850
+32065	may cause	20061
+35106	may cause	11104
+34998	may cause	21506
+29755	belong(s) to the category of	28858
+32241	may cause	14839
+30568	belong(s) to the category of	28813
+11980	may cause	15117
+10615	may cause	2729
+7181	may cause	13657
+1075	may cause	2847
+30195	may cause	29214
+6348	may cause	28440
+30801	may cause	4509
+5728	may cause	943
+12966	may cause	27460
+33585	may cause	22519
+22194	is a subtype of	28954
+2708	may cause	24609
+2247	may cause	19825
+9539	may cause	14367
+29781	may cause	23470
+588	may cause	22725
+31532	belong(s) to the category of	28803
+30707	may cause	4015
+30036	may cause	17771
+33585	may cause	34903
+35033	may cause	54
+29	may cause	4834
+35085	may cause	24048
+30705	may cause	16940
+34465	may be allelic with	33066
+31334	may cause	8905
+11841	may cause	27130
+10475	may cause	8100
+8628	may cause	35226
+4342	belong(s) to the category of	28834
+32979	belong(s) to the category of	28857
+29526	may cause	11263
+4788	belong(s) to the category of	28808
+32393	may cause	22641
+57785	may cause	34296
+27190	is a subtype of	15892
+1025	is a risk factor for	195
+9929	belongs to the drug family of	34205
+1107	is a subtype of	1089
+33613	belong(s) to the category of	28813
+8449	may cause	7772
+36414	belong(s) to the category of	28854
+14241	may cause	1684
+9748	may cause	15544
+33126	belongs to the drug family of	29779
+9688	may cause	29
+29495	may cause	29394
+3221	belong(s) to the category of	28851
+771	belong(s) to the category of	28824
+31096	may cause	4033
+32130	may cause	1132
+31288	may cause	29500
+5361	belong(s) to the category of	28813
+7616	may cause	30609
+3101	belongs to the drug family of	30182
+14198	may cause	24599
+9730	may cause	5252
+36517	may cause	27522
+2375	belong(s) to the category of	28806
+29807	may cause	27395
+33353	is a subtype of	23092
+10545	may contraindicate	13324
+4048	may cause	8716
+10832	may cause	31623
+30844	may cause	18193
+34286	belong(s) to the category of	28813
+6032	is a risk factor for	34499
+29438	is a risk factor for	12385
+12719	may cause	22895
+29288	belong(s) to the category of	28856
+36342	may cause	6444
+34302	belong(s) to the category of	28857
+32637	belong(s) to the category of	28803
+35131	may cause	22629
+11487	may cause	844
+31234	may cause	19825
+11081	belong(s) to the category of	28813
+35168	is a risk factor for	13657
+10814	belong(s) to the category of	28838
+243	is a subtype of	13595
+8628	may cause	21506
+3898	may cause	7689
+36432	belong(s) to the category of	28813
+5622	may cause	22751
+32182	may cause	33041
+31154	belong(s) to the category of	28811
+2567	may cause	4328
+35047	belong(s) to the category of	28801
+33190	may cause	7691
+31819	may cause	24182
+30055	may cause	29283
+30638	may cause	3742
+32507	may cause	25619
+1039	is a risk factor for	11421
+31993	belong(s) to the category of	28857
+12110	may cause	12116
+3066	may cause	11017
+29575	may cause	24609
+9351	belong(s) to the category of	28857
+3083	may cause	6847
+4793	belong(s) to the category of	28858
+22094	may cause	20204
+3930	belong(s) to the category of	28813
+805	may cause	2128
+7052	may cause	10122
+32625	may cause	29411
+29629	may cause	18327
+29931	may cause	3080
+6187	may cause	6330
+6906	may cause	25810
+6684	belong(s) to the category of	28813
+266	may cause	31088
+31629	belongs to the drug family of	34131
+32526	may cause	22543
+34232	belong(s) to the category of	28813
+7415	may cause	29283
+29580	may be allelic with	31929
+1063	belong(s) to the category of	28813
+11255	may cause	6330
+3661	may cause	6330
+30758	may cause	14326
+16311	may cause	4676
+35304	may cause	17912
+29267	may cause	6443
+6087	may cause	16101
+29583	may cause	9099
+12744	may cause	6890
+9991	may cause	4894
+33006	belongs to the drug family of	29554
+29790	may cause	1513
+35301	belongs to the drug family of	31168
+34179	may cause	8995
+33747	belongs to the drug family of	35165
+33345	may cause	28555
+30149	belong(s) to the category of	28801
+32144	may cause	24638
+1427	may cause	18003
+633	may cause	8723
+32741	may cause	32141
+10302	may cause	6239
+2861	may cause	8603
+35151	belong(s) to the category of	28801
+34329	may cause	29214
+33279	belong(s) to the category of	28813
+33432	may cause	20632
+33475	may cause	29330
+33304	belongs to the drug family of	33492
+37689	may cause	29080
+29459	is a subtype of	29457
+34442	may be allelic with	34443
+29816	may cause	8723
+30934	belong(s) to the category of	28813
+2486	interacts with	325
+6431	belong(s) to the category of	28807
+30180	see also	4903
+31747	belongs to the drug family of	30497
+6959	may cause	3080
+2769	may cause	14930
+42734	belong(s) to the category of	28813
+3314	may cause	16940
+9970	may cause	8994
+31995	may cause	27902
+29179	may cause	12375
+29778	may cause	11104
+33295	belong(s) to the category of	28811
+3178	may cause	11223
+33897	belong(s) to the category of	28813
+32988	may cause	6444
+11671	belong(s) to the category of	28838
+30924	may cause	8603
+33516	may cause	2874
+33465	may cause	24034
+31874	belong(s) to the category of	28828
+25810	may cause	16940
+34376	may cause	26877
+29583	may cause	21057
+13734	may cause	29114
+59822	may cause	4509
+32882	may cause	24638
+8575	may cause	3765
+2791	may cause	5670
+5906	may cause	12375
+34916	may cause	16118
+2975	may cause	943
+13089	belongs to the drug family of	33492
+36498	belongs to the drug family of	2182
+36457	may cause	2874
+5340	may cause	9850
+35277	may cause	27522
+36670	may cause	16662
+4934	may cause	27522
+295	see also	5037
+30260	may cause	5603
+5964	may cause	20389
+31893	is a risk factor for	2232
+33393	may cause	8905
+32157	may be allelic with	32142
+33768	may cause	15237
+4366	may cause	6764
+35290	may cause	18724
+34474	belong(s) to the category of	28811
+33619	may cause	29080
+58	belong(s) to the category of	28857
+4039	may cause	1089
+9096	may cause	3742
+34198	may cause	29782
+30820	belong(s) to the category of	28858
+1914	may cause	14367
+35156	may be allelic with	29540
+34705	belong(s) to the category of	28813
+32965	belongs to the drug family of	35014
+30459	belong(s) to the category of	28813
+32544	belong(s) to the category of	28813
+29043	may cause	31511
+10657	may cause	15409
+29234	may cause	29233
+325	may cause	18844
+3399	may cause	2613
+30733	belong(s) to the category of	28813
+58797	may cause	29104
+35011	may be allelic with	34665
+34076	belongs to the drug family of	29045
+32416	may cause	20764
+35194	belong(s) to the category of	28813
+36531	may cause	29617
+35189	belong(s) to the category of	28803
+29314	belong(s) to the category of	28806
+8515	may cause	10122
+14043	may cause	5578
+34407	belongs to the drug family of	34406
+34396	may cause	21417
+12913	may cause	8994
+5906	may cause	15892
+8868	belong(s) to the category of	28813
+30552	may cause	25363
+33682	may cause	27158
+33493	belongs to the drug family of	33492
+13400	belong(s) to the category of	28851
+11748	is a risk factor for	8896
+33314	may cause	18756
+34000	may cause	20061
+3661	is associated with	9099
+14218	may cause	14326
+32829	may cause	32561
+35179	may cause	14612
+3449	may cause	29330
+33595	belong(s) to the category of	28801
+35260	may cause	15409
+158	may cause	19825
+34988	belong(s) to the category of	28842
+24248	belong(s) to the category of	28856
+6763	belong(s) to the category of	28856
+36559	may cause	32487
+14248	may cause	33975
+9991	may cause	27426
+4443	belong(s) to the category of	28856
+36437	may cause	29153
+1218	see also	34181
+34779	may cause	19587
+30433	belong(s) to the category of	28813
+1346	is a risk factor for	8604
+30435	may cause	27522
+3564	belong(s) to the category of	28860
+33024	belong(s) to the category of	28825
+3498	may cause	31734
+29740	may cause	22895
+29909	is a risk factor for	29488
+3122	may cause	5402
+32559	interacts with	30518
+4529	may cause	6483
+34949	belong(s) to the category of	28801
+33803	see also	7464
+32205	may cause	15237
+33251	may cause	18756
+30468	may cause	3742
+31950	may cause	32115
+30913	is associated with	31118
+31652	belongs to the drug family of	6959
+13495	may cause	29698
+31280	is a subtype of	11416
+32345	belong(s) to the category of	29076
+9121	may cause	20061
+35102	may cause	20204
+33296	may cause	3617
+33551	may cause	6234
+32876	may cause	2218
+10545	may contraindicate	1984
+8732	may cause	32261
+11845	may cause	32386
+11472	may cause	17239
+14245	interacts with	30166
+12396	may cause	22543
+11461	may cause	17942
+4766	may cause	25148
+31795	belongs to the drug family of	31017
+32231	belong(s) to the category of	28811
+29600	belong(s) to the category of	28838
+36492	belong(s) to the category of	28813
+32667	belong(s) to the category of	28803
+58799	may be allelic with	34164
+32178	may cause	15237
+30542	may cause	11472
+30457	may cause	14765
+13722	may cause	27522
+6516	may cause	6220
+5879	may cause	6539
+27875	belong(s) to the category of	28807
+33870	may cause	31112
+2232	may cause	16662
+12642	belong(s) to the category of	28813
+4317	may cause	979
+32708	may cause	18844
+36644	belong(s) to the category of	28813
+34772	belongs to the drug family of	34041
+39727	belong(s) to the category of	28813
+30747	belong(s) to the category of	28806
+10098	may cause	13038
+30325	belong(s) to the category of	28813
+30831	belong(s) to the category of	28857
+32979	may cause	11472
+34190	belong(s) to the category of	28811
+29891	may cause	54
+34213	belong(s) to the category of	29546
+34305	belong(s) to the category of	28813
+100	may cause	1578
+7019	may cause	29080
+29930	may cause	10988
+10545	may contraindicate	985
+36370	may cause	29893
+3971	may cause	27381
+11263	may cause	16620
+33190	interacts with	36450
+15235	may cause	32435
+33334	belong(s) to the category of	28854
+11563	see also	32057
+35291	belong(s) to the category of	28813
+8905	may cause	29080
+10609	belongs to the drug family of	30969
+32317	belong(s) to the category of	29076
+34493	may cause	1578
+36631	may cause	29158
+7687	may cause	14934
+31086	may cause	8968
+31049	belongs to the drug family of	30969
+31704	may cause	3066
+10589	is a risk factor for	13522
+33054	may cause	29104
+9218	may cause	24638
+31226	may cause	29456
+31220	may cause	6397
+34495	may cause	21885
+34853	may cause	21929
+31013	belongs to the drug family of	29564
+30746	belong(s) to the category of	28857
+1218	may cause	28137
+13358	may cause	2867
+32009	may cause	2874
+31892	belong(s) to the category of	28803
+36649	belong(s) to the category of	28813
+33449	may cause	22641
+35115	belong(s) to the category of	28834
+30578	belongs to the drug family of	29532
+29428	belong(s) to the category of	28856
+3543	may cause	12135
+20710	may cause	27939
+30115	may cause	10703
+10545	may cause	5323
+5270	belong(s) to the category of	28813
+30351	may cause	6539
+4939	may cause	9313
+31464	belong(s) to the category of	28854
+7751	may cause	11080
+32151	belong(s) to the category of	28843
+32512	may cause	11104
+34418	belongs to the drug family of	34083
+34686	belong(s) to the category of	28813
+10545	may contraindicate	8116
+31443	belong(s) to the category of	28813
+12614	may cause	29284
+72	may cause	8817
+58792	may cause	23092
+29954	belongs to the drug family of	29551
+34496	may cause	4509
+10545	may contraindicate	8098
+34544	may cause	6234
+12223	may cause	29907
+31984	may cause	10998
+34442	may cause	30760
+32734	belong(s) to the category of	28811
+1572	belong(s) to the category of	28857
+34235	belongs to the drug family of	36428
+11124	may cause	9241
+35007	belong(s) to the category of	28813
+32882	may cause	20061
+3178	may cause	18256
+36477	belongs to the drug family of	31701
+6111	may cause	8817
+33545	may cause	29214
+2247	may cause	27742
+7861	may cause	23444
+9065	may cause	18561
+34915	belong(s) to the category of	28813
+30105	may cause	7438
+4496	belong(s) to the category of	28806
+7395	belong(s) to the category of	28825
+29176	may cause	22804
+36656	may cause	15801
+32706	may cause	5236
+30718	may cause	11754
+31745	belong(s) to the category of	28813
+30007	may cause	19825
+29436	may cause	29435
+33190	interacts with	30094
+33399	may cause	22895
+30688	belong(s) to the category of	28803
+31419	belong(s) to the category of	28857
+35248	belong(s) to the category of	28801
+5356	may cause	18256
+36352	may cause	10703
+33761	may cause	2874
+29377	belong(s) to the category of	28803
+45748	may cause	4509
+32624	may cause	32110
+29239	may cause	2218
+31926	may cause	29892
+27498	belong(s) to the category of	28807
+35294	may cause	6270
+31649	belong(s) to the category of	28813
+6801	may cause	18706
+34673	may cause	14638
+10545	is a risk factor for	10956
+3303	may cause	2137
+11506	may cause	2156
+2064	may cause	9820
+2729	may cause	943
+58808	may cause	33975
+465	may cause	6226
+29757	belong(s) to the category of	28842
+32653	may cause	23053
+934	belong(s) to the category of	28826
+32213	belong(s) to the category of	28860
+4068	may cause	19825
+33699	belong(s) to the category of	28801
+29510	may cause	29507
+5938	may cause	9539
+33257	belong(s) to the category of	28834
+30718	may cause	15237
+10718	may cause	29283
+34822	may cause	6373
+9760	may cause	25363
+31567	belongs to the drug family of	13170
+34984	belong(s) to the category of	28811
+30295	belong(s) to the category of	28813
+4780	belongs to the drug family of	29550
+1229	may cause	19297
+32014	may cause	12375
+29056	may cause	20204
+29610	belong(s) to the category of	28811
+2844	belongs to the drug family of	8975
+30473	interacts with	30000
+7698	may cause	14843
+8801	may cause	26877
+3726	may cause	29284
+2410	may cause	10703
+32818	belong(s) to the category of	28813
+29320	is a subtype of	6870
+34008	belong(s) to the category of	28805
+31367	belong(s) to the category of	28834
+34051	belong(s) to the category of	28844
+34535	may cause	30760
+3144	may cause	32236
+36606	may cause	2137
+9418	is a risk factor for	33977
+5792	belong(s) to the category of	28860
+33062	belong(s) to the category of	28813
+3000	may cause	7306
+36656	may cause	9148
+32029	belong(s) to the category of	28813
+32624	may cause	6646
+11797	may cause	1684
+34163	belong(s) to the category of	28813
+36312	belongs to the drug family of	31630
+31091	belong(s) to the category of	28843
+899	may cause	2218
+1617	belong(s) to the category of	28855
+33314	may cause	29735
+11765	may cause	14367
+30531	belong(s) to the category of	29546
+30869	may cause	18992
+32786	may cause	35184
+30065	may cause	29650
+3581	may cause	5603
+30178	see also	10713
+30479	belong(s) to the category of	28813
+30448	belong(s) to the category of	28813
+33263	belong(s) to the category of	28856
+33573	may cause	9241
+35306	may cause	33577
+2384	may cause	29101
+9739	may cause	4025
+32446	may cause	5402
+6767	may cause	9148
+35119	may cause	2137
+4875	may cause	19825
+2145	belong(s) to the category of	28808
+12193	may cause	14326
+35171	may cause	25466
+33120	interacts with	1984
+14186	may cause	27303
+29555	may cause	4847
+30118	interacts with	30042
+3460	may cause	4847
+28415	belong(s) to the category of	28856
+13373	may cause	24853
+33917	may cause	29292
+3614	belongs to the drug family of	29605
+35061	may cause	22629
+30861	may cause	4450
+29848	may cause	17239
+30742	may cause	15768
+34420	may cause	7688
+7002	is a risk factor for	33184
+5094	is a risk factor for	7493
+31767	belong(s) to the category of	28813
+32720	belongs to the drug family of	29480
+25619	may cause	29689
+34909	belong(s) to the category of	28813
+29295	may cause	31289
+33970	may cause	10477
+6767	interacts with	30166
+3809	may cause	15206
+33607	may cause	3110
+33190	interacts with	4420
+32233	may cause	29894
+12719	may cause	34743
+13100	may cause	19110
+34218	belong(s) to the category of	28813
+29410	may cause	1778
+35041	may cause	11472
+33182	belong(s) to the category of	28801
+7189	may cause	29406
+4387	may cause	29725
+31573	belong(s) to the category of	28813
+34340	may cause	25363
+14096	may cause	21627
+9027	belongs to the drug family of	31190
+29228	may cause	15823
+32984	may cause	1089
+13378	may cause	22629
+10545	may contraindicate	10685
+9991	may cause	22225
+35270	may cause	7698
+35117	belong(s) to the category of	28857
+31976	is a vector for	5765
+34590	may cause	25466
+4190	may cause	10140
+29294	may cause	7688
+5938	may cause	21506
+9510	may cause	312
+775	may cause	7546
+3809	belongs to the drug family of	30531
+35220	belongs to the drug family of	31782
+10643	belong(s) to the category of	28805
+30357	may cause	34799
+34766	may be allelic with	34765
+5195	belong(s) to the category of	28847
+7197	may cause	23470
+29315	may cause	31112
+29261	belongs to the drug family of	29262
+29920	may cause	21555
+4724	may cause	13447
+7038	may cause	26060
+34404	may cause	19011
+31681	belong(s) to the category of	28807
+31984	belong(s) to the category of	28813
+31579	belongs to the drug family of	31782
+33702	belongs to the drug family of	15141
+30592	may cause	9850
+10664	interacts with	30659
+10545	is a risk factor for	23596
+29468	may cause	2197
+31803	belong(s) to the category of	28813
+5284	may cause	6372
+33359	belong(s) to the category of	28813
+30503	belongs to the drug family of	1231
+34341	belong(s) to the category of	28803
+32029	belongs to the drug family of	29553
+32987	may cause	6895
+34617	belongs to the drug family of	30545
+32741	may cause	33975
+8254	may cause	11429
+29901	belongs to the drug family of	30955
+32364	belong(s) to the category of	29076
+34938	may cause	4509
+28853	is a category subset of	28857
+32201	may cause	23470
+31122	may cause	31112
+34635	may cause	19825
+14057	may cause	18027
+33114	belong(s) to the category of	28813
+5618	may cause	20061
+33900	belong(s) to the category of	28803
+5938	is a risk factor for	5594
+29818	may contraindicate	949
+34694	belong(s) to the category of	28801
+34530	may cause	20061
+1645	may cause	406
+32973	belong(s) to the category of	28801
+33120	interacts with	12128
+34399	may be allelic with	4690
+29699	may cause	25148
+29796	may cause	5534
+8328	may cause	24034
+31250	belongs to the drug family of	30614
+33111	belong(s) to the category of	28813
+30108	belong(s) to the category of	28813
+29603	may cause	14765
+33162	belongs to the drug family of	33157
+11765	may cause	5404
+7740	may cause	12375
+29988	see also	31093
+32491	may cause	2858
+34753	may cause	18756
+34744	belong(s) to the category of	28803
+29034	may cause	7490
+30085	interacts with	12348
+2641	may cause	3430
+29862	belong(s) to the category of	28813
+30861	may cause	13606
+34860	may cause	2179
+13495	may cause	11080
+20309	is a subtype of	29350
+3804	may cause	12136
+36413	may cause	4509
+10989	may cause	11623
+32170	belong(s) to the category of	28813
+5690	may cause	29284
+7845	belong(s) to the category of	28801
+9643	may cause	14717
+1547	may cause	11080
+3620	interacts with	4875
+33902	may cause	25363
+30287	belong(s) to the category of	28813
+32182	interacts with	34566
+32021	may cause	4509
+9559	may cause	15544
+30473	may cause	14638
+32555	may cause	943
+31603	belong(s) to the category of	28813
+33411	is a risk factor for	3498
+34815	belong(s) to the category of	28813
+10545	may cause	5836
+31358	belong(s) to the category of	28841
+8231	may cause	13750
+34977	may cause	29214
+31409	belong(s) to the category of	28857
+35089	may cause	36570
+13902	may cause	10207
