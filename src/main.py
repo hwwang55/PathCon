@@ -4,6 +4,7 @@ from train import train
 import os
 
 os.environ['CUDA_VISIBLE_DEVICES'] = '2'
+os.environ['TF_CPP_MIN_LOG_LEVEL'] = '1'
 
 
 def print_setting(args):
@@ -16,7 +17,6 @@ def print_setting(args):
     print('dim: ' + str(args.dim))
     print('l2: ' + str(args.l2))
     print('lr: ' + str(args.lr))
-    print('dropout: ' + str(args.dropout))
     print('feature_mode: ' + args.feature_mode)
 
     print('use local structure message passing: ' + str(args.use_gnn))
@@ -45,19 +45,18 @@ def main():
     parser.add_argument('--dim', type=int, default=64, help='hidden dimension')
     parser.add_argument('--l2', type=float, default=1e-7, help='l2 regularization weight')
     parser.add_argument('--lr', type=float, default=5e-3, help='learning rate')
-    parser.add_argument('--dropout', type=float, default=0.0, help='dropout rate')
     parser.add_argument('--feature_mode', type=str, default='id', help='type of relation features: id, bow, bert')
 
     # settings for local structure message passing
-    parser.add_argument('--use_gnn', type=bool, default=False, help='whether to use local structure message passing')
+    parser.add_argument('--use_gnn', type=bool, default=True, help='whether to use local structure message passing')
     parser.add_argument('--neighbor_samples', type=int, default=16, help='number of sampled neighbor edges')
-    parser.add_argument('--gnn_layers', type=int, default=2, help='number of gnn layers')
-    parser.add_argument('--neighbor_agg', type=str, default='concat', help='neighbor aggregator: mean, concat, cross')
+    parser.add_argument('--gnn_layers', type=int, default=3, help='number of gnn layers')
+    parser.add_argument('--neighbor_agg', type=str, default='cross', help='neighbor aggregator: mean, concat, cross')
 
     # settings for entity2entity message passing
     parser.add_argument('--use_path', type=bool, default=True, help='whether to use entity2entity message passing')
-    parser.add_argument('--max_path_len', type=int, default=2, help='max length of a path')
-    parser.add_argument('--path_mode', type=str, default='rnn', help='path representation mode: id, rnn')
+    parser.add_argument('--max_path_len', type=int, default=3, help='max length of a path')
+    parser.add_argument('--path_mode', type=str, default='id', help='path representation mode: id, rnn')
     parser.add_argument('--path_samples', type=int, default=8, help='number of sampled paths if using rnn')
     parser.add_argument('--path_agg', type=str, default='mean', help='path aggregator if using rnn: mean, att')
 

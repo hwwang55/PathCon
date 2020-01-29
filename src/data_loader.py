@@ -337,7 +337,7 @@ def load_data(model_args):
         print('counting paths from head to tail ...')
         train_set = set(train_data)
 
-        use_mp = True
+        use_mp = False
         if use_mp:
             train_paths = count_paths_with_mp(train_set, train_data)
             valid_paths = count_paths_with_mp(train_set, valid_data)

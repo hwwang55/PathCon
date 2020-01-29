@@ -1,6 +1,6 @@
 import numpy as np
 import tensorflow as tf
-from aggregators import MeanAggregator, ConcatAggregator
+from aggregators import MeanAggregator, ConcatAggregator, CrossAggregator
 
 
 class MPNet(object):
@@ -19,7 +19,6 @@ class MPNet(object):
         self.hidden_dim = args.dim
         self.l2 = args.l2
         self.lr = args.lr
-        self.dropout = args.dropout
 
         self.use_gnn = args.use_gnn
         if self.use_gnn:
@@ -31,7 +30,7 @@ class MPNet(object):
             elif args.neighbor_agg == 'concat':
                 self.neighbor_agg = ConcatAggregator
             elif args.neighbor_agg == 'cross':
-                pass  # TODO
+                self.neighbor_agg = CrossAggregator
             else:
                 raise ValueError('unknown neighbor_agg')
 
@@ -119,27 +118,23 @@ class MPNet(object):
             aggregators.append(self.neighbor_agg(batch_size=self.batch_size,
                                                  input_dim=self.relation_dim,
                                                  output_dim=self.n_relations,
-                                                 dropout=self.dropout,
                                                  self_included=False))
         else:
             # the first layer
             aggregators.append(self.neighbor_agg(batch_size=self.batch_size,
                                                  input_dim=self.relation_dim,
                                                  output_dim=self.hidden_dim,
-                                                 dropout=self.dropout,
                                                  act=tf.nn.relu))
             # middle layers
             for i in range(self.gnn_layers - 2):
                 aggregators.append(self.neighbor_agg(batch_size=self.batch_size,
                                                      input_dim=self.hidden_dim,
                                                      output_dim=self.hidden_dim,
-                                                     dropout=self.dropout,
                                                      act=tf.nn.relu))
             # the last layer
             aggregators.append(self.neighbor_agg(batch_size=self.batch_size,
                                                  input_dim=self.hidden_dim,
                                                  output_dim=self.n_relations,
-                                                 dropout=self.dropout,
                                                  self_included=False))
         return aggregators
 
@@ -192,8 +187,8 @@ class MPNet(object):
             output = tf.reduce_mean(inputs, axis=1)
         elif self.path_agg == 'att':
             assert self.use_gnn
-            aggregated_neihbors = tf.expand_dims(self.aggregated_neighbors, axis=1)  # [batch_size, 1, n_relations]
-            attention_weights = tf.reduce_sum(aggregated_neihbors * inputs, axis=-1)  # [batch_size, path_samples]
+            aggregated_neighbors = tf.expand_dims(self.aggregated_neighbors, axis=1)  # [batch_size, 1, n_relations]
+            attention_weights = tf.reduce_sum(aggregated_neighbors * inputs, axis=-1)  # [batch_size, path_samples]
             attention_weights = tf.nn.softmax(attention_weights, axis=-1)  # [batch_size, path_samples]
             attention_weights = tf.expand_dims(attention_weights, axis=-1)  # [batch_size, path_samples, 1]
             output = tf.reduce_sum(attention_weights * inputs, axis=1)  # [batch_size, n_relations]
@@ -210,8 +205,8 @@ class MPNet(object):
         self.optimizer = tf.train.AdamOptimizer(self.lr).minimize(self.loss)
 
     def _build_eval(self):
-        correct_preds = tf.equal(self.labels, tf.cast(tf.argmax(self.scores, axis=-1), tf.int32))
-        self.acc = tf.reduce_mean(tf.cast(correct_preds, tf.float64))
+        correct_predictions = tf.equal(self.labels, tf.cast(tf.argmax(self.scores, axis=-1), tf.int32))
+        self.acc = tf.reduce_mean(tf.cast(correct_predictions, tf.float64))
 
     @staticmethod
     def _get_weight_and_bias(input_dim, output_dim):
@@ -224,15 +219,6 @@ class MPNet(object):
                                dtype=tf.float64,
                                name='bias')
         return weight, bias
-
-    @staticmethod
-    def _weighted_average(inputs, weights):
-        # shape of inputs: [batch_size, path_samples, n_relations]
-        # shape of weights: [batch_size, path_samples]
-        weights = tf.nn.softmax(weights, axis=-1)  # [batch_size, path_samples]
-        weights = tf.expand_dims(weights, axis=-1)  # [batch_size, path_samples, 1]
-        output = tf.reduce_sum(weights * inputs, axis=1)  # [batch_size, n_relations]
-        return output
 
     def train(self, sess, feed_dict):
         return sess.run([self.optimizer, self.loss], feed_dict)
