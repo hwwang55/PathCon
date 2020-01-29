@@ -1,4 +1,5 @@
 import re
+import os
 import numpy as np
 from collections import defaultdict
 from sklearn.feature_extraction.text import CountVectorizer
@@ -42,12 +43,12 @@ def process_relations(file_name):
         index, name = line.strip().split('\t')
         d[name] = int(index)
 
-        if args.feature_mode == 'bow':
+        if args.feature_mode == 'bow' and not os.path.exists('../data/' + args.dataset + '/bow.npy'):
             tokens = re.findall('[a-z]{2,}', name)
             bow.append(' '.join(tokens))
     file.close()
 
-    if args.feature_mode == 'bow':
+    if args.feature_mode == 'bow' and not os.path.exists('../data/' + args.dataset + '/bow.npy'):
         bow = count_vec.fit_transform(bow)
         np.save('../data/' + args.dataset + '/bow.npy', bow.toarray())
 
