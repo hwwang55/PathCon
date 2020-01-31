@@ -26,6 +26,9 @@ def train(model_args, data):
 
     model = MPNet(args, n_relations, params_for_paths)
 
+    best_valid_acc = 0.0
+    final_res = None  # acc, mrr, mr, hit1, hit3, hit5
+
     with tf.Session() as sess:
         print('start training ...')
         sess.run(tf.global_variables_initializer())
@@ -35,8 +38,8 @@ def train(model_args, data):
             # data shuffling
             index = np.arange(len(train_labels))
             np.random.shuffle(index)
-            if args.use_gnn:
-                for i in range(args.gnn_layers + 1):
+            if args.use_neighbor:
+                for i in range(args.neighbor_hops + 1):
                     train_neighbors[i] = train_neighbors[i][index]
             if args.use_path:
                 train_paths = train_paths[index]
@@ -51,22 +54,32 @@ def train(model_args, data):
 
             # evaluation
             print('epoch %2d   ' % step, end='')
-            train_acc = evaluate(train_neighbors, train_paths, train_labels, False)
-            valid_acc = evaluate(valid_neighbors, valid_paths, valid_labels, False)
-            test_acc, test_scores = evaluate(test_neighbors, test_paths, test_labels, show_ranking)
+            train_acc, _ = evaluate(train_neighbors, train_paths, train_labels)
+            valid_acc, _ = evaluate(valid_neighbors, valid_paths, valid_labels)
+            test_acc, test_scores = evaluate(test_neighbors, test_paths, test_labels)
 
+            # print results for current epoch
+            current_res = 'acc: %.3f' % test_acc
             print('train acc: %.3f   valid acc: %.3f   test acc: %.3f' % (train_acc, valid_acc, test_acc))
             if show_ranking:
                 mrr, mr, hit1, hit3, hit5 = calculate_ranking_metrics(test_triplets, test_scores, true_relations)
+                current_res += '   mrr: %.3f   mr: %.3f   h1: %.3f   h3: %.3f   h5: %.3f' % (mrr, mr, hit1, hit3, hit5)
                 print('           mrr: %.3f   mr: %.3f   h1: %.3f   h3: %.3f   h5: %.3f' % (mrr, mr, hit1, hit3, hit5))
                 print()
+
+            # update final results according to valid accuracy
+            if valid_acc > best_valid_acc:
+                best_valid_acc = valid_acc
+                final_res = current_res
+
+        print('final results\n%s' % final_res)
 
 
 def get_feed_dict(neighbors, paths, labels, start, end):
     feed_dict = {}
 
-    if args.use_gnn:
-        for i in range(args.gnn_layers + 1):
+    if args.use_neighbor:
+        for i in range(args.neighbor_hops + 1):
             feed_dict[model.neighbors_list[i]] = neighbors[i][start:end]
 
     if args.use_path:
@@ -80,7 +93,7 @@ def get_feed_dict(neighbors, paths, labels, start, end):
     return feed_dict
 
 
-def evaluate(neighbors, paths, labels, show_ranking):
+def evaluate(neighbors, paths, labels):
     acc_list = []
     scores_list = []
 
@@ -88,14 +101,10 @@ def evaluate(neighbors, paths, labels, show_ranking):
     while start + args.batch_size <= len(labels):
         acc, scores = model.eval(sess, get_feed_dict(neighbors, paths, labels, start, start + args.batch_size))
         acc_list.append(acc)
-        if show_ranking:
-            scores_list.extend(scores)
+        scores_list.extend(scores)
         start += args.batch_size
 
-    if show_ranking:
-        return float(np.mean(acc_list)), np.array(scores_list)
-    else:
-        return float(np.mean(acc_list))
+    return float(np.mean(acc_list)), np.array(scores_list)
 
 
 def calculate_ranking_metrics(triplets, scores, true_relations):

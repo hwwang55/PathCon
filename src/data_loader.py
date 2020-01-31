@@ -76,7 +76,7 @@ def process_kg(train_data):
     for edge_idx, triplet in enumerate(train_data):
         head_idx, tail_idx, relation_idx = triplet
 
-        if args.use_gnn:
+        if args.use_neighbor:
             entity2edge_set[head_idx].add(edge_idx)
             entity2edge_set[tail_idx].add(edge_idx)
             edge2entities.append([head_idx, tail_idx])
@@ -94,7 +94,7 @@ def process_kg(train_data):
     # edge2relation[null_edge] = null_relation
     # The feature of null_relation is a zero vector. See _build_model() of model.py for details
 
-    if args.use_gnn:
+    if args.use_neighbor:
         null_entity = len(entity_dict)
         null_relation = len(relation_dict)
         null_edge = len(edge2entities)
@@ -122,7 +122,7 @@ def get_neighbors_for_train(inputs):
     # the first element in edge_list is relations of all triples
     edges_list = [data_np[:, 2]]
 
-    for i in range(args.gnn_layers):
+    for i in range(args.neighbor_hops):
         edges_list.append([])
 
     for i, (head, tail, _) in enumerate(data_np):
@@ -135,7 +135,7 @@ def get_neighbors_for_train(inputs):
         entity2edges_np[head] = sample_neighbors(entity2edge_set[head], edge, args.neighbor_samples)
         entity2edges_np[tail] = sample_neighbors(entity2edge_set[tail], edge, args.neighbor_samples)
 
-        for j in range(args.gnn_layers):
+        for j in range(args.neighbor_hops):
             if j == 0:
                 neighbor_entities = np.array([head, tail])
             else:
@@ -147,11 +147,11 @@ def get_neighbors_for_train(inputs):
         entity2edges_np[head] = row_head
         entity2edges_np[tail] = row_tail
 
-    for i in range(args.gnn_layers):
+    for i in range(args.neighbor_hops):
         edges_list[i + 1] = np.array(edges_list[i + 1])
 
     # map each edge to its relation type
-    for i in range(args.gnn_layers):
+    for i in range(args.neighbor_hops):
         edges_list[i + 1] = edge2relation_np[edges_list[i + 1]]
 
     return edges_list, pid
@@ -165,7 +165,7 @@ def get_neighbors_for_train_with_mp(data):
 
     # sort the results by pid to make sure that train data preserve the original order
     sorted_results = sorted(results, key=lambda x: x[1])
-    edges_list = [np.concatenate([j[i] for j, _ in sorted_results], axis=0) for i in range(args.gnn_layers + 1)]
+    edges_list = [np.concatenate([j[i] for j, _ in sorted_results], axis=0) for i in range(args.neighbor_hops + 1)]
 
     return edges_list
 
@@ -179,7 +179,7 @@ def get_neighbors_for_eval(data):
     # the first element in edge_list is relations of all triples
     edges_list = [data_np[:, 2]]
 
-    for i in range(args.gnn_layers):
+    for i in range(args.neighbor_hops):
         if i == 0:
             neighbor_entities = data_np[:, 0:2]
         else:
@@ -188,7 +188,7 @@ def get_neighbors_for_eval(data):
         edges_list.append(neighbor_edges)
 
     # map each edge to its relation type
-    for i in range(args.gnn_layers):
+    for i in range(args.neighbor_hops):
         edges_list[i + 1] = edge2relation_np[edges_list[i + 1]]
 
     return edges_list
@@ -316,7 +316,7 @@ def load_data(model_args):
     print('processing the knowledge graph ...')
     process_kg(train_triplets)
 
-    if args.use_gnn:
+    if args.use_neighbor:
         print('sampling neighbor edges ...')
 
         use_mp = False

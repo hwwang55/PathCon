@@ -20,11 +20,11 @@ class MPNet(object):
         self.l2 = args.l2
         self.lr = args.lr
 
-        self.use_gnn = args.use_gnn
-        if self.use_gnn:
+        self.use_neighbor = args.use_neighbor
+        if self.use_neighbor:
             self.feature_mode = args.feature_mode
             self.neighbor_samples = args.neighbor_samples
-            self.gnn_layers = args.gnn_layers
+            self.neighbor_hops = args.neighbor_hops
             if args.neighbor_agg == 'mean':
                 self.neighbor_agg = MeanAggregator
             elif args.neighbor_agg == 'concat':
@@ -47,9 +47,9 @@ class MPNet(object):
                 self.id2length = tf.constant(params_for_paths[2], dtype=tf.int32, name='id2length')
 
     def _build_inputs(self):
-        if self.use_gnn:
+        if self.use_neighbor:
             self.neighbors_list = [tf.placeholder(dtype=tf.int32, shape=[self.batch_size], name='neighbors_0')]
-            for i in range(self.gnn_layers):
+            for i in range(self.neighbor_hops):
                 self.neighbors_list.append(tf.placeholder(dtype=tf.int32,
                                                           shape=[self.batch_size, pow(self.neighbor_samples*2, i+1)],
                                                           name='neighbors_' + str(i + 1)))
@@ -66,12 +66,12 @@ class MPNet(object):
 
     def _build_model(self):
         # define initial relation features
-        if self.use_gnn or (self.use_path and self.path_mode == 'rnn'):
+        if self.use_neighbor or (self.use_path and self.path_mode == 'rnn'):
             self._build_relation_feature()
 
         self.scores = 0.0
 
-        if self.use_gnn:
+        if self.use_neighbor:
             self.aggregators = self._get_neighbor_aggregators()  # define aggregators for each layer
             self.aggregated_neighbors = self._aggregate_neighbors()  # [batch_size, n_relations]
             self.scores += self.aggregated_neighbors
@@ -116,7 +116,7 @@ class MPNet(object):
     def _get_neighbor_aggregators(self):
         aggregators = []  # store all aggregators
 
-        if self.gnn_layers == 1:
+        if self.neighbor_hops == 1:
             aggregators.append(self.neighbor_agg(batch_size=self.batch_size,
                                                  input_dim=self.relation_dim,
                                                  output_dim=self.n_relations,
@@ -128,7 +128,7 @@ class MPNet(object):
                                                  output_dim=self.hidden_dim,
                                                  act=tf.nn.relu))
             # middle layers
-            for i in range(self.gnn_layers - 2):
+            for i in range(self.neighbor_hops - 2):
                 aggregators.append(self.neighbor_agg(batch_size=self.batch_size,
                                                      input_dim=self.hidden_dim,
                                                      output_dim=self.hidden_dim,
@@ -144,10 +144,10 @@ class MPNet(object):
         # translate edges IDs to relations IDs, then to features
         edge_vectors = [tf.nn.embedding_lookup(self.relation_features, edges) for edges in self.neighbors_list]
 
-        for i in range(self.gnn_layers):
+        for i in range(self.neighbor_hops):
             aggregator = self.aggregators[i]
             edge_vectors_next_iter = []
-            for hop in range(self.gnn_layers - i):
+            for hop in range(self.neighbor_hops - i):
                 vector = aggregator(self_vectors=edge_vectors[hop],
                                     neighbor_vectors=tf.reshape(
                                         edge_vectors[hop + 1],
@@ -188,7 +188,7 @@ class MPNet(object):
             # [batch_size, n_relations]
             output = tf.reduce_mean(inputs, axis=1)
         elif self.path_agg == 'att':
-            assert self.use_gnn
+            assert self.use_neighbor
             aggregated_neighbors = tf.expand_dims(self.aggregated_neighbors, axis=1)  # [batch_size, 1, n_relations]
             attention_weights = tf.reduce_sum(aggregated_neighbors * inputs, axis=-1)  # [batch_size, path_samples]
             attention_weights = tf.nn.softmax(attention_weights, axis=-1)  # [batch_size, path_samples]
