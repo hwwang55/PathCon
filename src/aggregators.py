@@ -25,9 +25,11 @@ class Aggregator(object):
         self.self_included = self_included
         self.name = name
 
-    def __call__(self, self_vectors, neighbor_vectors):
+    def __call__(self, self_vectors, neighbor_vectors, masks):
+        # self_vectors: [batch_size, -1, input_dim]
         # neighbor_vectors: [batch_size, -1, 2, n_neighbor, input_dim]
-        entity_vectors = tf.reduce_mean(neighbor_vectors, axis=-2)  # [batch_size, -1, 2, input_dim]
+        # masks: [batch_size, -1, 2, n_neighbor, 1]
+        entity_vectors = tf.reduce_mean(neighbor_vectors * masks, axis=-2)  # [batch_size, -1, 2, input_dim]
         outputs = self._call(self_vectors, entity_vectors)
         return outputs
 

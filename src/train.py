@@ -1,7 +1,7 @@
 import tensorflow as tf
 import numpy as np
-from model import MPNet
 from collections import defaultdict
+from model import MPNet
 from utils import sparse_to_tuple
 
 
@@ -11,21 +11,22 @@ args = None
 def train(model_args, data):
     global args, model, sess
     args = model_args
-    triplets, neighbors, paths, labels, n_relations, params_for_paths = data
-    train_triplets, valid_triplets, test_triplets = triplets
-    train_neighbors, valid_neighbors, test_neighbors = neighbors
-    train_paths, valid_paths, test_paths = paths
-    train_labels, valid_labels, test_labels = labels
 
-    show_ranking = True
+    triplets, train_edges, paths, n_relations, params_for_neighbors, params_for_paths = data
+    train_triplets, valid_triplets, test_triplets = triplets
+    train_entity_pairs = np.array([[triplet[0], triplet[1]] for triplet in train_triplets], np.int32)
+    valid_entity_pairs = np.array([[triplet[0], triplet[1]] for triplet in valid_triplets], np.int32)
+    test_entity_pairs = np.array([[triplet[0], triplet[1]] for triplet in test_triplets], np.int32)
+    train_paths, valid_paths, test_paths = paths
+    train_labels = np.array([triplet[2] for triplet in train_triplets], np.int32)
+    valid_labels = np.array([triplet[2] for triplet in valid_triplets], np.int32)
+    test_labels = np.array([triplet[2] for triplet in test_triplets], np.int32)
+
+    model = MPNet(args, n_relations, params_for_neighbors, params_for_paths)
 
     true_relations = defaultdict(set)
-    if show_ranking:
-        for head, tail, relation in train_triplets + valid_triplets + test_triplets:
-            true_relations[(head, tail)].add(relation)
-
-    model = MPNet(args, n_relations, params_for_paths)
-
+    for head, tail, relation in train_triplets + valid_triplets + test_triplets:
+        true_relations[(head, tail)].add(relation)
     best_valid_acc = 0.0
     final_res = None  # acc, mrr, mr, hit1, hit3, hit5
 
@@ -39,33 +40,34 @@ def train(model_args, data):
             index = np.arange(len(train_labels))
             np.random.shuffle(index)
             if args.use_neighbor:
-                for i in range(args.neighbor_hops + 1):
-                    train_neighbors[i] = train_neighbors[i][index]
+                train_entity_pairs = train_entity_pairs[index]
+                train_edges = train_edges[index]
             if args.use_path:
                 train_paths = train_paths[index]
             train_labels = train_labels[index]
 
             # training
             start = 0
+
             while start + args.batch_size <= len(train_labels):
-                _, loss = model.train(
-                    sess, get_feed_dict(train_neighbors, train_paths, train_labels, start, start + args.batch_size))
+                _, loss = model.train(sess, get_feed_dict(
+                    train_entity_pairs, train_edges, train_paths, train_labels, start, start + args.batch_size))
                 start += args.batch_size
 
             # evaluation
             print('epoch %2d   ' % step, end='')
-            train_acc, _ = evaluate(train_neighbors, train_paths, train_labels)
-            valid_acc, _ = evaluate(valid_neighbors, valid_paths, valid_labels)
-            test_acc, test_scores = evaluate(test_neighbors, test_paths, test_labels)
+            train_acc, _ = evaluate(train_entity_pairs, train_paths, train_labels)
+            valid_acc, _ = evaluate(valid_entity_pairs, valid_paths, valid_labels)
+            test_acc, test_scores = evaluate(test_entity_pairs, test_paths, test_labels)
 
             # print results for current epoch
-            current_res = 'acc: %.3f' % test_acc
-            print('train acc: %.3f   valid acc: %.3f   test acc: %.3f' % (train_acc, valid_acc, test_acc))
-            if show_ranking:
-                mrr, mr, hit1, hit3, hit5 = calculate_ranking_metrics(test_triplets, test_scores, true_relations)
-                current_res += '   mrr: %.3f   mr: %.3f   h1: %.3f   h3: %.3f   h5: %.3f' % (mrr, mr, hit1, hit3, hit5)
-                print('           mrr: %.3f   mr: %.3f   h1: %.3f   h3: %.3f   h5: %.3f' % (mrr, mr, hit1, hit3, hit5))
-                print()
+            current_res = 'acc: %.4f' % test_acc
+            print('train acc: %.4f   valid acc: %.4f   test acc: %.4f' % (train_acc, valid_acc, test_acc))
+
+            mrr, mr, hit1, hit3, hit5 = calculate_ranking_metrics(test_triplets, test_scores, true_relations)
+            current_res += '   mrr: %.4f   mr: %.4f   h1: %.4f   h3: %.4f   h5: %.4f' % (mrr, mr, hit1, hit3, hit5)
+            print('           mrr: %.4f   mr: %.4f   h1: %.4f   h3: %.4f   h5: %.4f' % (mrr, mr, hit1, hit3, hit5))
+            print()
 
             # update final results according to valid accuracy
             if valid_acc > best_valid_acc:
@@ -75,12 +77,16 @@ def train(model_args, data):
         print('final results\n%s' % final_res)
 
 
-def get_feed_dict(neighbors, paths, labels, start, end):
+def get_feed_dict(entity_pairs, train_edges, paths, labels, start, end):
     feed_dict = {}
 
     if args.use_neighbor:
-        for i in range(args.neighbor_hops + 1):
-            feed_dict[model.neighbors_list[i]] = neighbors[i][start:end]
+        feed_dict[model.entity_pairs] = entity_pairs[start:end]
+        if train_edges is not None:
+            feed_dict[model.train_edges] = train_edges[start:end]
+        else:
+            # for evaluation no edges should be masked out
+            feed_dict[model.train_edges] = np.array([-1] * (end - start), np.int32)
 
     if args.use_path:
         if args.path_mode == 'id':
@@ -93,13 +99,13 @@ def get_feed_dict(neighbors, paths, labels, start, end):
     return feed_dict
 
 
-def evaluate(neighbors, paths, labels):
+def evaluate(entity_pairs, paths, labels):
     acc_list = []
     scores_list = []
 
     start = 0
     while start + args.batch_size <= len(labels):
-        acc, scores = model.eval(sess, get_feed_dict(neighbors, paths, labels, start, start + args.batch_size))
+        acc, scores = model.eval(sess, get_feed_dict(entity_pairs, None, paths, labels, start, start + args.batch_size))
         acc_list.append(acc)
         scores_list.extend(scores)
         start += args.batch_size
