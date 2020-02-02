@@ -4,14 +4,15 @@ from aggregators import MeanAggregator, ConcatAggregator, CrossAggregator
 
 
 class MPNet(object):
-    def __init__(self, args, n_relations, params_for_neighbors, params_for_paths):
-        self._parse_args(args, n_relations, params_for_neighbors, params_for_paths)
+    def __init__(self, args, n_entities, n_relations, params_for_neighbors, params_for_paths):
+        self._parse_args(args, n_entities, n_relations, params_for_neighbors, params_for_paths)
         self._build_inputs()
         self._build_model()
         self._build_train()
         self._build_eval()
 
-    def _parse_args(self, args, n_relations, params_for_neighbors, params_for_paths):
+    def _parse_args(self, args, n_entities, n_relations, params_for_neighbors, params_for_paths):
+        self.n_entities = n_entities
         self.n_relations = n_relations
 
         self.dataset = args.dataset
@@ -25,7 +26,6 @@ class MPNet(object):
         if self.use_neighbor:
             self.edge2entities = tf.constant(params_for_neighbors[0], tf.int32, name='edge2entities')
             self.edge2relation = tf.constant(params_for_neighbors[1], tf.int32, name='edge2relation')
-            self.entity2edges = tf.constant(params_for_neighbors[2], tf.int32, name='entity2edges')
             self.neighbor_samples = args.neighbor_samples
             self.neighbor_hops = args.neighbor_hops
             if args.neighbor_agg == 'mean':
@@ -51,6 +51,8 @@ class MPNet(object):
         if self.use_neighbor:
             self.entity_pairs = tf.placeholder(tf.int32, [self.batch_size, 2], name='entity_pairs')
             self.train_edges = tf.placeholder(tf.int32, [self.batch_size], name='train_edges')
+            self.entity2edges = tf.placeholder(tf.int32, [self.n_entities + 1, self.neighbor_samples],
+                                               name='entity2edges')
 
         if self.use_path:
             if self.path_mode == 'id':

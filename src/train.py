@@ -12,7 +12,8 @@ def train(model_args, data):
     global args, model, sess
     args = model_args
 
-    triplets, train_edges, paths, n_relations, params_for_neighbors, params_for_paths = data
+    # extract data
+    triplets, train_edges, entity2edge_set, paths, n_entities, n_relations, neighbor_params, path_params = data
     train_triplets, valid_triplets, test_triplets = triplets
     train_entity_pairs = np.array([[triplet[0], triplet[1]] for triplet in train_triplets], np.int32)
     valid_entity_pairs = np.array([[triplet[0], triplet[1]] for triplet in valid_triplets], np.int32)
@@ -22,8 +23,10 @@ def train(model_args, data):
     valid_labels = np.array([triplet[2] for triplet in valid_triplets], np.int32)
     test_labels = np.array([triplet[2] for triplet in test_triplets], np.int32)
 
-    model = MPNet(args, n_relations, params_for_neighbors, params_for_paths)
+    # define the model
+    model = MPNet(args, n_entities, n_relations, neighbor_params, path_params)
 
+    # prepare for top-k evaluation
     true_relations = defaultdict(set)
     for head, tail, relation in train_triplets + valid_triplets + test_triplets:
         true_relations[(head, tail)].add(relation)
@@ -36,7 +39,16 @@ def train(model_args, data):
 
         for step in range(args.epoch):
 
-            # data shuffling
+            # sample neighbors
+            entity2edges = []  # each row in entity2edges is the sampled edges connecting to this entity
+            for i in range(n_entities + 1):
+                sampled_neighbors = np.random.choice(list(entity2edge_set[i]),
+                                                     size=args.neighbor_samples,
+                                                     replace=len(entity2edge_set[i]) < args.neighbor_samples)
+                entity2edges.append(sampled_neighbors)
+            entity2edges = np.array(entity2edges)
+
+            # shuffle training data
             index = np.arange(len(train_labels))
             np.random.shuffle(index)
             if args.use_neighbor:
@@ -47,37 +59,36 @@ def train(model_args, data):
             train_labels = train_labels[index]
 
             # training
-            start = 0
-
-            while start + args.batch_size <= len(train_labels):
+            s = 0
+            while s + args.batch_size <= len(train_labels):
                 _, loss = model.train(sess, get_feed_dict(
-                    train_entity_pairs, train_edges, train_paths, train_labels, start, start + args.batch_size))
-                start += args.batch_size
+                    train_entity_pairs, train_edges, entity2edges, train_paths, train_labels, s, s + args.batch_size))
+                s += args.batch_size
 
             # evaluation
             print('epoch %2d   ' % step, end='')
-            train_acc, _ = evaluate(train_entity_pairs, train_paths, train_labels)
-            valid_acc, _ = evaluate(valid_entity_pairs, valid_paths, valid_labels)
-            test_acc, test_scores = evaluate(test_entity_pairs, test_paths, test_labels)
+            train_acc, _ = evaluate(train_entity_pairs, entity2edges, train_paths, train_labels)
+            valid_acc, _ = evaluate(valid_entity_pairs, entity2edges, valid_paths, valid_labels)
+            test_acc, test_scores = evaluate(test_entity_pairs, entity2edges, test_paths, test_labels)
 
-            # print results for current epoch
+            # show evaluation result for current epoch
             current_res = 'acc: %.4f' % test_acc
             print('train acc: %.4f   valid acc: %.4f   test acc: %.4f' % (train_acc, valid_acc, test_acc))
-
             mrr, mr, hit1, hit3, hit5 = calculate_ranking_metrics(test_triplets, test_scores, true_relations)
             current_res += '   mrr: %.4f   mr: %.4f   h1: %.4f   h3: %.4f   h5: %.4f' % (mrr, mr, hit1, hit3, hit5)
             print('           mrr: %.4f   mr: %.4f   h1: %.4f   h3: %.4f   h5: %.4f' % (mrr, mr, hit1, hit3, hit5))
             print()
 
-            # update final results according to valid accuracy
+            # update final results according to validation accuracy
             if valid_acc > best_valid_acc:
                 best_valid_acc = valid_acc
                 final_res = current_res
 
+        # show final evaluation result
         print('final results\n%s' % final_res)
 
 
-def get_feed_dict(entity_pairs, train_edges, paths, labels, start, end):
+def get_feed_dict(entity_pairs, train_edges, entity2edges, paths, labels, start, end):
     feed_dict = {}
 
     if args.use_neighbor:
@@ -87,6 +98,7 @@ def get_feed_dict(entity_pairs, train_edges, paths, labels, start, end):
         else:
             # for evaluation no edges should be masked out
             feed_dict[model.train_edges] = np.array([-1] * (end - start), np.int32)
+        feed_dict[model.entity2edges] = entity2edges
 
     if args.use_path:
         if args.path_mode == 'id':
@@ -99,16 +111,17 @@ def get_feed_dict(entity_pairs, train_edges, paths, labels, start, end):
     return feed_dict
 
 
-def evaluate(entity_pairs, paths, labels):
+def evaluate(entity_pairs, entity2edges, paths, labels):
     acc_list = []
     scores_list = []
 
-    start = 0
-    while start + args.batch_size <= len(labels):
-        acc, scores = model.eval(sess, get_feed_dict(entity_pairs, None, paths, labels, start, start + args.batch_size))
+    s = 0
+    while s + args.batch_size <= len(labels):
+        acc, scores = model.eval(sess, get_feed_dict(
+            entity_pairs, None, entity2edges, paths, labels, s, s + args.batch_size))
         acc_list.append(acc)
         scores_list.extend(scores)
-        start += args.batch_size
+        s += args.batch_size
 
     return float(np.mean(acc_list)), np.array(scores_list)
 

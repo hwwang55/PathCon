@@ -98,8 +98,8 @@ def main():
 
     # settings for local structure message passing
     parser.add_argument('--use_neighbor', type=bool, default=True, help='whether use local structure message passing')
-    parser.add_argument('--neighbor_samples', type=int, default=8, help='number of sampled neighbors for one hop')
-    parser.add_argument('--neighbor_hops', type=int, default=2, help='number of neighbor hops')
+    parser.add_argument('--neighbor_samples', type=int, default=32, help='number of sampled neighbors for one hop')
+    parser.add_argument('--neighbor_hops', type=int, default=1, help='number of neighbor hops')
     parser.add_argument('--neighbor_agg', type=str, default='cross', help='neighbor aggregator: mean, concat, cross')
 
     # settings for entity2entity message passing
@@ -110,7 +110,7 @@ def main():
     parser.add_argument('--path_agg', type=str, default='mean', help='path aggregator if using rnn: mean, att')
     #'''
 
-    parser.add_argument('--gpu', type=str, default='1', help='')
+    parser.add_argument('--gpu', type=str, default='0', help='on which GPU to run the code')
 
     args = parser.parse_args()
     os.environ['CUDA_VISIBLE_DEVICES'] = args.gpu
