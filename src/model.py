@@ -20,7 +20,6 @@ class MPNet(object):
         self.hidden_dim = args.dim
         self.l2 = args.l2
         self.lr = args.lr
-        self.feature_mode = args.feature_mode
 
         self.use_neighbor = args.use_neighbor
         if self.use_neighbor:
@@ -88,19 +87,9 @@ class MPNet(object):
 
     def _build_relation_feature(self):
         # the feature of the last relation (the null relation) is a zero vector
-        if self.feature_mode == 'id':
-            self.relation_dim = self.n_relations
-            self.relation_features = tf.eye(self.n_relations, dtype=tf.float64)
-        elif self.feature_mode == 'bow':
-            bow = np.load('../data/' + self.dataset + '/bow.npy')
-            self.relation_dim = bow.shape[1]
-            self.relation_features = tf.constant(bow, tf.float64)
-        elif self.feature_mode == 'bert':
-            bert = np.load('../data/' + self.dataset + '/' + self.feature_mode + '.npy')
-            self.relation_dim = bert.shape[1]
-            self.relation_features = tf.constant(bert, tf.float64)
+        self.relation_features = tf.eye(self.n_relations, dtype=tf.float64)
 
-        self.relation_features = tf.concat([self.relation_features, tf.zeros([1, self.relation_dim], tf.float64)],
+        self.relation_features = tf.concat([self.relation_features, tf.zeros([1, self.n_relations], tf.float64)],
                                            axis=0,
                                            name='relation_features')
 
@@ -127,13 +116,13 @@ class MPNet(object):
 
         if self.neighbor_hops == 1:
             aggregators.append(self.neighbor_agg(batch_size=self.batch_size,
-                                                 input_dim=self.relation_dim,
+                                                 input_dim=self.n_relations,
                                                  output_dim=self.n_relations,
                                                  self_included=False))
         else:
             # the first layer
             aggregators.append(self.neighbor_agg(batch_size=self.batch_size,
-                                                 input_dim=self.relation_dim,
+                                                 input_dim=self.n_relations,
                                                  output_dim=self.hidden_dim,
                                                  act=tf.nn.relu))
             # middle layers
@@ -157,9 +146,9 @@ class MPNet(object):
             edge_vectors.append(tf.nn.embedding_lookup(self.relation_features, relations))
 
         # shape of edge vectors:
-        # [[batch_size, relation_dim],
-        #  [batch_size, 2 * neighbor_samples, relation_dim],
-        #  [batch_size, (2 * neighbor_samples) ^ 2, relation_dim],
+        # [[batch_size, n_relations],
+        #  [batch_size, 2 * neighbor_samples, n_relations],
+        #  [batch_size, (2 * neighbor_samples) ^ 2, n_relations],
         #  ...]
 
         for i in range(self.neighbor_hops):
@@ -182,7 +171,7 @@ class MPNet(object):
     def _rnn(self, path_ids):
         path_ids = tf.reshape(path_ids, [self.batch_size * self.path_samples])  # [batch_size * path_samples]
         paths = tf.nn.embedding_lookup(self.id2path, path_ids)  # [batch_size * path_samples, max_path_len]
-        # [batch_size * path_samples, max_path_len, relation_dim]
+        # [batch_size * path_samples, max_path_len, n_relations]
         path_features = tf.nn.embedding_lookup(self.relation_features, paths)
         lengths = tf.nn.embedding_lookup(self.id2length, path_ids)  # [batch_size * path_samples]
 
