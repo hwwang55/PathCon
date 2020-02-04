@@ -13,12 +13,16 @@ def train(model_args, data):
     args = model_args
 
     # extract data
-    triplets, train_edges, entity2edge_set, paths, n_entities, n_relations, neighbor_params, path_params = data
+    triplets, paths, n_entities, n_relations, neighbor_params, path_params = data
+
     train_triplets, valid_triplets, test_triplets = triplets
+    train_edges = np.array(range(len(train_triplets)), np.int32)
     train_entity_pairs = np.array([[triplet[0], triplet[1]] for triplet in train_triplets], np.int32)
     valid_entity_pairs = np.array([[triplet[0], triplet[1]] for triplet in valid_triplets], np.int32)
     test_entity_pairs = np.array([[triplet[0], triplet[1]] for triplet in test_triplets], np.int32)
+
     train_paths, valid_paths, test_paths = paths
+
     train_labels = np.array([triplet[2] for triplet in train_triplets], np.int32)
     valid_labels = np.array([triplet[2] for triplet in valid_triplets], np.int32)
     test_labels = np.array([triplet[2] for triplet in test_triplets], np.int32)
@@ -39,15 +43,6 @@ def train(model_args, data):
 
         for step in range(args.epoch):
 
-            # sample neighbors
-            entity2edges = []  # each row in entity2edges is the sampled edges connecting to this entity
-            for i in range(n_entities + 1):
-                sampled_neighbors = np.random.choice(list(entity2edge_set[i]),
-                                                     size=args.neighbor_samples,
-                                                     replace=len(entity2edge_set[i]) < args.neighbor_samples)
-                entity2edges.append(sampled_neighbors)
-            entity2edges = np.array(entity2edges)
-
             # shuffle training data
             index = np.arange(len(train_labels))
             np.random.shuffle(index)
@@ -62,14 +57,14 @@ def train(model_args, data):
             s = 0
             while s + args.batch_size <= len(train_labels):
                 _, loss = model.train(sess, get_feed_dict(
-                    train_entity_pairs, train_edges, entity2edges, train_paths, train_labels, s, s + args.batch_size))
+                    train_entity_pairs, train_edges, train_paths, train_labels, s, s + args.batch_size))
                 s += args.batch_size
 
             # evaluation
             print('epoch %2d   ' % step, end='')
-            train_acc, _ = evaluate(train_entity_pairs, entity2edges, train_paths, train_labels)
-            valid_acc, _ = evaluate(valid_entity_pairs, entity2edges, valid_paths, valid_labels)
-            test_acc, test_scores = evaluate(test_entity_pairs, entity2edges, test_paths, test_labels)
+            train_acc, _ = evaluate(train_entity_pairs, train_paths, train_labels)
+            valid_acc, _ = evaluate(valid_entity_pairs, valid_paths, valid_labels)
+            test_acc, test_scores = evaluate(test_entity_pairs, test_paths, test_labels)
 
             # show evaluation result for current epoch
             current_res = 'acc: %.4f' % test_acc
@@ -88,7 +83,7 @@ def train(model_args, data):
         print('final results\n%s' % final_res)
 
 
-def get_feed_dict(entity_pairs, train_edges, entity2edges, paths, labels, start, end):
+def get_feed_dict(entity_pairs, train_edges, paths, labels, start, end):
     feed_dict = {}
 
     if args.use_neighbor:
@@ -98,7 +93,6 @@ def get_feed_dict(entity_pairs, train_edges, entity2edges, paths, labels, start,
         else:
             # for evaluation no edges should be masked out
             feed_dict[model.train_edges] = np.array([-1] * (end - start), np.int32)
-        feed_dict[model.entity2edges] = entity2edges
 
     if args.use_path:
         if args.path_mode == 'id':
@@ -111,14 +105,14 @@ def get_feed_dict(entity_pairs, train_edges, entity2edges, paths, labels, start,
     return feed_dict
 
 
-def evaluate(entity_pairs, entity2edges, paths, labels):
+def evaluate(entity_pairs, paths, labels):
     acc_list = []
     scores_list = []
 
     s = 0
     while s + args.batch_size <= len(labels):
         acc, scores = model.eval(sess, get_feed_dict(
-            entity_pairs, None, entity2edges, paths, labels, s, s + args.batch_size))
+            entity_pairs, None, paths, labels, s, s + args.batch_size))
         acc_list.append(acc)
         scores_list.extend(scores)
         s += args.batch_size

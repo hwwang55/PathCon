@@ -1,22 +1,16 @@
 import re
 import os
 import pickle
-from collections import defaultdict
 from sklearn.feature_extraction.text import CountVectorizer
 from utils import *
 
 
-# entity index -> set of (both incoming and outgoing) edges connecting to this entity
-entity2edge_set = defaultdict(set)
+entity2edge_set = defaultdict(set)  # entity id -> set of (both incoming and outgoing) edges connecting to this entity
+entity2edges = []  # each row in entity2edges is the sampled edges connecting to this entity
+edge2entities = []  # each row in edge2entities is the two entities connected by this edge
+edge2relation = []  # each row in edge2relation is the relation type of this edge
 
-# each row in edge2entities is the two entities connected by this edge
-edge2entities = []
-
-# each row in edge2relation is the relation type of this edge
-edge2relation = []
-
-# entity index -> set of pair (relation, entity) connecting to this entity
-e2re = defaultdict(set)
+e2re = defaultdict(set)  # entity index -> set of pair (relation, entity) connecting to this entity
 
 
 def read_entities(file_name):
@@ -101,6 +95,16 @@ def build_kg(train_data):
         for i in range(len(entity_dict) + 1):
             if i not in entity2edge_set:
                 entity2edge_set[i] = {null_edge}
+            sampled_neighbors = np.random.choice(list(entity2edge_set[i]), size=args.neighbor_samples,
+                                                 replace=len(entity2edge_set[i]) < args.neighbor_samples)
+            entity2edges.append(sampled_neighbors)
+
+
+def get_h2t(train_triplets, valid_triplets, test_triplets):
+    head2tails = defaultdict(set)
+    for head, tail, relation in train_triplets + valid_triplets + test_triplets:
+        head2tails[head].add(tail)
+    return head2tails
 
 
 def get_paths(train_triplets, valid_triplets, test_triplets):
@@ -118,10 +122,12 @@ def get_paths(train_triplets, valid_triplets, test_triplets):
 
     else:
         print('counting paths from head to tail ...')
+        head2tails = get_h2t(train_triplets, valid_triplets, test_triplets)
+        ht2paths = count_all_paths_with_mp(e2re, args.max_path_len, [(k, v) for k, v in head2tails.items()])
         train_set = set(train_triplets)
-        train_paths = count_paths_with_mp(train_set, e2re, args.max_path_len, train_triplets)
-        valid_paths = count_paths_with_mp(train_set, e2re, args.max_path_len, valid_triplets)
-        test_paths = count_paths_with_mp(train_set, e2re, args.max_path_len, test_triplets)
+        train_paths = count_paths(train_triplets, ht2paths, train_set)
+        valid_paths = count_paths(valid_triplets, ht2paths, train_set)
+        test_paths = count_paths(test_triplets, ht2paths, train_set)
 
         print('dumping paths to files ...')
         pickle.dump(train_paths, open(directory + 'train_paths_' + length + '.pkl', 'wb'))
@@ -157,22 +163,21 @@ def load_data(model_args):
     triplets = [train_triplets, valid_triplets, test_triplets]
 
     if args.use_neighbor:
-        train_edges = np.array(range(len(train_triplets)), np.int32)
-        neighbor_params = [np.array(edge2entities), np.array(edge2relation)]
+        neighbor_params = [np.array(entity2edges), np.array(edge2entities), np.array(edge2relation)]
     else:
-        train_edges = None
         neighbor_params = None
 
     if args.use_path:
         train_paths, valid_paths, test_paths = get_paths(train_triplets, valid_triplets, test_triplets)
+        path2id, id2path, id2length = get_path_dict_and_length(
+            train_paths, valid_paths, test_paths, len(relation_dict), args.max_path_len)
+
         if args.path_mode == 'id':
             print('transforming paths to one hot IDs ...')
-            paths, n_paths = one_hot_path_id(train_paths, valid_paths, test_paths)
-            path_params = [n_paths]
+            paths = one_hot_path_id(train_paths, valid_paths, test_paths, path2id)
+            path_params = [len(path2id)]
         elif args.path_mode == 'rnn':
-            print('sampling paths ...')
-            paths, id2path, id2length = sample_paths(
-                train_paths, valid_paths, test_paths, len(relation_dict), args.max_path_len, args.path_samples)
+            paths = sample_paths(train_paths, valid_paths, test_paths, path2id, args.path_samples)
             path_params = [id2path, id2length]
         else:
             raise ValueError('unknown path embedding mode')
@@ -183,4 +188,4 @@ def load_data(model_args):
     n_entities = len(entity_dict)
     n_relations = len(relation_dict)
 
-    return triplets, train_edges, entity2edge_set, paths, n_entities, n_relations, neighbor_params, path_params
+    return triplets, paths, n_entities, n_relations, neighbor_params, path_params

@@ -1,28 +1,24 @@
 import numpy as np
 import multiprocessing as mp
 import scipy.sparse as sp
+from collections import defaultdict
 
 
-def count_paths_with_mp(train_set, e2re, max_path_len, data):
-    n_cores, pool, range_list = get_params_for_mp(len(data))
-    results = pool.map(count_paths, zip([train_set] * n_cores,
-                                        [e2re] * n_cores,
-                                        [max_path_len] * n_cores,
-                                        [data[i[0]:i[1]] for i in range_list],
-                                        range(n_cores)))
+def count_all_paths_with_mp(e2re, max_path_len, head2tails):
+    n_cores, pool, range_list = get_params_for_mp(len(head2tails))
+    results = pool.map(count_all_paths, zip([e2re] * n_cores,
+                                            [max_path_len] * n_cores,
+                                            [head2tails[i[0]:i[1]] for i in range_list],
+                                            range(n_cores)))
+    res = defaultdict(set)
+    for ht2paths in results:
+        res.update(ht2paths)
 
-    # sort the results by pid to make sure that data preserve the original order
-    sorted_results = sorted(results, key=lambda x: x[1])
-
-    paths_list = []
-    for paths_sublist, _ in sorted_results:
-        paths_list.extend(paths_sublist)
-
-    return paths_list
+    return res
 
 
 def get_params_for_mp(n_triples):
-    n_cores = max(mp.cpu_count(), 8)
+    n_cores = mp.cpu_count()
     pool = mp.Pool(n_cores)
     avg = n_triples // n_cores
 
@@ -36,108 +32,99 @@ def get_params_for_mp(n_triples):
     return n_cores, pool, range_list
 
 
-def count_paths(inputs):
-    train_set, e2re, max_path_len, data, pid = inputs
-    paths_list = []
-    for head, tail, relation in data:
-        paths = bfs(head, tail, relation, e2re, max_path_len, (tail, head, relation) in train_set)
-        paths_list.append(paths)
-    return paths_list, pid
+# input: [(h1, {t1, t2 ...}), (h2, {t3 ...}), ...]
+# output: {(h1, t1): paths, (h1, t2): paths, (h2, t3): paths, ...}
+def count_all_paths(inputs):
+    e2re, max_path_len, head2tails, pid = inputs
+    ht2paths = {}
+    for i, (head, tails) in enumerate(head2tails):
+        ht2paths.update(bfs(head, tails, e2re, max_path_len))
+        print('pid %d:  %d / %d' % (pid, i, len(head2tails)))
+    print('pid %d  done' % pid)
+    return ht2paths
 
 
-def bfs(head, tail, relation, e2re, max_path_len, flag):
-    # put length-1 paths into all_paths except (relation, tail) if exists
+def bfs(head, tails, e2re, max_path_len):
+    # put length-1 paths into all_paths
     # each element in all_paths is a path consisting of a sequence of (relation, entity)
-    all_paths = [[i] for i in e2re[head] - {(relation, tail)}]
+    all_paths = [[i] for i in e2re[head]]
 
     p = 0
     for length in range(2, max_path_len + 1):
         while p < len(all_paths) and len(all_paths[p]) < length:
             path = all_paths[p]
             last_entity_in_path = path[-1][1]
-            if last_entity_in_path != tail:
-                entities_in_path = set([head] + [i[1] for i in path])
-                for edge in e2re[last_entity_in_path]:
-                    # append (relation, entity) to the path if the new entity does not appear in this path before
-                    if edge[1] not in entities_in_path:
-                        all_paths.append(path + [edge])
+            entities_in_path = set([head] + [i[1] for i in path])
+            for edge in e2re[last_entity_in_path]:
+                # append (relation, entity) to the path if the new entity does not appear in this path before
+                if edge[1] not in entities_in_path:
+                    all_paths.append(path + [edge])
             p += 1
 
-    paths = []
-    path_set = set()
-    # TODO
-    remove_duplicate_paths = True
-
+    ht2paths = defaultdict(set)
     for path in all_paths:
-        # if this path ends at tail
-        if path[-1][1] == tail:
-            candidate_path = [i[0] for i in path]
-            if remove_duplicate_paths:
-                if tuple(candidate_path) not in path_set:
-                    paths.append(candidate_path)
-                    path_set.add(tuple(candidate_path))
-            else:
-                paths.append(candidate_path)
+        tail = path[-1][1]
+        if tail in tails:  # if this path ends at tail
+            ht2paths[(head, tail)].add(tuple([i[0] for i in path]))
 
-    # if the reverse edge is in the KG, add it back
-    if flag:
-        paths.append([relation])
-
-    return paths
+    return ht2paths
 
 
-def one_hot_path_id(train_paths, valid_paths, test_paths):
-    path_dict = {}
-    n_paths = 0
-
+def count_paths(triplets, ht2paths, train_set):
     res = []
-    for data in (train_paths, valid_paths, test_paths):
-        # bag of paths
-        bop_list = []
-        for paths in data:
-            bop = []
-            for path in paths:
-                path = tuple(path)
-                if path not in path_dict:
-                    path_dict[path] = n_paths
-                    n_paths += 1
-                bop.append(path_dict[path])
-            bop_list.append(bop)
-        res.append(bop_list)
 
-    return [get_sparse_feature_matrix(bop_list, n_paths) for bop_list in res], n_paths
+    for head, tail, relation in triplets:
+        path_set = ht2paths[(head, tail)]
+        if (tail, head, relation) in train_set:
+            path_list = list(path_set)
+        else:
+            path_list = list(path_set - {tuple([relation])})
+        res.append([list(i) for i in path_list])
+
+    return res
 
 
-def sample_paths(train_paths, valid_paths, test_paths, null_relation, max_path_len, path_samples):
+def get_path_dict_and_length(train_paths, valid_paths, test_paths, null_relation, max_path_len):
     path2id = {}
     id2path = []
     id2length = []
     n_paths = 0
 
+    for paths_of_triplet in train_paths + valid_paths + test_paths:
+        for path in paths_of_triplet:
+            path_tuple = tuple(path)
+            if path_tuple not in path2id:
+                path2id[path_tuple] = n_paths
+                id2length.append(len(path))
+                id2path.append(path + [null_relation] * (max_path_len - len(path)))  # padding
+                n_paths += 1
+    return path2id, id2path, id2length
+
+
+def one_hot_path_id(train_paths, valid_paths, test_paths, path_dict):
+    res = []
+    for data in (train_paths, valid_paths, test_paths):
+        bop_list = []  # bag of paths
+        for paths in data:
+            bop_list.append([path_dict[tuple(path)] for path in paths])
+        res.append(bop_list)
+
+    return [get_sparse_feature_matrix(bop_list, len(path_dict)) for bop_list in res]
+
+
+def sample_paths(train_paths, valid_paths, test_paths, path_dict, path_samples):
     res = []
     for data in [train_paths, valid_paths, test_paths]:
         path_ids_for_data = []
         for paths in data:
-            path_ids_for_triplet = []
-
-            for path in paths:
-                path_tuple = tuple(path)
-                if path_tuple not in path2id:
-                    path2id[path_tuple] = n_paths
-                    id2length.append(len(path))
-                    id2path.append(path + [null_relation] * (max_path_len - len(path)))  # padding
-                    n_paths += 1
-                path_ids_for_triplet.append(path2id[path_tuple])
-
-            sampled_path_ids_for_triplet = np.random.choice(path_ids_for_triplet,
-                                                            size=path_samples,
-                                                            replace=len(path_ids_for_triplet) < path_samples)
+            path_ids_for_triplet = [path_dict[tuple(path)] for path in paths]
+            sampled_path_ids_for_triplet = np.random.choice(
+                path_ids_for_triplet, size=path_samples, replace=len(path_ids_for_triplet) < path_samples)
             path_ids_for_data.append(sampled_path_ids_for_triplet)
 
         path_ids_for_data = np.array(path_ids_for_data, dtype=np.int32)
         res.append(path_ids_for_data)
-
-    return res, id2path, id2length
+    return res
 
 
 def get_sparse_feature_matrix(non_zeros, n_cols):

@@ -39,28 +39,52 @@ def main():
     parser = argparse.ArgumentParser()
 
     '''
-    # ===== FB15k-237 ===== #
-    parser.add_argument('--dataset', type=str, default='FB15k-237', help='dataset name')
-    parser.add_argument('--epoch', type=int, default=20, help='number of epochs')
-    parser.add_argument('--batch_size', type=int, default=128, help='batch size')
+    # ===== FB15k ===== #
+    parser.add_argument('--dataset', type=str, default='FB15k', help='dataset name')
+    parser.add_argument('--epoch', type=int, default=10, help='number of epochs')
+    parser.add_argument('--batch_size', type=int, default=1024, help='batch size')
     parser.add_argument('--dim', type=int, default=64, help='hidden dimension')
     parser.add_argument('--l2', type=float, default=1e-7, help='l2 regularization weight')
     parser.add_argument('--lr', type=float, default=5e-3, help='learning rate')
-    parser.add_argument('--feature_mode', type=str, default='id', help='type of relation features: id, bow, bert')
+    parser.add_argument('--feature_mode', type=str, default='bert', help='type of relation features: id, bow, bert')
 
     # settings for local structure message passing
     parser.add_argument('--use_neighbor', type=bool, default=True, help='whether use local structure message passing')
     parser.add_argument('--neighbor_samples', type=int, default=16, help='number of sampled neighbors for one hop')
     parser.add_argument('--neighbor_hops', type=int, default=1, help='number of neighbor hops')
-    parser.add_argument('--neighbor_agg', type=str, default='cross', help='neighbor aggregator: mean, concat, cross')
+    parser.add_argument('--neighbor_agg', type=str, default='concat', help='neighbor aggregator: mean, concat, cross')
 
     # settings for entity2entity message passing
     parser.add_argument('--use_path', type=bool, default=False, help='whether use entity2entity message passing')
-    parser.add_argument('--max_path_len', type=int, default=3, help='max length of a path')
+    parser.add_argument('--max_path_len', type=int, default=2, help='max length of a path')
     parser.add_argument('--path_mode', type=str, default='id', help='path representation mode: id, rnn')
     parser.add_argument('--path_samples', type=int, default=8, help='number of sampled paths if using rnn')
     parser.add_argument('--path_agg', type=str, default='mean', help='path aggregator if using rnn: mean, att')
     '''
+
+    #'''
+    # ===== FB15k-237 ===== #
+    parser.add_argument('--dataset', type=str, default='FB15k-237', help='dataset name')
+    parser.add_argument('--epoch', type=int, default=10, help='number of epochs')
+    parser.add_argument('--batch_size', type=int, default=128, help='batch size')
+    parser.add_argument('--dim', type=int, default=64, help='hidden dimension')
+    parser.add_argument('--l2', type=float, default=1e-7, help='l2 regularization weight')
+    parser.add_argument('--lr', type=float, default=5e-3, help='learning rate')
+    parser.add_argument('--feature_mode', type=str, default='bert', help='type of relation features: id, bow, bert')
+
+    # settings for local structure message passing
+    parser.add_argument('--use_neighbor', type=bool, default=False, help='whether use local structure message passing')
+    parser.add_argument('--neighbor_samples', type=int, default=16, help='number of sampled neighbors for one hop')
+    parser.add_argument('--neighbor_hops', type=int, default=1, help='number of neighbor hops')
+    parser.add_argument('--neighbor_agg', type=str, default='concat', help='neighbor aggregator: mean, concat, cross')
+
+    # settings for entity2entity message passing
+    parser.add_argument('--use_path', type=bool, default=True, help='whether use entity2entity message passing')
+    parser.add_argument('--max_path_len', type=int, default=1, help='max length of a path')
+    parser.add_argument('--path_mode', type=str, default='id', help='path representation mode: id, rnn')
+    parser.add_argument('--path_samples', type=int, default=8, help='number of sampled paths if using rnn')
+    parser.add_argument('--path_agg', type=str, default='mean', help='path aggregator if using rnn: mean, att')
+    #'''
 
     '''
     # ===== wn18 ===== #
@@ -74,8 +98,8 @@ def main():
 
     # settings for local structure message passing
     parser.add_argument('--use_neighbor', type=bool, default=True, help='whether use local structure message passing')
-    parser.add_argument('--neighbor_samples', type=int, default=64, help='number of sampled neighbors for one hop')
-    parser.add_argument('--neighbor_hops', type=int, default=2, help='number of neighbor hops')
+    parser.add_argument('--neighbor_samples', type=int, default=16, help='number of sampled neighbors for one hop')
+    parser.add_argument('--neighbor_hops', type=int, default=3, help='number of neighbor hops')
     parser.add_argument('--neighbor_agg', type=str, default='cross', help='neighbor aggregator: mean, concat, cross')
 
     # settings for entity2entity message passing
@@ -86,7 +110,7 @@ def main():
     parser.add_argument('--path_agg', type=str, default='mean', help='path aggregator if using rnn: mean, att')
     '''
 
-    #'''
+    '''
     # ===== wn18rr ===== #
     parser.add_argument('--dataset', type=str, default='wn18rr', help='dataset name')
     parser.add_argument('--epoch', type=int, default=20, help='number of epochs')
@@ -98,17 +122,17 @@ def main():
 
     # settings for local structure message passing
     parser.add_argument('--use_neighbor', type=bool, default=True, help='whether use local structure message passing')
-    parser.add_argument('--neighbor_samples', type=int, default=32, help='number of sampled neighbors for one hop')
-    parser.add_argument('--neighbor_hops', type=int, default=1, help='number of neighbor hops')
+    parser.add_argument('--neighbor_samples', type=int, default=8, help='number of sampled neighbors for one hop')
+    parser.add_argument('--neighbor_hops', type=int, default=3, help='number of neighbor hops')
     parser.add_argument('--neighbor_agg', type=str, default='cross', help='neighbor aggregator: mean, concat, cross')
 
     # settings for entity2entity message passing
-    parser.add_argument('--use_path', type=bool, default=False, help='whether use entity2entity message passing')
-    parser.add_argument('--max_path_len', type=int, default=3, help='max length of a path')
+    parser.add_argument('--use_path', type=bool, default=True, help='whether use entity2entity message passing')
+    parser.add_argument('--max_path_len', type=int, default=4, help='max length of a path')
     parser.add_argument('--path_mode', type=str, default='id', help='path representation mode: id, rnn')
     parser.add_argument('--path_samples', type=int, default=8, help='number of sampled paths if using rnn')
     parser.add_argument('--path_agg', type=str, default='mean', help='path aggregator if using rnn: mean, att')
-    #'''
+    '''
 
     parser.add_argument('--gpu', type=str, default='0', help='on which GPU to run the code')
 

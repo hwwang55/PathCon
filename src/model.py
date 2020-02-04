@@ -24,8 +24,9 @@ class MPNet(object):
 
         self.use_neighbor = args.use_neighbor
         if self.use_neighbor:
-            self.edge2entities = tf.constant(params_for_neighbors[0], tf.int32, name='edge2entities')
-            self.edge2relation = tf.constant(params_for_neighbors[1], tf.int32, name='edge2relation')
+            self.entity2edges = tf.constant(params_for_neighbors[0], tf.int32, name='entity2edges')
+            self.edge2entities = tf.constant(params_for_neighbors[1], tf.int32, name='edge2entities')
+            self.edge2relation = tf.constant(params_for_neighbors[2], tf.int32, name='edge2relation')
             self.neighbor_samples = args.neighbor_samples
             self.neighbor_hops = args.neighbor_hops
             if args.neighbor_agg == 'mean':
@@ -51,8 +52,6 @@ class MPNet(object):
         if self.use_neighbor:
             self.entity_pairs = tf.placeholder(tf.int32, [self.batch_size, 2], name='entity_pairs')
             self.train_edges = tf.placeholder(tf.int32, [self.batch_size], name='train_edges')
-            self.entity2edges = tf.placeholder(tf.int32, [self.n_entities + 1, self.neighbor_samples],
-                                               name='entity2edges')
 
         if self.use_path:
             if self.path_mode == 'id':
