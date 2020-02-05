@@ -17,6 +17,7 @@ def print_setting(args):
     print('dim: ' + str(args.dim))
     print('l2: ' + str(args.l2))
     print('lr: ' + str(args.lr))
+    print('feature_mode: ' + args.feature_mode)
 
     print('use local structure message passing: ' + str(args.use_neighbor))
     if args.use_neighbor:
@@ -46,6 +47,7 @@ def main():
     parser.add_argument('--dim', type=int, default=64, help='hidden dimension')
     parser.add_argument('--l2', type=float, default=1e-7, help='l2 regularization weight')
     parser.add_argument('--lr', type=float, default=5e-3, help='learning rate')
+    parser.add_argument('--feature_mode', type=str, default='id', help='type of relation features: id, bow, bert')
 
     # settings for local structure message passing
     parser.add_argument('--use_neighbor', type=bool, default=True, help='whether use local structure message passing')
@@ -56,7 +58,7 @@ def main():
     # settings for entity2entity message passing
     parser.add_argument('--use_path', type=bool, default=True, help='whether use entity2entity message passing')
     parser.add_argument('--max_path_len', type=int, default=2, help='max length of a path')
-    parser.add_argument('--path_mode', type=str, default='id', help='path representation mode: id, rnn')
+    parser.add_argument('--path_mode', type=str, default='append', help='path representation mode: append, rnn')
     parser.add_argument('--path_samples', type=int, default=None, help='number of sampled paths if using rnn')
     parser.add_argument('--path_agg', type=str, default=None, help='path aggregator if using rnn: mean, att')
     '''
@@ -69,6 +71,7 @@ def main():
     parser.add_argument('--dim', type=int, default=64, help='hidden dimension')
     parser.add_argument('--l2', type=float, default=1e-7, help='l2 regularization weight')
     parser.add_argument('--lr', type=float, default=5e-3, help='learning rate')
+    parser.add_argument('--feature_mode', type=str, default='id', help='type of relation features: id, bow, bert')
 
     # settings for local structure message passing
     parser.add_argument('--use_neighbor', type=bool, default=True, help='whether use local structure message passing')
@@ -79,7 +82,7 @@ def main():
     # settings for entity2entity message passing
     parser.add_argument('--use_path', type=bool, default=True, help='whether use entity2entity message passing')
     parser.add_argument('--max_path_len', type=int, default=3, help='max length of a path')
-    parser.add_argument('--path_mode', type=str, default='id', help='path representation mode: id, rnn')
+    parser.add_argument('--path_mode', type=str, default='append', help='path representation mode: append, rnn')
     parser.add_argument('--path_samples', type=int, default=None, help='number of sampled paths if using rnn')
     parser.add_argument('--path_agg', type=str, default=None, help='path aggregator if using rnn: mean, att')
     '''
@@ -92,6 +95,7 @@ def main():
     parser.add_argument('--dim', type=int, default=64, help='hidden dimension')
     parser.add_argument('--l2', type=float, default=1e-7, help='l2 regularization weight')
     parser.add_argument('--lr', type=float, default=5e-3, help='learning rate')
+    parser.add_argument('--feature_mode', type=str, default='id', help='type of relation features: id, bow, bert')
 
     # settings for local structure message passing
     parser.add_argument('--use_neighbor', type=bool, default=True, help='whether use local structure message passing')
@@ -102,7 +106,7 @@ def main():
     # settings for entity2entity message passing
     parser.add_argument('--use_path', type=bool, default=True, help='whether use entity2entity message passing')
     parser.add_argument('--max_path_len', type=int, default=3, help='max length of a path')
-    parser.add_argument('--path_mode', type=str, default='id', help='path representation mode: id, rnn')
+    parser.add_argument('--path_mode', type=str, default='append', help='path representation mode: append, rnn')
     parser.add_argument('--path_samples', type=int, default=None, help='number of sampled paths if using rnn')
     parser.add_argument('--path_agg', type=str, default=None, help='path aggregator if using rnn: mean, att')
     '''
@@ -114,6 +118,7 @@ def main():
     parser.add_argument('--dim', type=int, default=64, help='hidden dimension')
     parser.add_argument('--l2', type=float, default=1e-7, help='l2 regularization weight')
     parser.add_argument('--lr', type=float, default=5e-3, help='learning rate')
+    parser.add_argument('--feature_mode', type=str, default='id', help='type of relation features: id, bow, bert')
 
     # settings for local structure message passing
     parser.add_argument('--use_neighbor', type=bool, default=True, help='whether use local structure message passing')
@@ -124,7 +129,7 @@ def main():
     # settings for entity2entity message passing
     parser.add_argument('--use_path', type=bool, default=True, help='whether use entity2entity message passing')
     parser.add_argument('--max_path_len', type=int, default=4, help='max length of a path')
-    parser.add_argument('--path_mode', type=str, default='id', help='path representation mode: id, rnn')
+    parser.add_argument('--path_mode', type=str, default='append', help='path representation mode: append, rnn')
     parser.add_argument('--path_samples', type=int, default=None, help='number of sampled paths if using rnn')
     parser.add_argument('--path_agg', type=str, default=None, help='path aggregator if using rnn: mean, att')
 
@@ -136,6 +141,7 @@ def main():
     parser.add_argument('--dim', type=int, default=64, help='hidden dimension')
     parser.add_argument('--l2', type=float, default=1e-7, help='l2 regularization weight')
     parser.add_argument('--lr', type=float, default=5e-3, help='learning rate')
+    parser.add_argument('--feature_mode', type=str, default='id', help='type of relation features: id, bow, bert')
 
     # settings for local structure message passing
     parser.add_argument('--use_neighbor', type=bool, default=True, help='whether use local structure message passing')
@@ -146,7 +152,7 @@ def main():
     # settings for entity2entity message passing
     parser.add_argument('--use_path', type=bool, default=True, help='whether use entity2entity message passing')
     parser.add_argument('--max_path_len', type=int, default=3, help='max length of a path')
-    parser.add_argument('--path_mode', type=str, default='id', help='path representation mode: id, rnn')
+    parser.add_argument('--path_mode', type=str, default='append', help='path representation mode: append, rnn')
     parser.add_argument('--path_samples', type=int, default=None, help='number of sampled paths if using rnn')
     parser.add_argument('--path_agg', type=str, default=None, help='path aggregator if using rnn: mean, att')
     '''
@@ -159,6 +165,7 @@ def main():
     parser.add_argument('--dim', type=int, default=64, help='hidden dimension')
     parser.add_argument('--l2', type=float, default=1e-7, help='l2 regularization weight')
     parser.add_argument('--lr', type=float, default=5e-3, help='learning rate')
+    parser.add_argument('--feature_mode', type=str, default='id', help='type of relation features: id, bow, bert')
 
     # settings for local structure message passing
     parser.add_argument('--use_neighbor', type=bool, default=True, help='whether use local structure message passing')
@@ -169,13 +176,12 @@ def main():
     # settings for entity2entity message passing
     parser.add_argument('--use_path', type=bool, default=True, help='whether use entity2entity message passing')
     parser.add_argument('--max_path_len', type=int, default=4, help='max length of a path')
-    parser.add_argument('--path_mode', type=str, default='id', help='path representation mode: id, rnn')
+    parser.add_argument('--path_mode', type=str, default='append', help='path representation mode: append, rnn')
     parser.add_argument('--path_samples', type=int, default=None, help='number of sampled paths if using rnn')
     parser.add_argument('--path_agg', type=str, default=None, help='path aggregator if using rnn: mean, att')
     '''
 
     args = parser.parse_args()
-    os.environ['CUDA_VISIBLE_DEVICES'] = args.gpu
     print_setting(args)
     data = load_data(args)
     train(args, data)

@@ -1,7 +1,9 @@
 import os
+import re
 import pickle
 import numpy as np
 from collections import defaultdict
+from sklearn.feature_extraction.text import CountVectorizer
 from utils import count_all_paths_with_mp, count_paths, get_path_dict_and_length, one_hot_path_id, sample_paths
 
 
@@ -25,12 +27,23 @@ def read_entities(file_name):
 
 
 def read_relations(file_name):
+    bow = []
+    count_vec = CountVectorizer()
+
     d = {}
     file = open(file_name)
     for line in file:
         index, name = line.strip().split('\t')
         d[name] = int(index)
+
+        if args.feature_mode == 'bow' and not os.path.exists('../data/' + args.dataset + '/bow.npy'):
+            tokens = re.findall('[a-z]{2,}', name)
+            bow.append(' '.join(tokens))
     file.close()
+
+    if args.feature_mode == 'bow' and not os.path.exists('../data/' + args.dataset + '/bow.npy'):
+        bow = count_vec.fit_transform(bow)
+        np.save('../data/' + args.dataset + '/bow.npy', bow.toarray())
 
     return d
 
@@ -161,7 +174,7 @@ def load_data(model_args):
         path2id, id2path, id2length = get_path_dict_and_length(
             train_paths, valid_paths, test_paths, len(relation_dict), args.max_path_len)
 
-        if args.path_mode == 'id':
+        if args.path_mode == 'append':
             print('transforming paths to one hot IDs ...')
             paths = one_hot_path_id(train_paths, valid_paths, test_paths, path2id)
             path_params = [len(path2id)]

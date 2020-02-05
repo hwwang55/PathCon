@@ -95,7 +95,7 @@ def get_feed_dict(entity_pairs, train_edges, paths, labels, start, end):
             feed_dict[model.train_edges] = np.array([-1] * (end - start), np.int32)
 
     if args.use_path:
-        if args.path_mode == 'id':
+        if args.path_mode == 'append':
             feed_dict[model.path_features] = sparse_to_tuple(paths[start:end])
         elif args.path_mode == 'rnn':
             feed_dict[model.path_ids] = paths[start:end]
