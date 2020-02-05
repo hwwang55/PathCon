@@ -4,6 +4,7 @@ from train import train
 import os
 
 os.environ['TF_CPP_MIN_LOG_LEVEL'] = '1'
+os.environ['CUDA_VISIBLE_DEVICES'] = '0'
 
 
 def print_setting(args):
@@ -126,7 +127,7 @@ def main():
     parser.add_argument('--path_mode', type=str, default='id', help='path representation mode: id, rnn')
     parser.add_argument('--path_samples', type=int, default=None, help='number of sampled paths if using rnn')
     parser.add_argument('--path_agg', type=str, default=None, help='path aggregator if using rnn: mean, att')
-    
+
     '''
     # ===== NELL995 ===== #
     parser.add_argument('--dataset', type=str, default='NELL995', help='dataset name')
@@ -172,8 +173,6 @@ def main():
     parser.add_argument('--path_samples', type=int, default=None, help='number of sampled paths if using rnn')
     parser.add_argument('--path_agg', type=str, default=None, help='path aggregator if using rnn: mean, att')
     '''
-
-    parser.add_argument('--gpu', type=str, default='0', help='on which GPU to run the code')
 
     args = parser.parse_args()
     os.environ['CUDA_VISIBLE_DEVICES'] = args.gpu
