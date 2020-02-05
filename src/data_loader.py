@@ -1,6 +1,8 @@
 import os
 import pickle
-from utils import *
+import numpy as np
+from collections import defaultdict
+from utils import count_all_paths_with_mp, count_paths, get_path_dict_and_length, one_hot_path_id, sample_paths
 
 
 entity2edge_set = defaultdict(set)  # entity id -> set of (both incoming and outgoing) edges connecting to this entity
@@ -172,7 +174,4 @@ def load_data(model_args):
         paths = [None] * 3
         path_params = None
 
-    n_entities = len(entity_dict)
-    n_relations = len(relation_dict)
-
-    return triplets, paths, n_entities, n_relations, neighbor_params, path_params
+    return triplets, paths, len(relation_dict), neighbor_params, path_params

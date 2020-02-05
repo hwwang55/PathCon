@@ -1,18 +1,16 @@
-import numpy as np
 import tensorflow as tf
 from aggregators import MeanAggregator, ConcatAggregator, CrossAggregator
 
 
 class MPNet(object):
-    def __init__(self, args, n_entities, n_relations, params_for_neighbors, params_for_paths):
-        self._parse_args(args, n_entities, n_relations, params_for_neighbors, params_for_paths)
+    def __init__(self, args, n_relations, params_for_neighbors, params_for_paths):
+        self._parse_args(args, n_relations, params_for_neighbors, params_for_paths)
         self._build_inputs()
         self._build_model()
         self._build_train()
         self._build_eval()
 
-    def _parse_args(self, args, n_entities, n_relations, params_for_neighbors, params_for_paths):
-        self.n_entities = n_entities
+    def _parse_args(self, args, n_relations, params_for_neighbors, params_for_paths):
         self.n_relations = n_relations
 
         self.dataset = args.dataset

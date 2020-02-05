@@ -54,7 +54,7 @@ def main():
 
     # settings for entity2entity message passing
     parser.add_argument('--use_path', type=bool, default=True, help='whether use entity2entity message passing')
-    parser.add_argument('--max_path_len', type=int, default=3, help='max length of a path')
+    parser.add_argument('--max_path_len', type=int, default=2, help='max length of a path')
     parser.add_argument('--path_mode', type=str, default='id', help='path representation mode: id, rnn')
     parser.add_argument('--path_samples', type=int, default=None, help='number of sampled paths if using rnn')
     parser.add_argument('--path_agg', type=str, default=None, help='path aggregator if using rnn: mean, att')
@@ -126,7 +126,7 @@ def main():
     parser.add_argument('--path_mode', type=str, default='id', help='path representation mode: id, rnn')
     parser.add_argument('--path_samples', type=int, default=None, help='number of sampled paths if using rnn')
     parser.add_argument('--path_agg', type=str, default=None, help='path aggregator if using rnn: mean, att')
-
+    
     '''
     # ===== NELL995 ===== #
     parser.add_argument('--dataset', type=str, default='NELL995', help='dataset name')
@@ -153,7 +153,7 @@ def main():
     '''
     # ===== DDB14 ===== #
     parser.add_argument('--dataset', type=str, default='DDB14', help='dataset name')
-    parser.add_argument('--epoch', type=int, default=10, help='number of epochs')
+    parser.add_argument('--epoch', type=int, default=20, help='number of epochs')
     parser.add_argument('--batch_size', type=int, default=128, help='batch size')
     parser.add_argument('--dim', type=int, default=64, help='hidden dimension')
     parser.add_argument('--l2', type=float, default=1e-7, help='l2 regularization weight')
@@ -163,7 +163,7 @@ def main():
     parser.add_argument('--use_neighbor', type=bool, default=True, help='whether use local structure message passing')
     parser.add_argument('--neighbor_samples', type=int, default=8, help='number of sampled neighbors for one hop')
     parser.add_argument('--neighbor_hops', type=int, default=3, help='number of neighbor hops')
-    parser.add_argument('--neighbor_agg', type=str, default='concat', help='neighbor aggregator: mean, concat, cross')
+    parser.add_argument('--neighbor_agg', type=str, default='cross', help='neighbor aggregator: mean, concat, cross')
 
     # settings for entity2entity message passing
     parser.add_argument('--use_path', type=bool, default=True, help='whether use entity2entity message passing')

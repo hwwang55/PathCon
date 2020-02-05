@@ -13,7 +13,7 @@ def train(model_args, data):
     args = model_args
 
     # extract data
-    triplets, paths, n_entities, n_relations, neighbor_params, path_params = data
+    triplets, paths, n_relations, neighbor_params, path_params = data
 
     train_triplets, valid_triplets, test_triplets = triplets
     train_edges = np.array(range(len(train_triplets)), np.int32)
@@ -28,7 +28,7 @@ def train(model_args, data):
     test_labels = np.array([triplet[2] for triplet in test_triplets], np.int32)
 
     # define the model
-    model = MPNet(args, n_entities, n_relations, neighbor_params, path_params)
+    model = MPNet(args, n_relations, neighbor_params, path_params)
 
     # prepare for top-k evaluation
     true_relations = defaultdict(set)
