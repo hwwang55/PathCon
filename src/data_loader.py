@@ -36,12 +36,12 @@ def read_relations(file_name):
         index, name = line.strip().split('\t')
         d[name] = int(index)
 
-        if args.feature_mode == 'bow' and not os.path.exists('../data/' + args.dataset + '/bow.npy'):
+        if args.feature_type == 'bow' and not os.path.exists('../data/' + args.dataset + '/bow.npy'):
             tokens = re.findall('[a-z]{2,}', name)
             bow.append(' '.join(tokens))
     file.close()
 
-    if args.feature_mode == 'bow' and not os.path.exists('../data/' + args.dataset + '/bow.npy'):
+    if args.feature_type == 'bow' and not os.path.exists('../data/' + args.dataset + '/bow.npy'):
         bow = count_vec.fit_transform(bow)
         np.save('../data/' + args.dataset + '/bow.npy', bow.toarray())
 
@@ -69,7 +69,7 @@ def build_kg(train_data):
     for edge_idx, triplet in enumerate(train_data):
         head_idx, tail_idx, relation_idx = triplet
 
-        if args.use_neighbor:
+        if args.use_context:
             entity2edge_set[head_idx].add(edge_idx)
             entity2edge_set[tail_idx].add(edge_idx)
             edge2entities.append([head_idx, tail_idx])
@@ -87,7 +87,7 @@ def build_kg(train_data):
     # edge2relation[null_edge] = null_relation
     # The feature of null_relation is a zero vector. See _build_model() of model.py for details
 
-    if args.use_neighbor:
+    if args.use_context:
         null_entity = len(entity_dict)
         null_relation = len(relation_dict)
         null_edge = len(edge2entities)
@@ -137,7 +137,7 @@ def get_paths(train_triplets, valid_triplets, test_triplets):
         pickle.dump(test_paths, open(directory + 'test_paths_' + length + '.pkl', 'wb'))
 
     # if using rnn and no path is found for the triplet, put an empty path into paths
-    if args.path_mode == 'rnn':
+    if args.path_type == 'rnn':
         for paths in train_paths + valid_paths + test_paths:
             if len(paths) == 0:
                 paths.append([])
@@ -164,7 +164,7 @@ def load_data(model_args):
 
     triplets = [train_triplets, valid_triplets, test_triplets]
 
-    if args.use_neighbor:
+    if args.use_context:
         neighbor_params = [np.array(entity2edges), np.array(edge2entities), np.array(edge2relation)]
     else:
         neighbor_params = None
@@ -174,11 +174,11 @@ def load_data(model_args):
         path2id, id2path, id2length = get_path_dict_and_length(
             train_paths, valid_paths, test_paths, len(relation_dict), args.max_path_len)
 
-        if args.path_mode == 'append':
+        if args.path_type == 'embedding':
             print('transforming paths to one hot IDs ...')
             paths = one_hot_path_id(train_paths, valid_paths, test_paths, path2id)
             path_params = [len(path2id)]
-        elif args.path_mode == 'rnn':
+        elif args.path_type == 'rnn':
             paths = sample_paths(train_paths, valid_paths, test_paths, path2id, args.path_samples)
             path_params = [id2path, id2length]
         else:

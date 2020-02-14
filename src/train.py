@@ -46,7 +46,7 @@ def train(model_args, data):
             # shuffle training data
             index = np.arange(len(train_labels))
             np.random.shuffle(index)
-            if args.use_neighbor:
+            if args.use_context:
                 train_entity_pairs = train_entity_pairs[index]
                 train_edges = train_edges[index]
             if args.use_path:
@@ -86,7 +86,7 @@ def train(model_args, data):
 def get_feed_dict(entity_pairs, train_edges, paths, labels, start, end):
     feed_dict = {}
 
-    if args.use_neighbor:
+    if args.use_context:
         feed_dict[model.entity_pairs] = entity_pairs[start:end]
         if train_edges is not None:
             feed_dict[model.train_edges] = train_edges[start:end]
@@ -95,9 +95,9 @@ def get_feed_dict(entity_pairs, train_edges, paths, labels, start, end):
             feed_dict[model.train_edges] = np.array([-1] * (end - start), np.int32)
 
     if args.use_path:
-        if args.path_mode == 'append':
+        if args.path_type == 'embedding':
             feed_dict[model.path_features] = sparse_to_tuple(paths[start:end])
-        elif args.path_mode == 'rnn':
+        elif args.path_type == 'rnn':
             feed_dict[model.path_ids] = paths[start:end]
 
     feed_dict[model.labels] = labels[start:end]
