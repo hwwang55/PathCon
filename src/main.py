@@ -6,7 +6,6 @@ import os
 os.environ['TF_CPP_MIN_LOG_LEVEL'] = '1'
 os.environ['CUDA_VISIBLE_DEVICES'] = '0'
 
-
 def print_setting(args):
     assert args.use_context or args.use_path
     print()
