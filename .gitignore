@@ -96,6 +96,6 @@ ENV/
 .idea/*
 data/DDB14/raw/*
 data/FB15k/ent2name.txt
-data/FB15k/cache/*_2.pkl
+data/FB15k-237/cache/*_3.pkl
 data/NELL995/raw/*
 src/bert.py
