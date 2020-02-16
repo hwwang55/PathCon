@@ -1,14 +1,14 @@
-# ConPath
+# PathCon
 
-This repository is the implementation of ConPath:
+This repository is the implementation of PathCon ([arXiv]()):
 > Entity Context and Relational Paths forKnowledge Graph Completion  
-Anonymous author(s)  
-The 26th SIGKDD Conference on Knowledge Discovery and Data Mining (KDD 2020), under review
+Hongwei Wang, Hongyu Ren, Jure Leskovec  
+arXiv Preprint
 
-![](https://github.com/hwwang55/ConPath/blob/master/model.png)
+![](https://github.com/hwwang55/PathCon/blob/master/model.png)
 
-ConPath considers relational context and relational paths of (head, tail) pair in knowledge graphs for link prediction.
-ConPath achieves substantial gains over state-of-the-art baselines.
+PathCon considers relational context and relational paths of (head, tail) pair in knowledge graphs for link prediction.
+PathCon achieves substantial gains over state-of-the-art baselines.
 Below is the result of mean test set Hit@1 on FB15K, FB15K-237, WN18, WN18RR, NELL995, and DDB14 datasets for relation prediction task:
 
 | Method      | FB15K | FB15K-237 | WN18  | WN18RR | NELL995 | DDB14 |
@@ -17,7 +17,7 @@ Below is the result of mean test set Hit@1 on FB15K, FB15K-237, WN18, WN18RR, NE
 | RotatE      | 96.7  | 95.1      | 97.9  | 73.5   | 69.1    | 93.4  |
 | QuatE       | 97.2  | 95.8      | 97.5  | 76.7   | 70.6    | 92.2  |
 | DRUM        | 94.5  | 90.5      | 95.6  | 77.8   | 64.0    | 93.0  |
-| __ConPath__ | __97.4 (+/-0.2)__ | __96.4 (+/-0.1)__ | __98.8 (+/-0.1)__ | __95.4 (+/-0.2)__ | __84.4 (+/-0.4)__ | __96.6 (+/-0.1)__ |
+| __PathCon__ | __97.4 (+/-0.2)__ | __96.4 (+/-0.1)__ | __98.8 (+/-0.1)__ | __95.4 (+/-0.2)__ | __84.4 (+/-0.4)__ | __96.6 (+/-0.1)__ |
 
 For more results, please refer to the original paper.
 
@@ -30,7 +30,7 @@ For more results, please refer to the original paper.
   - `wn18rr/`
   - `NELL995/`
   - `DDB14/`
-- `src/`: implementation of ConPath.
+- `src/`: implementation of PathCon.
 
 
 
