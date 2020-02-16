@@ -1,6 +1,6 @@
 # PathCon
 
-This repository is the implementation of PathCon ([arXiv]()):
+This repository is the implementation of PathCon (arXiv link is coming soon):
 > Entity Context and Relational Paths forKnowledge Graph Completion  
 Hongwei Wang, Hongyu Ren, Jure Leskovec  
 arXiv Preprint
@@ -9,7 +9,7 @@ arXiv Preprint
 
 PathCon considers relational context and relational paths of (head, tail) pair in knowledge graphs for link prediction.
 PathCon achieves substantial gains over state-of-the-art baselines.
-Below is the result of mean test set Hit@1 on FB15K, FB15K-237, WN18, WN18RR, NELL995, and DDB14 datasets for relation prediction task:
+Below is the result of Hit@1 on the test set of FB15K, FB15K-237, WN18, WN18RR, NELL995, and DDB14 datasets for relation prediction task:
 
 | Method      | FB15K | FB15K-237 | WN18  | WN18RR | NELL995 | DDB14 |
 | :---------: | :---: | :------:  | :---: | :----: | :----:  | :---: |
@@ -32,6 +32,10 @@ For more results, please refer to the original paper.
   - `DDB14/`
 - `src/`: implementation of PathCon.
 
+__Note__: We provide a `cache/` folder for each dataset, which caches the pre-computed relational paths for this dataset.
+This folder is not required for running the code because relational paths will be re-counted (and cached) if no corresponding cache file is found. 
+**If you are going to run FB15k-237 with max_path_len=3, please first download and unzip ``paths_3.zip`` from [here](https://drive.google.com/file/d/1uF42OgIQY0f_G8z0Wwk90AQ_KEueqhsv/view?usp=sharing) and put all unzipped files under ``FB15k-237/cache/``** (the original files cannot be uploaded to GitHub due to the limitation on file size).
+Again, this is not required but highly recommended because counting length-3 paths for FB15k-237 will be time-consuming.
 
 
 
@@ -40,7 +44,7 @@ For more results, please refer to the original paper.
 ```
 $ python main.py
 ```
-The default dataset is set as WN18RR.
+__Note__: The default dataset is set as WN18rr.
 Hyper-parameter settings for other datasets are provided in  `main.py`.
 
 
