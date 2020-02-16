@@ -3,7 +3,7 @@ import tensorflow as tf
 from aggregators import MeanAggregator, ConcatAggregator, CrossAggregator
 
 
-class MPNet(object):
+class PathCon(object):
     def __init__(self, args, n_relations, params_for_neighbors, params_for_paths):
         self._parse_args(args, n_relations, params_for_neighbors, params_for_paths)
         self._build_inputs()

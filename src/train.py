@@ -1,7 +1,7 @@
 import tensorflow as tf
 import numpy as np
 from collections import defaultdict
-from model import MPNet
+from model import PathCon
 from utils import sparse_to_tuple
 
 
@@ -28,7 +28,7 @@ def train(model_args, data):
     test_labels = np.array([triplet[2] for triplet in test_triplets], np.int32)
 
     # define the model
-    model = MPNet(args, n_relations, neighbor_params, path_params)
+    model = PathCon(args, n_relations, neighbor_params, path_params)
 
     # prepare for top-k evaluation
     true_relations = defaultdict(set)
