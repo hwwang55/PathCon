@@ -3,7 +3,7 @@
 This repository is the implementation of PathCon ([arXiv](https://arxiv.org/abs/2002.06757)):
 > Entity Context and Relational Paths forKnowledge Graph Completion  
 Hongwei Wang, Hongyu Ren, Jure Leskovec  
-arXiv Preprint
+arXiv Preprint, 2020
 
 ![](https://github.com/hwwang55/PathCon/blob/master/model.png)
 
