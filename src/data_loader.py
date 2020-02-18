@@ -182,7 +182,7 @@ def load_data(model_args):
             paths = sample_paths(train_paths, valid_paths, test_paths, path2id, args.path_samples)
             path_params = [id2path, id2length]
         else:
-            raise ValueError('unknown path embedding mode')
+            raise ValueError('unknown path type')
     else:
         paths = [None] * 3
         path_params = None
