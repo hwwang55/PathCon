@@ -1,9 +1,11 @@
 # PathCon
 
-This repository is the implementation of PathCon ([arXiv](https://arxiv.org/abs/2002.06757)):
+This repository is the Tensorflow implementation of PathCon ([arXiv](https://arxiv.org/abs/2002.06757)):
 > Entity Context and Relational Paths forKnowledge Graph Completion  
 Hongwei Wang, Hongyu Ren, Jure Leskovec  
 arXiv Preprint, 2020
+
+(A PyTorch implementation of PathCon can be found [here](https://github.com/hyren/PathCon))
 
 ![](https://github.com/hwwang55/PathCon/blob/master/model.png)
 

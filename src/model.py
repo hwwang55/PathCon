@@ -94,7 +94,7 @@ class PathCon(object):
             self.relation_dim = bow.shape[1]
             self.relation_features = tf.constant(bow, tf.float64)
         elif self.feature_type == 'bert':
-            bert = np.load('../data/' + self.dataset + '/' + self.feature_type + '.npy')
+            bert = np.load('../data/' + self.dataset + '/bert.npy')
             self.relation_dim = bert.shape[1]
             self.relation_features = tf.constant(bert, tf.float64)
 
