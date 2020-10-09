@@ -32,7 +32,7 @@ For more results, please refer to the original paper.
   - `wn18rr/`
   - `NELL995/`
   - `DDB14/`
-- `src/`: implementation of PathCon.
+- `src/`: implementation of PathCon
 
 __Note__: We provide a `cache/` folder for each dataset, which caches the pre-computed relational paths for this dataset.
 This folder is not required for running the code because relational paths will be counted (and cached) if no corresponding cache file is found. 
