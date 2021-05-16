@@ -34,9 +34,9 @@ For more results, please refer to the original paper.
   - `DDB14/`
 - `src/`: implementation of PathCon
 
-__Note__: We provide a `cache/` folder for each dataset, which caches the pre-computed relational paths for this dataset.
-This folder is not required for running the code because relational paths will be counted (and cached) if no corresponding cache file is found. 
-**If you are going to run FB15K-237 with max_path_len=3, please first download and unzip ``paths_3.zip`` from [here](https://drive.google.com/file/d/1uF42OgIQY0f_G8z0Wwk90AQ_KEueqhsv/view?usp=sharing) and put all unzipped files under ``FB15k-237/cache/``** (the original files cannot be uploaded to GitHub due to the limitation on file size).
+__Note__: We provide a `cache/` folder for each dataset, which caches the pre-computed relational paths for the dataset.
+This folder is not required for running the code, because relational paths will be counted (and cached) when running the code if no corresponding cache file is found. 
+**If you are going to run FB15K-237 with max_path_len=3, please first download and unzip ``paths_3.zip`` from [here](https://drive.google.com/file/d/1uF42OgIQY0f_G8z0Wwk90AQ_KEueqhsv/view?usp=sharing) and put all unzipped files under ``FB15k-237/cache/``** (these files cannot be uploaded to GitHub due to the limitation on file size).
 
 
 
