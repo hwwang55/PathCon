@@ -1,9 +1,9 @@
 # PathCon
 
 This repository is the Tensorflow implementation of PathCon ([arXiv](https://arxiv.org/abs/2002.06757)):
-> Entity Context and Relational Paths forKnowledge Graph Completion  
+> Relational Message Passing for Knowledge Graph Completion  
 Hongwei Wang, Hongyu Ren, Jure Leskovec  
-arXiv Preprint, 2020
+In Proceedings of The 27th ACM SIGKDD Conference on Knowledge Discovery and Data Mining (KDD 2021)
 
 (A PyTorch implementation of PathCon can be found [here](https://github.com/hyren/PathCon))
 
